@@ -2,16 +2,16 @@
 
 ### Introduction
 
-Thank you for your interesting in contributing to LaravelUK website project!  
+Thank you for your interest in contributing to the LaravelUK website project!  
 
-This project is not just a platform for building the LaravelUK website, it is also a platform to help other members learn technologies that they are not too familiar with irrespective of their level of experience.
+This project is not just a platform for building the LaravelUK website, but also a platform to help other members learn technologies that they are not familiar with; irrespective of their level of experience.
 
-These guidelines ensure that developers are able quickly give feedback on your contribution and how to make it better. Most probably you might have to go back and change a few things, but it will be in the interest of making this process better for everyone. Please read and understand the contribution guide before creating an issue or pull request..
+These guidelines ensure that developers are able to quickly give feedback on your contribution and how to make it better. Most probably you might have to go back and change a few things, but it will be in the interest of making this process better for everyone. Please read and understand the contribution guide before creating an issue or pull request..
 
 Happy contributing!
 
 ### Framework Libraries ###
-The following framwork and libraries will be used in the project
+The following framework and libraries will be used in the project
 Laravel
 Vue.js
 Vuex
@@ -21,7 +21,7 @@ Tailwind CSS (You can write vanilla CSS if you want. We will apply these within 
 
 
 ### Etiquette
-As this is a community project, selected reviewers will go through your code to ascertain if the quality is sufficient for it to be merged. You are however free to choose any member of the community to review your code however only specificly assigned members can merge your PRS. Please be considerate towards reviewers/maintainers when raising issues or presenting pull requests. Let's show the world that LaravelUK members are civilized and great guys to work with.
+As this is a community project, selected reviewers will go through your code to ascertain if the quality is sufficient for it to be merged. You are however free to choose any member of the community to review your code however only specifically assigned members can merge your Pull Requests. Please be considerate towards reviewers/maintainers when raising issues or presenting pull requests. Let's show the world that LaravelUK members are civilized and great people to work with.
 
 ## Submission Requirements
 Before submitting a pull request:
@@ -41,8 +41,3 @@ As this is a Laravel application, we will be following the [PSR-2](https://githu
  - Interfaces should NOT be suffixed with Interface, Traits should NOT be suffixed with Trait
  - Class and method names must be descriptive enough with type-hints since we are not enforcing docblocks
  - Ensure that you submit tests that have minimal 100% coverage.
-
-
-
-
-
