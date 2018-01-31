@@ -10,6 +10,8 @@ These guidelines ensure that developers are able to quickly give feedback on you
 
 Happy contributing!
 
+[![Build Status](https://travis-ci.org/laraveluk/website.svg?branch=master)](https://travis-ci.org/laraveluk/website)
+
 ### Framework Libraries ###
 The following framework and libraries will be used in the project
 Laravel
