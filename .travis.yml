@@ -3,6 +3,9 @@ language: php
 php:
   - 7.1
 
+services:
+  - mysql
+
 before_script:
   - cp .env.travis .env
   - mysql -e 'create database website_test;'
