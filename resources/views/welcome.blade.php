@@ -17,7 +17,7 @@
 
 <div class="bgimg">
     <div class="middle">
-        <h1>COMING SOON</h1>
+        <h1>LaravelUK COMING SOON</h1>
         <hr>
         <p>Join us at #Larahack - February 3 - 4 2018!</p>
     </div>
