@@ -57,6 +57,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+        font-size: 2em;
     }
 
     /* Style the <hr> element */
