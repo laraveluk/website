@@ -125,6 +125,8 @@ return [
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
+    'deploy_secret' => env('APP_DEPLOY_SECRET'),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
