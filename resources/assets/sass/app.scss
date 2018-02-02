@@ -50,6 +50,23 @@ body, html {
   bottom: 0;
   width: 100%;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+@media (max-width: 744px) {
+  .bgimg {
+    font-size: 1.2em;
+  }
+  h1 {
+    font-size: 1em;
+  }
+  .middle {
+    font-size: 1em;
+  }
+
+  .bottom-center {
+    font-size: 1em;
+  }
 }
 @tailwind utilities;
