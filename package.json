@@ -18,5 +18,9 @@
         "lodash": "^4.17.4",
         "tailwindcss": "^0.4.1",
         "vue": "^2.5.7"
+    },
+    "dependencies": {
+        "vue-router": "^3.0.1",
+        "vuex": "^3.0.1"
     }
 }
