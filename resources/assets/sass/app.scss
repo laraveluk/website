@@ -12,7 +12,6 @@ body, html {
   position: relative;
   color: white;
   font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
 }
 
 .middle {
@@ -21,7 +20,7 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   h1 {
     display: block;
     font-size: 2em;
@@ -30,6 +29,10 @@ body, html {
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     font-weight: bold;
+  }
+
+  .info {
+    padding-top: 30px;
   }
 }
 
@@ -45,6 +48,8 @@ body, html {
 .bottom-center {
   position: absolute;
   bottom: 0;
+  width: 100%;
   text-align: center;
+  font-size: 1.5em;
 }
 @tailwind utilities;
