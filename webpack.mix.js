@@ -20,3 +20,8 @@ mix.sass('resources/assets/sass/app.scss', 'public/css')
         processCssUrls: false,
         postCss: [tailwindcss('./tailwind.js')],
 });
+
+if (mix.inProduction) {
+	console.log('in inProduction')
+	mix.version();
+} 
