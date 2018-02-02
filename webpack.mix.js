@@ -1,3 +1,4 @@
+require('dotenv').config();
 let tailwindcss = require('tailwindcss');
 
 let mix = require('laravel-mix');
@@ -23,4 +24,9 @@ mix.sass('resources/assets/sass/app.scss', 'public/css')
 
 if (mix.inProduction) {
 	mix.version();
-} 
+}
+
+mix.browserSync({
+    proxy: process.env.APP_URL,
+    open: false
+});

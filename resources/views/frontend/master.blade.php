@@ -8,7 +8,7 @@
 
     <title>Laravel UK - The most exciting coding group in the UK</title>
     <meta name="title" content="Laravel UK - The most exciting coding group in the UK">
-     <meta name="description" content="A Commnity of Laravel Developers in the UK and beyond">
+    <meta name="description" content="A Commnity of Laravel Developers in the UK and beyond">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -17,25 +17,11 @@
 </head>
 <body>
 
-<div class="bgimg">
-    <div class="middle">
-        <h1>Laravelphp.uk Coming Soon!</h1>
-        <hr>
-
-        <div class="info">
-            <p>Join us as we build this website in a weekend  #Larahack.</p>
-            <p>February 3 - 4 2018!</p>
-        </div>
-        
-    </div>
-    <div class="bottom-center">
-        <p>Laravel UK - The most exciting coding group in the UK</p>
-    </div>
-</div>
+@yield('content')
 <div id="app">
 
 </div>
 
-    <script type="text/javascript" src="{{ mix('/js/app.js') }}"></script>
+<script type="text/javascript" src="{{ mix('/js/app.js') }}"></script>
 </body>
 </html>
