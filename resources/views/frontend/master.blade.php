@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Laravel UK - The most exciting coding group in the UK</title>
-    <meta name="title" content="Laravel UK - The most exciting coding group in the UK">
-    <meta name="description" content="A Commnity of Laravel Developers in the UK and beyond">
+    {{-- Add title and meta description  --}}
+    @yield('title_and_meta')
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">

@@ -1,5 +1,13 @@
 @extends('frontend.master')
 
+@section('title_and_meta')
+    <title>Welcome To LaravelUK Community - Celebrating Top Laravel People</title>
+    <meta name="title" content="Welcome To LaravelUK Community - Celebrating Top Laravek People" />
+    <meta name="description" content="Welcome To LaravelUK Community - Celebrating Top Laravek People" />
+    <meta name="og_title" content="Welcome To LaravelUK Community - Celebrating Top Laravek People" />
+    <meta name="og_description" content="Welcome To LaravelUK Community - Celebrating Top Laravek People" />
+@stop
+
 @section('content')
     <div class="w-full">
         <div class="page-heading text-center my-8">
