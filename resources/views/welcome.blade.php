@@ -17,9 +17,10 @@
 
 <div class="bgimg">
     <div class="middle">
-        <h1>LaravelUK Website Comming Soon!</h1>
+        <h1>Comming Soon!</h1>
         <hr>
-        <p>Join us at #Larahack - February 3 - 4 2018!</p>
+        <p>Join us as we build build this website at #Larahack.</p>
+        <p>February 3 - 4 2018!</p>
     </div>
     <div class="bottom-center text-center">
         <p>Laravel UK - The most exciting coding group in the UK</p>
