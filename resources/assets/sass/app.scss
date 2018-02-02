@@ -1,5 +1,25 @@
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+ */
 @tailwind preflight;
 
+/**
+  * Custom elements added here
+ *
+ * Example:
+ *
+ * .btn { ... }
+ * .form-input { ... }
+ *
+ * Or if using a preprocessor:
+ *
+ * @import "components/buttons";
+ * @import "components/forms";
+ */
 body, html {
   height: 100%
 }
@@ -69,4 +89,13 @@ body, html {
     font-size: 1em;
   }
 }
+
+/**
+ * Tailwind's utility classes injected here. Generated based on your
+ * config file.
+ */
 @tailwind utilities;
+
+/**
+ * Add custom utilities not covered by Tailwind
+ */

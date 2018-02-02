@@ -22,6 +22,5 @@ mix.sass('resources/assets/sass/app.scss', 'public/css')
 });
 
 if (mix.inProduction) {
-	console.log('in inProduction')
 	mix.version();
 } 
