@@ -39,9 +39,20 @@ class MemberController extends Controller
         $post->update($request->only(/* */));
 
         if (Auth::user()) {
-        	Log::debug(Auth::user()->name . " updated post {$post->id}");
+            Log::debug(Auth::user()->name . " updated post {$post->id}");
         }
 
         return $post;
+    }
+
+    public function destroy($post_id)
+    {
+        Post::findOrFail($post_id)->delete();
+
+        if (Auth::user()) {
+            Log::debug(Auth::user()->name . " deleted post {$post_id}");
+        }
+
+        return response()->json(['message' => "post {$post_id} deleted"]);
     }
 }
