@@ -12,4 +12,5 @@ Route::resource('posts', 'PostController', ['only' => [
     'index',
     'show',
     'update',
+    'destroy'
 ]]);

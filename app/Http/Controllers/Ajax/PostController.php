@@ -16,7 +16,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::with('author')->get()->sortByDesc('created_at');
+        $posts = Post::with('author')->orderBy('created_at', 'DESC')->get();
 
         return response()->json([
             'posts' => $posts
@@ -96,13 +96,16 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         if ($post->user_id != auth()->id()) {
-            return redirect($post->url);
+            return response([
+                'status' => 'error'
+            ]);
         }
-        $post->delete();
 
         if (auth()->user()) {
-            Log::debug(auth()->user()->name . " deleted post {$post_id}");
+            Log::debug(auth()->user()->name . " deleted post {$post->id}");
         }
+
+        $post->delete();
 
         return response([
             'status' => 'deleted'

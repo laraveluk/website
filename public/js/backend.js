@@ -1718,7 +1718,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         getPost: function getPost(slug) {
             var _this = this;
 
-            axios.get("/ajax/posts/" + slug).then(function (_ref) {
+            axios.get('/ajax/posts/' + slug).then(function (_ref) {
                 var data = _ref.data;
 
                 _this.post = data.post;
@@ -1731,10 +1731,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this2 = this;
 
             var slug = this.$route.params.slug;
-            axios.patch("/ajax/posts/" + slug, this.post).then(function (_ref2) {
+            axios.patch('/ajax/posts/' + slug, this.post).then(function (_ref2) {
                 var data = _ref2.data;
 
                 _this2.editMode = !_this2.editMode;
+            });
+        },
+        deletePost: function deletePost() {
+            var _this3 = this;
+
+            var slug = this.$route.params.slug;
+            axios.delete('/ajax/posts/' + slug, this.post).then(function (_ref3) {
+                var data = _ref3.data;
+
+                if (data.status == 'deleted') {
+                    console.log('post deleted');
+                    _this3.$router.go('/blog');
+                } else {
+                    alert(data.status);
+                }
             });
         }
     }
@@ -20121,22 +20136,6 @@ var render = function() {
                 ]),
             _vm._v(" "),
             _c("div", { staticClass: "px-1 py-4 mb-4" }, [
-              _c(
-                "a",
-                {
-                  staticClass:
-                    "bg-red hover:bg-red-dark text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded",
-                  attrs: { href: "#" },
-                  on: {
-                    click: function($event) {
-                      $event.preventDefault()
-                      _vm.deletePost()
-                    }
-                  }
-                },
-                [_vm._v("Delete Post")]
-              ),
-              _vm._v(" "),
               this.editMode
                 ? _c("div", [
                     _c(
@@ -20172,6 +20171,22 @@ var render = function() {
                     )
                   ])
                 : _c("div", [
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "bg-red hover:bg-red-dark text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded",
+                        attrs: { href: "#" },
+                        on: {
+                          click: function($event) {
+                            $event.preventDefault()
+                            _vm.deletePost()
+                          }
+                        }
+                      },
+                      [_vm._v("Delete Post")]
+                    ),
+                    _vm._v(" "),
                     _c(
                       "a",
                       {
