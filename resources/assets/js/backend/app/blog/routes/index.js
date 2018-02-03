@@ -1,11 +1,11 @@
-import { PostsList } from '../components/index'
+import { PostsList, PostRow } from '../components/index'
 
 export default [
     {
         path: '/blog',
         component: PostsList,
         name: 'posts-lists',
-    }
+    },
 
     {
         path: '/blog/:id',
