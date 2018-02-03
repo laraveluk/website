@@ -31,4 +31,16 @@ class MemberController extends Controller
 
         return $user;
     }
+
+    public function resetPassword(Request $request, $user_id)
+    {
+        $user = User::findOrFail($user_id);
+
+        $exitCode = Artisan::call('user:resetpassword', [
+            'user' => $user->id,
+            '--force' => true
+        ]);
+
+        return $user;
+    }
 }
