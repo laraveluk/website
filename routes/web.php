@@ -11,6 +11,3 @@ Route::get('/members', 'MemberDashboardController@dashboard')->name('dashboard')
 Auth::routes();
 Route::get('login/slack', 'Auth\SlackLoginController@redirectToProvider');
 Route::get('login/slack/callback', 'Auth\SlackLoginController@handleProviderCallback');
-
-/** Blog Routes */
-require base_path() . '/routes/blog.php';

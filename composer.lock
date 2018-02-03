@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4c5c517b7a7cf082f949678f838b556",
+    "content-hash": "48c3d6e4e1254e1a4b48f2ba966d4ffa",
     "packages": [
         {
             "name": "defuse/php-encryption",
@@ -695,6 +695,39 @@
                 }
             ],
             "time": "2015-04-20T18:58:01+00:00"
+        },
+        {
+            "name": "joepriest/passwordreset",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/joepriest/laravelpasswordreset.git",
+                "reference": "0adca5479f6f9f35f7049aacf5b84eb9c0889ba7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/joepriest/laravelpasswordreset/zipball/0adca5479f6f9f35f7049aacf5b84eb9c0889ba7",
+                "reference": "0adca5479f6f9f35f7049aacf5b84eb9c0889ba7",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JoePriest\\PasswordReset\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joe Priest",
+                    "email": "joe@infusion-it.co.uk"
+                }
+            ],
+            "description": "A a console command to reset user passwords",
+            "time": "2018-02-03T19:01:45+00:00"
         },
         {
             "name": "laravel/framework",
