@@ -6,6 +6,8 @@
  * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
  */
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
+@import "../../../node_modules/animate.css/animate";
+
 @tailwind preflight;
 
 
