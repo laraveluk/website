@@ -60,11 +60,21 @@
                     <!-- <p class="text-red text-xs italic">Please choose a password.</p> -->
                 </div>
                 <div class="flex items-center justify-between">
-                    <button class="bg-red hover:bg-red-dark text-white font-bold py-2 px-4 rounded" type="button">
-                        Sign In
-                    </button>
-
-                </div>
+                <button class="bg-red hover:bg-red-dark text-white font-bold py-2 px-4 rounded" type="button">
+                    Sign In
+                </button>
+                <a class="inline-block align-baseline font-bold text-sm text-white hover:text-blue-darker" href="{{ route('password.request') }}">
+                    Forgot </br> Password?
+                </a>
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="bg-white hover:bg-red-dark py-2 px-4 rounded" type="button">
+                    Sign In
+                </button>
+                <a class="inline-block align-baseline font-bold text-sm text-white hover:text-blue-darker" href="{{ route('password.request') }}">
+                    Forgot </br> Password?
+                </a>
+            </div>
             </div>
         </form>
     </div>
