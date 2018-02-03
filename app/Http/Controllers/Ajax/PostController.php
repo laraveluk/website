@@ -31,6 +31,8 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
+        $post = $post->load('author');
+
         return response()->json([
             'post' => $post
         ]);

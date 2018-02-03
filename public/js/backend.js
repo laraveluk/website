@@ -1672,6 +1672,36 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     created: function created() {
@@ -1679,7 +1709,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     data: function data() {
         return {
-            post: []
+            post: [],
+            editMode: false
         };
     },
 
@@ -1691,6 +1722,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 var data = _ref.data;
 
                 _this.post = data.post;
+            });
+        },
+        editPost: function editPost() {
+            this.editMode = !this.editMode;
+        },
+        savePost: function savePost() {
+            var _this2 = this;
+
+            var slug = this.$route.params.slug;
+            axios.patch("/ajax/posts/" + slug, this.post).then(function (_ref2) {
+                var data = _ref2.data;
+
+                _this2.editMode = !_this2.editMode;
             });
         }
     }
@@ -20007,7 +20051,149 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    " + _vm._s(_vm.post) + "\n")])
+  return _c("div", [
+    _c("article", { staticClass: "max-w-2xl mx-auto" }, [
+      _c("header", { staticClass: "p-8 text-center" }, [
+        _c("h1", { staticClass: "tracking-tight text-4xl text-red" }, [
+          _vm._v(_vm._s(_vm.post.title))
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "flex flex-wrap max-w-2xl mx-auto" }, [
+      _c(
+        "div",
+        { staticClass: "w-full rounded bg-white overflow-hidden shadow-lg" },
+        [
+          _c("div", { staticClass: "px-6 py-4" }, [
+            _c("div", { staticClass: "mb-2" }, [
+              _vm._v("Posted by "),
+              _c("a", { attrs: { href: "" } }, [
+                _vm._v(_vm._s(_vm.post.author.name))
+              ]),
+              _vm._v(" - " + _vm._s(_vm.post.created_at))
+            ]),
+            _vm._v(" "),
+            this.editMode
+              ? _c("div", [
+                  _c(
+                    "textarea",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.post.body,
+                          expression: "post.body"
+                        }
+                      ],
+                      staticClass:
+                        "shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3",
+                      attrs: { rows: "10" },
+                      domProps: { value: _vm.post.body },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.post, "body", $event.target.value)
+                        }
+                      }
+                    },
+                    [_vm._v(_vm._s(_vm.post.body))]
+                  )
+                ])
+              : _c("div", [
+                  _c(
+                    "p",
+                    {
+                      staticClass:
+                        "text-grey-darker text-base pt-2 pb-2 mb-2 mt-2"
+                    },
+                    [
+                      _vm._v(
+                        "\n                        " +
+                          _vm._s(_vm.post.body) +
+                          "\n                    "
+                      )
+                    ]
+                  )
+                ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "px-1 py-4 mb-4" }, [
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "bg-red hover:bg-red-dark text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded",
+                  attrs: { href: "#" },
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      _vm.deletePost()
+                    }
+                  }
+                },
+                [_vm._v("Delete Post")]
+              ),
+              _vm._v(" "),
+              this.editMode
+                ? _c("div", [
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "bg-red-light hover:bg-red text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded",
+                        attrs: { href: "#" },
+                        on: {
+                          click: function($event) {
+                            $event.preventDefault()
+                            _vm.editMode = !_vm.editMode
+                          }
+                        }
+                      },
+                      [_vm._v("Cancel")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "bg-green-light hover:bg-green text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded",
+                        attrs: { href: "#" },
+                        on: {
+                          click: function($event) {
+                            $event.preventDefault()
+                            _vm.savePost()
+                          }
+                        }
+                      },
+                      [_vm._v("Save")]
+                    )
+                  ])
+                : _c("div", [
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "bg-blue-light hover:bg-blue text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded",
+                        attrs: { href: "#" },
+                        on: {
+                          click: function($event) {
+                            $event.preventDefault()
+                            _vm.editPost()
+                          }
+                        }
+                      },
+                      [_vm._v("Edit Post")]
+                    )
+                  ])
+            ])
+          ])
+        ]
+      )
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
