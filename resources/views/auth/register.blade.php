@@ -4,11 +4,20 @@
 @section('content')
 
 
-<div class="container content-center">
+<div class="flex justify-center items-center w-screen h-screen">
     <div class="flex content-center">
         <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                                 {{ csrf_field() }}
             <div class="text-blue-lightest shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col bg-blue-dark">
+
+                <div class="flex items-center justify-between">
+                    <a href="#"><img src="{{ asset('/images/slack-button.png') }}" class="shadow appearance-none border rounded w-full py-2 px-3 bg-white"></a>
+                </div>
+                </br>
+                <div class="text-white font-bold flex content-center">
+                OR
+                </div>
+                </br></br>
                 <div class="mb-4">
                     <label class="block text-blue-lightest text-sm font-bold mb-2" for="name">
                         Username
@@ -66,15 +75,7 @@
                 <a class="inline-block align-baseline font-bold text-sm text-white hover:text-blue-darker" href="{{ route('password.request') }}">
                     Forgot </br> Password?
                 </a>
-            </div>
-            <div class="flex items-center justify-between">
-                <button class="bg-white hover:bg-red-dark py-2 px-4 rounded" type="button">
-                    Sign In
-                </button>
-                <a class="inline-block align-baseline font-bold text-sm text-white hover:text-blue-darker" href="{{ route('password.request') }}">
-                    Forgot </br> Password?
-                </a>
-            </div>
+                </div>
             </div>
         </form>
     </div>
