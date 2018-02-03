@@ -43,7 +43,15 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Post;
+
+        $post->title = $request->title;
+        $post->slug = str_slug($request->title);
+        $post->body = $request->body;
+        $post->user_id = auth()->id();
+        $post->save();
+
+        return redirect()->route('home');
     }
 
     /**
