@@ -1702,6 +1702,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     created: function created() {
@@ -20069,9 +20074,35 @@ var render = function() {
   return _c("div", [
     _c("article", { staticClass: "max-w-2xl mx-auto" }, [
       _c("header", { staticClass: "p-8 text-center" }, [
-        _c("h1", { staticClass: "tracking-tight text-4xl text-red" }, [
-          _vm._v(_vm._s(_vm.post.title))
-        ])
+        this.editMode
+          ? _c("div", [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.post.title,
+                    expression: "post.title"
+                  }
+                ],
+                staticClass:
+                  "shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker",
+                domProps: { value: _vm.post.title },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.post, "title", $event.target.value)
+                  }
+                }
+              })
+            ])
+          : _c("div", [
+              _c("h1", { staticClass: "tracking-tight text-4xl text-red" }, [
+                _vm._v(_vm._s(_vm.post.title))
+              ])
+            ])
       ])
     ]),
     _vm._v(" "),

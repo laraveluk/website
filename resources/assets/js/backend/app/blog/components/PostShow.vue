@@ -2,7 +2,12 @@
     <div>
         <article class="max-w-2xl mx-auto">
             <header class="p-8 text-center">
-                <h1 class="tracking-tight text-4xl text-red">{{post.title}}</h1>
+                <div v-if="this.editMode">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" v-model="post.title">
+                </div>
+                <div v-else>
+                    <h1 class="tracking-tight text-4xl text-red">{{post.title}}</h1>
+                </div>
             </header>
         </article>
         <div class="flex flex-wrap max-w-2xl mx-auto">
