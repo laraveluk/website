@@ -20,7 +20,16 @@ Vuex
 VueRouter
 Tailwind CSS (You can write vanilla CSS if you want. We will apply these within the build)
 
-
+### Contribution Instructions
+If you are new to contibuting to open source projects, please follow the steps below
+- Fork the repository
+- Clone the forked repository to your local system
+- Add a git remote to the original repository. Example `git remote add upstream git remote add upstream https://github.com/laraveluk/website.git`
+- Check `git remote -v` to ensure you can see both remotes
+- Create a feature branch in which to make your changes `git checkout -b <new branch name>`
+- Make changes and commit to the branch
+- Push the branch to Github
+- Submit Pull request
 
 ### Etiquette
 As this is a community project, selected reviewers will go through your code to ascertain if the quality is sufficient for it to be merged. You are however free to choose any member of the community to review your code however only specifically assigned members can merge your Pull Requests. Please be considerate towards reviewers/maintainers when raising issues or presenting pull requests. Let's show the world that LaravelUK members are civilized and great people to work with.
