@@ -2,11 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Post;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+    /**
+     * Instantiate the PostController
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -24,7 +32,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return \view('posts.create');
     }
 
     /**
