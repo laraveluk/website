@@ -13,6 +13,10 @@
     @include('frontend.partials.header')
     <article class="max-w-2xl mx-auto">
         <header class="p-8 text-center">
+            @if (auth()->check())
+            {{-- @todo authorization --}}
+            <a href="{{route('posts.create')}}" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 float-right no-underline rounded">Create Post</a>
+            @endif
             <h1 class="tracking-tight text-5xl text-red">LaravelUK - News and Updates</h1>
         </header>
     </article>

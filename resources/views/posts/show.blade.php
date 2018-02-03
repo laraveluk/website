@@ -2,10 +2,10 @@
 
 @section('title_and_meta')
     <title>LaravelUK - {{$post->title}}</title>
-    <meta name="title" content="LaravelUK - News and Updates" />
-    <meta name="description" content="LaravelUK - News and Updates" />
-    <meta name="og_title" content="LaravelUK - News and Updates" />
-    <meta name="og_description" content="LaravelUK - News and Updates" />
+    <meta name="title" content="LaravelUK - {{$post->title}}" />
+    <meta name="description" content="LaravelUK - {{$post->title}}" />
+    <meta name="og_title" content="LaravelUK - {{$post->title}}" />
+    <meta name="og_description" content="LaravelUK - {{$post->title}}" />
 @stop
 
 
@@ -25,6 +25,13 @@
                 <p class="text-grey-darker text-base">
                     {!! nl2br($post->body) !!}
                 </p>
+            @if (auth()->check())
+                {{-- @todo authorization --}}
+                <div class="px-1 py-4 mb-4">
+                    <a href="#" onclick="alert('Are you sure')" class="bg-red hover:bg-red-dark text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded">Delete Post</a>
+                    <a href="{{route('posts.edit', $post)}}" class="bg-blue-light hover:bg-blue text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded">Edit Post</a>
+                </div>
+            @endif
             </div>
             {{-- @todo blog tags --}}
 {{--             <div class="px-6 py-4">

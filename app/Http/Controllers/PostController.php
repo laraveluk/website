@@ -53,6 +53,7 @@ class PostController extends Controller
         $post->user_id = auth()->id();
         $post->save();
 
+        /** @todo alert() helper */
         return redirect()->route('home');
     }
 
@@ -75,7 +76,12 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        /** @todo change this to laravel authorization so we can allow staff to edit posts */
+        if ($post->user_id != auth()->id()) {
+            /** @todo alert() helper */
+            return redirect($post->url);
+        }
+        return \view('posts.edit', compact('post'));
     }
 
     /**
@@ -87,7 +93,12 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $post->update([
+            'title' => $request->title ?? $post->title,
+            'body' => $request->body ?? $post->body,
+        ]);
+
+        return redirect($post->url);
     }
 
     /**
