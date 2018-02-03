@@ -6,7 +6,6 @@ import { routes as routes } from '../app/index'
 Vue.use(Router)
 
 const router = new Router({
-    mode: 'history',
     routes: routes
 })
 
