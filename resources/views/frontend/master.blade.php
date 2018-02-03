@@ -9,13 +9,10 @@
     {{-- Add title and meta description  --}}
     @yield('title_and_meta')
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
 
 </head>
-<body>
+<body class="font-sans bg-grey">
 
 @yield('content')
 <div id="app">

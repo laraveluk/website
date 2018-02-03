@@ -9,26 +9,36 @@
 @stop
 
 @section('content')
-    <div class="w-full">
-        <div class="page-heading text-center my-8">
-            <h1 class="text-red">Laravel People</h1>
-        </div>
+    @include('frontend.partials.header')
 
+    <article class="max-w-2xl mx-auto">
+        <header class="p-8 text-center">
+            <h1 class="tracking-tight text-5xl text-red">Laravel People</h1>
+            <h2 class="text-grey-dark font-normal">(or LaraCelebs)</h2>
+        </header>
 
-        <div class="flex justify-center">
-            <div class="rounded rounded-t-lg shadow my- p-4">
-                <div class="flex justify-center mt-8">
-                    <img src="https://i.imgur.com/8Km9tLL.jpg" class="rounded-full border-solid border-white border-2 -mt-3">
+        <section class="py-8 max-w-lg mx-auto text-lg leading-normal text-grey-darkest">
+            <p>These wonderful folk contribute so much to the Laravel community.
+                They have also been fantastically wonderful to make a commit to our website codebase during
+                <a href="https://larahack.com">Larahack</a>.</p>
+        </section>
+
+        <section class="flex max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg">
+                {{-- Add your profile pic --}}
+            <figure class="w-2/3 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url('https://placeimg.com/640/480/people')"></figure>
+            <section class="flex flex-col justify-between">
+                {{-- Your name and a bit about you --}}
+                <div class="p-4 text-lg leading-normal">
+                    <h3 class="text-xl mb-2">A LaraCeleb was here</h3>
+                    <p>I am a Laravel Celebrity! I am a sample post that will be
+                        removed when the first Laravel Person commits.</p>
                 </div>
-                <div class="text-center px-3 pb-6 pt-2">
-                    <h3 class="text-black text-sm bold font-sans">Laravela Artisan</h3>
+                <div class="bg-red px-4 py-3 text-right">
+                    <a href="https://twitter.com/laraCeleb" class="text-white no-underline hover:underline p-2">@twitterHandle</a>
+                    <a href="https://example.com" class="text-white no-underline hover:underline p-2">https://example.com</a>
                 </div>
-                <div class="note">
-                    <p class="mt-2 font-sans font-light text-grey-dark">
-                        I am a Laravel Celebrity! I am a sample post that will be removed when the first Laravel Person commits
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+            </section>
+        </section>
+    </article>
+
 @stop
