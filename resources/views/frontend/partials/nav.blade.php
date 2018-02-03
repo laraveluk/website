@@ -4,8 +4,8 @@
     </a>
     <label for="mainNavTogger" class="text-blue-lightest hover:text-white w-8 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="fill-current"><path d="M25 3c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 16c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 16c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6z"/></svg></label>
     <input type="checkbox" id="mainNavTogger" class="hidden">
-    <nav class="sm:hidden fixed pin md:static md:flex md:flex-row justify-center items-center text-center text-xl md:text-sm lg:text-base bg-blue md:bg-transparent z-10">
-        <label for="mainNavTogger" class="w-10 h-10 flex items-center justify-center p-3 m-4 absolute pin-t pin-r text-2xl leading-none text-white bg-red rounded-full md:hidden">&times;</label>
+    <nav class="invisible fixed pin flex flex-col md:visible md:static md:flex md:flex-row justify-center items-center text-center text-xl md:text-sm lg:text-base bg-blue md:bg-transparent z-10">
+        <label for="mainNavTogger" class="w-10 h-10 flex items-center justify-center p-3 mt-8 mr-6 absolute pin-t pin-r text-2xl leading-none text-white bg-red rounded-full md:hidden">&times;</label>
         <a href="/" class="text-blue-lightest hover:text-white no-underline p-3 md:px-2">Home</a>
         <a href="/blog" class="text-blue-lightest hover:text-white no-underline p-3 md:px-2">Blog</a>
         <a href="/tutorials" class="text-blue-lightest hover:text-white no-underline p-3 md:px-2">Tutorials</a>

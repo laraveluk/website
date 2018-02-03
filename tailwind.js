@@ -167,7 +167,7 @@ module.exports = {
   */
 
   screens: {
-    'mobile': {max: '768px'},
+    'mobile': {max: '767px'},
     'sm': '576px',
     'md': '768px',
     'lg': '992px',
