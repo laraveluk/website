@@ -24,7 +24,7 @@ Tailwind CSS (You can write vanilla CSS if you want. We will apply these within 
 If you are new to contibuting to open source projects, please follow the steps below
 - Fork the repository
 - Clone the forked repository to your local system
-- Add a git remote to the original repository. Example `git remote add upstream git remote add upstream https://github.com/laraveluk/website.git`
+- Add a git remote to the original repository. Example `git remote add upstream https://github.com/laraveluk/website.git`
 - Check `git remote -v` to ensure you can see both remotes
 - Create a feature branch in which to make your changes `git checkout -b <new branch name>`
 - Make changes and commit to the branch
