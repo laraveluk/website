@@ -14,12 +14,16 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js');
+// Frontend assets
+mix.js('resources/assets/js/frontend/app.js', 'public/js/')
+    .sass('resources/assets/sass/app.scss', 'public/css/');
 
-mix.sass('resources/assets/sass/app.scss', 'public/css')
-    .options({
-        processCssUrls: false,
-        postCss: [tailwindcss('./tailwind.js')],
+//Backend assets
+mix.js('resources/assets/js/backend/backend.js', 'public/js/');
+
+mix.options({
+    processCssUrls: false,
+    postCss: [tailwindcss('./tailwind.js')],
 });
 
 if (mix.inProduction) {
