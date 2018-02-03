@@ -26,7 +26,7 @@ class MemberController extends Controller
         $user->update($request->only('name', 'email', 'location'));
 
         if (Auth::user()) {
-            Log::debug(Auth::user()->name . " updated profile information for {$user->name}");
+        	Log::debug(Auth::user()->name . " updated profile information for {$user->name}");
         }
 
         return $user;

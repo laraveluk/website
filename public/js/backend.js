@@ -1692,6 +1692,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -19490,122 +19515,219 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    {
+      staticClass: "font-sans bg-grey-lighter flex flex-col min-h-screen w-full"
+    },
+    [
+      _c("div", [
+        _c("div", { staticClass: "bg-blue" }, [
+          _c("div", { staticClass: "container mx-auto px-4" }, [
+            _c(
+              "div",
+              { staticClass: "flex items-center md:justify-between py-4" },
+              [
+                _c("div", { staticClass: "w-1/4 md:hidden" }, [
+                  _c(
+                    "svg",
+                    {
+                      staticClass: "fill-current text-white h-8 w-8",
+                      attrs: {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        viewBox: "0 0 20 20"
+                      }
+                    },
+                    [
+                      _c("path", {
+                        attrs: {
+                          d:
+                            "M16.4 9H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1zm0 4H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1zM3.6 7h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1z"
+                        }
+                      })
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "w-1/2 md:w-auto text-center text-white text-2xl font-medium"
+                  },
+                  [
+                    _vm._v(
+                      "\n                        LaravelUK\n                    "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "w-1/4 md:w-auto md:flex text-right" },
+                  [
+                    _vm._m(0),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "hidden md:block md:flex md:items-center ml-2"
+                      },
+                      [
+                        _c("span", { staticClass: "text-white text-sm mr-1" }, [
+                          _vm._v("Steve Popoola")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", [
+                          _c(
+                            "svg",
+                            {
+                              staticClass:
+                                "fill-current text-white h-4 w-4 block opacity-50",
+                              attrs: {
+                                xmlns: "http://www.w3.org/2000/svg",
+                                viewBox: "0 0 20 20"
+                              }
+                            },
+                            [
+                              _c("path", {
+                                attrs: {
+                                  d:
+                                    "M4.516 7.548c.436-.446 1.043-.481 1.576 0L10 11.295l3.908-3.747c.533-.481 1.141-.446 1.574 0 .436.445.408 1.197 0 1.615-.406.418-4.695 4.502-4.695 4.502a1.095 1.095 0 0 1-1.576 0S4.924 9.581 4.516 9.163c-.409-.418-.436-1.17 0-1.615z"
+                                }
+                              })
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ]
+                )
+              ]
+            )
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(1)
+    ]
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("img", {
+        staticClass: "inline-block h-8 w-8 rounded-full",
+        attrs: {
+          src: "https://avatars0.githubusercontent.com/u/526063?s=40&v=4",
+          alt: ""
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c(
       "div",
-      {
-        staticClass:
-          "font-sans bg-grey-lighter flex flex-col min-h-screen w-full"
-      },
+      { staticClass: "flex-grow container mx-auto sm:px-4 pt-6 pb-8" },
       [
-        _c(
-          "div",
-          { staticClass: "flex-grow container mx-auto sm:px-4 pt-6 pb-8" },
-          [
-            _c("div", { staticClass: "flex flex-wrap -mx-4" }, [
+        _c("div", { staticClass: "flex flex-wrap -mx-4" }, [
+          _c(
+            "div",
+            { staticClass: "w-full mb-6 lg:mb-0 lg:w-1/2 px-4 flex flex-col" },
+            [
               _c(
                 "div",
                 {
-                  staticClass: "w-full mb-6 lg:mb-0 lg:w-1/2 px-4 flex flex-col"
+                  staticClass:
+                    "flex-grow flex flex-col bg-white border-t border-b sm:rounded sm:border shadow overflow-hidden"
                 },
                 [
+                  _c("div", { staticClass: "border-b" }, [
+                    _c(
+                      "div",
+                      { staticClass: "flex justify-between px-2 -mb-px" },
+                      [
+                        _c(
+                          "h3",
+                          {
+                            staticClass:
+                              "text-blue-dark py-4 font-normal text-lg"
+                          },
+                          [_vm._v("Recent Articles")]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
                   _c(
                     "div",
                     {
                       staticClass:
-                        "flex-grow flex flex-col bg-white border-t border-b sm:rounded sm:border shadow overflow-hidden"
+                        "text-grey-darker items-center border-b -mx-4 px-6 py-2"
                     },
                     [
-                      _c("div", { staticClass: "border-b" }, [
-                        _c(
-                          "div",
-                          { staticClass: "flex justify-between px-2 -mb-px" },
-                          [
-                            _c(
-                              "h3",
-                              {
-                                staticClass:
-                                  "text-blue-dark py-4 font-normal text-lg"
-                              },
-                              [_vm._v("Recent Articles")]
-                            )
-                          ]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "text-grey-darker items-center border-b -mx-4 px-6 py-2"
-                        },
-                        [
-                          _c("div", { staticClass: "flex justify-between" }, [
-                            _c("div", { staticClass: "title" }, [
-                              _vm._v("Article Title")
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "title" }, [
-                              _vm._v("Author")
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "title" }, [
-                              _vm._v("Published date")
-                            ])
-                          ])
-                        ]
-                      )
+                      _c("div", { staticClass: "flex justify-between" }, [
+                        _c("div", { staticClass: "title" }, [
+                          _vm._v("Article Title")
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "title" }, [_vm._v("Author")]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "title" }, [
+                          _vm._v("Published date")
+                        ])
+                      ])
                     ]
                   )
                 ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "w-full lg:w-1/2 px-4" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "bg-white border-t border-b sm:rounded sm:border shadow"
-                  },
-                  [
-                    _c("div", { staticClass: "border-b" }, [
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "w-full lg:w-1/2 px-4" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "bg-white border-t border-b sm:rounded sm:border shadow"
+              },
+              [
+                _c("div", { staticClass: "border-b" }, [
+                  _c(
+                    "div",
+                    { staticClass: "flex justify-between px-6 -mb-px" },
+                    [
                       _c(
-                        "div",
-                        { staticClass: "flex justify-between px-6 -mb-px" },
-                        [
-                          _c(
-                            "h3",
-                            {
-                              staticClass:
-                                "text-blue-dark py-4 font-normal text-lg"
-                            },
-                            [_vm._v("Recent Activity")]
-                          )
-                        ]
+                        "h3",
+                        {
+                          staticClass: "text-blue-dark py-4 font-normal text-lg"
+                        },
+                        [_vm._v("Recent Activity")]
                       )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("div", { staticClass: "text-center px-6 py-4" }, [
-                        _c("div", { staticClass: "py-8" }, [
-                          _c("div", { staticClass: "mb-4" }, [
-                            _vm._v("You don't have any activity yet")
-                          ])
-                        ])
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("div", { staticClass: "text-center px-6 py-4" }, [
+                    _c("div", { staticClass: "py-8" }, [
+                      _c("div", { staticClass: "mb-4" }, [
+                        _vm._v("You don't have any activity yet")
                       ])
                     ])
-                  ]
-                )
-              ])
-            ])
-          ]
-        )
+                  ])
+                ])
+              ]
+            )
+          ])
+        ])
       ]
     )
   }
