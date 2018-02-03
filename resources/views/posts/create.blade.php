@@ -1,7 +1,7 @@
 @extends('frontend.master')
 
 @section('content')
-    @include('frontend/partials/header')
+    @include('backend.partials.nav')
 
     <article class="max-w-2xl mx-auto">
         <header class="p-8 text-center">
