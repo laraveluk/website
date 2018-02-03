@@ -27,9 +27,16 @@ class SlackLoginController extends Controller
      */
     public function handleProviderCallback()
     {
-        $user = Socialite::driver('slack')->user();
+        $slackUser = Socialite::driver('slack')->user();
 
-        Log::debug("{$user->getName()} logged in with Slack");
+        Log::debug("{$slackUser->getName()} logged in with Slack");
+
+        $user = User::create([
+            'name' => $slackUser->getName(),
+            'email' => $slackUser->getEmail(),
+        ]);
+
+        Auth::login($user);
 
         return view('frontend.welcome', compact('user'));
     }
