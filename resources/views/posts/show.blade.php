@@ -28,7 +28,7 @@
             @if (auth()->check())
                 {{-- @todo authorization --}}
                 <div class="px-1 py-4 mb-4">
-                    <a href="#" onclick="alert('Are you sure')" class="bg-red hover:bg-red-dark text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded">Delete Post</a>
+                    <a href="#" onclick="document.getElementById('delete-post-form-{{$post->id}}').submit()" class="bg-red hover:bg-red-dark text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded">Delete Post</a>
                     <a href="{{route('posts.edit', $post)}}" class="bg-blue-light hover:bg-blue text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded">Edit Post</a>
                 </div>
             @endif
@@ -42,4 +42,10 @@
         </div>
         {{-- @todo blog comments --}}
     </div>
+    <form action="{{route('posts.destroy', $post)}}" method="POST" id="delete-post-form-{{$post->id}}" style="display:none">
+        {{-- @csrf --}}
+        {{-- @method('DELETE') --}}
+        {{csrf_field()}}
+        {{method_field('DELETE')}}
+    </form>
 @endsection
