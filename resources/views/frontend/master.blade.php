@@ -13,6 +13,12 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+
+    <script>
+        window.axios.defaults.headers.common = {
+            'X-Requested-With': 'XMLHttpRequest',
+        };
+    </script>
 </head>
 <body>
 
