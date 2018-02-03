@@ -1,4 +1,4 @@
-/**
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);/**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
  *
@@ -612,6 +612,33 @@ button,
   cursor: pointer;
 }
 
+a {
+  color: #c0251e;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.ratio-3\/4 {
+  position: relative;
+}
+
+.ratio-3\/4:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 75%;
+}
+
+.ratio-3\/4 > .inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 /**
   * Custom elements added here
  *
@@ -963,7 +990,7 @@ html {
 }
 
 .bg-blue-lightest {
-  background-color: #6b77b4;
+  background-color: #98a3d9;
 }
 
 .bg-indigo-darkest {
@@ -1255,7 +1282,7 @@ html {
 }
 
 .hover\:bg-blue-lightest:hover {
-  background-color: #6b77b4;
+  background-color: #98a3d9;
 }
 
 .hover\:bg-indigo-darkest:hover {
@@ -1607,7 +1634,7 @@ html {
 }
 
 .border-blue-lightest {
-  border-color: #6b77b4;
+  border-color: #98a3d9;
 }
 
 .border-indigo-darkest {
@@ -1899,7 +1926,7 @@ html {
 }
 
 .hover\:border-blue-lightest:hover {
-  border-color: #6b77b4;
+  border-color: #98a3d9;
 }
 
 .hover\:border-indigo-darkest:hover {
@@ -2575,7 +2602,7 @@ html {
 }
 
 .font-sans {
-  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Noto Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 .font-serif {
@@ -4068,7 +4095,7 @@ html {
 }
 
 .text-blue-lightest {
-  color: #6b77b4;
+  color: #98a3d9;
 }
 
 .text-indigo-darkest {
@@ -4360,7 +4387,7 @@ html {
 }
 
 .hover\:text-blue-lightest:hover {
-  color: #6b77b4;
+  color: #98a3d9;
 }
 
 .hover\:text-indigo-darkest:hover {
@@ -5040,7 +5067,7 @@ html {
   }
 
   .sm\:bg-blue-lightest {
-    background-color: #6b77b4;
+    background-color: #98a3d9;
   }
 
   .sm\:bg-indigo-darkest {
@@ -5332,7 +5359,7 @@ html {
   }
 
   .sm\:hover\:bg-blue-lightest:hover {
-    background-color: #6b77b4;
+    background-color: #98a3d9;
   }
 
   .sm\:hover\:bg-indigo-darkest:hover {
@@ -5684,7 +5711,7 @@ html {
   }
 
   .sm\:border-blue-lightest {
-    border-color: #6b77b4;
+    border-color: #98a3d9;
   }
 
   .sm\:border-indigo-darkest {
@@ -5976,7 +6003,7 @@ html {
   }
 
   .sm\:hover\:border-blue-lightest:hover {
-    border-color: #6b77b4;
+    border-color: #98a3d9;
   }
 
   .sm\:hover\:border-indigo-darkest:hover {
@@ -6652,7 +6679,7 @@ html {
   }
 
   .sm\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Noto Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .sm\:font-serif {
@@ -8137,7 +8164,7 @@ html {
   }
 
   .sm\:text-blue-lightest {
-    color: #6b77b4;
+    color: #98a3d9;
   }
 
   .sm\:text-indigo-darkest {
@@ -8429,7 +8456,7 @@ html {
   }
 
   .sm\:hover\:text-blue-lightest:hover {
-    color: #6b77b4;
+    color: #98a3d9;
   }
 
   .sm\:hover\:text-indigo-darkest:hover {
@@ -9106,7 +9133,7 @@ html {
   }
 
   .md\:bg-blue-lightest {
-    background-color: #6b77b4;
+    background-color: #98a3d9;
   }
 
   .md\:bg-indigo-darkest {
@@ -9398,7 +9425,7 @@ html {
   }
 
   .md\:hover\:bg-blue-lightest:hover {
-    background-color: #6b77b4;
+    background-color: #98a3d9;
   }
 
   .md\:hover\:bg-indigo-darkest:hover {
@@ -9750,7 +9777,7 @@ html {
   }
 
   .md\:border-blue-lightest {
-    border-color: #6b77b4;
+    border-color: #98a3d9;
   }
 
   .md\:border-indigo-darkest {
@@ -10042,7 +10069,7 @@ html {
   }
 
   .md\:hover\:border-blue-lightest:hover {
-    border-color: #6b77b4;
+    border-color: #98a3d9;
   }
 
   .md\:hover\:border-indigo-darkest:hover {
@@ -10718,7 +10745,7 @@ html {
   }
 
   .md\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Noto Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .md\:font-serif {
@@ -12203,7 +12230,7 @@ html {
   }
 
   .md\:text-blue-lightest {
-    color: #6b77b4;
+    color: #98a3d9;
   }
 
   .md\:text-indigo-darkest {
@@ -12495,7 +12522,7 @@ html {
   }
 
   .md\:hover\:text-blue-lightest:hover {
-    color: #6b77b4;
+    color: #98a3d9;
   }
 
   .md\:hover\:text-indigo-darkest:hover {
@@ -13172,7 +13199,7 @@ html {
   }
 
   .lg\:bg-blue-lightest {
-    background-color: #6b77b4;
+    background-color: #98a3d9;
   }
 
   .lg\:bg-indigo-darkest {
@@ -13464,7 +13491,7 @@ html {
   }
 
   .lg\:hover\:bg-blue-lightest:hover {
-    background-color: #6b77b4;
+    background-color: #98a3d9;
   }
 
   .lg\:hover\:bg-indigo-darkest:hover {
@@ -13816,7 +13843,7 @@ html {
   }
 
   .lg\:border-blue-lightest {
-    border-color: #6b77b4;
+    border-color: #98a3d9;
   }
 
   .lg\:border-indigo-darkest {
@@ -14108,7 +14135,7 @@ html {
   }
 
   .lg\:hover\:border-blue-lightest:hover {
-    border-color: #6b77b4;
+    border-color: #98a3d9;
   }
 
   .lg\:hover\:border-indigo-darkest:hover {
@@ -14784,7 +14811,7 @@ html {
   }
 
   .lg\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Noto Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .lg\:font-serif {
@@ -16269,7 +16296,7 @@ html {
   }
 
   .lg\:text-blue-lightest {
-    color: #6b77b4;
+    color: #98a3d9;
   }
 
   .lg\:text-indigo-darkest {
@@ -16561,7 +16588,7 @@ html {
   }
 
   .lg\:hover\:text-blue-lightest:hover {
-    color: #6b77b4;
+    color: #98a3d9;
   }
 
   .lg\:hover\:text-indigo-darkest:hover {
@@ -17238,7 +17265,7 @@ html {
   }
 
   .xl\:bg-blue-lightest {
-    background-color: #6b77b4;
+    background-color: #98a3d9;
   }
 
   .xl\:bg-indigo-darkest {
@@ -17530,7 +17557,7 @@ html {
   }
 
   .xl\:hover\:bg-blue-lightest:hover {
-    background-color: #6b77b4;
+    background-color: #98a3d9;
   }
 
   .xl\:hover\:bg-indigo-darkest:hover {
@@ -17882,7 +17909,7 @@ html {
   }
 
   .xl\:border-blue-lightest {
-    border-color: #6b77b4;
+    border-color: #98a3d9;
   }
 
   .xl\:border-indigo-darkest {
@@ -18174,7 +18201,7 @@ html {
   }
 
   .xl\:hover\:border-blue-lightest:hover {
-    border-color: #6b77b4;
+    border-color: #98a3d9;
   }
 
   .xl\:hover\:border-indigo-darkest:hover {
@@ -18850,7 +18877,7 @@ html {
   }
 
   .xl\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Noto Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .xl\:font-serif {
@@ -20335,7 +20362,7 @@ html {
   }
 
   .xl\:text-blue-lightest {
-    color: #6b77b4;
+    color: #98a3d9;
   }
 
   .xl\:text-indigo-darkest {
@@ -20627,7 +20654,7 @@ html {
   }
 
   .xl\:hover\:text-blue-lightest:hover {
-    color: #6b77b4;
+    color: #98a3d9;
   }
 
   .xl\:hover\:text-indigo-darkest:hover {
