@@ -40,45 +40,45 @@
 </template>
 
 <script>
-export default {
-    created() {
-        this.post = this.getPost(this.$route.params.slug)
-    },
-    data() {
-        return {
-            post: [],
-            editMode: false
-        }
-    },
-    methods: {
-        getPost(slug) {
-            axios.get(`/ajax/posts/${slug}`)
-                .then(({data}) => {
-                    this.post = data.post
-                })
+    export default {
+        created() {
+            this.post = this.getPost(this.$route.params.slug)
         },
-        editPost() {
-            this.editMode = !this.editMode
+        data() {
+            return {
+                post: [],
+                editMode: false
+            }
         },
-        savePost() {
-            let slug = this.$route.params.slug
-            axios.patch(`/ajax/posts/${slug}`, this.post)
-                .then(({data}) => {
-                    this.editMode = !this.editMode
-                })
-        },
-        deletePost() {
-            let slug = this.$route.params.slug
-            axios.delete(`/ajax/posts/${slug}`, this.post)
-                .then(({data}) => {
-                    if (data.status == 'deleted') {
-                        console.log('post deleted')
-                        this.$router.go('/blog')
-                    } else {
-                        alert(data.status)
-                    }
-                })
+        methods: {
+            getPost(slug) {
+                axios.get(`/ajax/posts/${slug}`)
+                    .then(({data}) => {
+                        this.post = data.post
+                    })
+            },
+            editPost() {
+                this.editMode = !this.editMode
+            },
+            savePost() {
+                let slug = this.$route.params.slug
+                axios.patch(`/ajax/posts/${slug}`, this.post)
+                    .then(({data}) => {
+                        this.editMode = !this.editMode
+                    })
+            },
+            deletePost() {
+                let slug = this.$route.params.slug
+                axios.delete(`/ajax/posts/${slug}`, this.post)
+                    .then(({data}) => {
+                        if (data.status == 'deleted') {
+                            console.log('post deleted')
+                            this.$router.go(-1)
+                        } else {
+                            alert(data.status)
+                        }
+                    })
+            }
         }
     }
-}
 </script>

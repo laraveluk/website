@@ -1631,6 +1631,70 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/backend/app/blog/components/PostCreate.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            post: {
+                title: '',
+                body: ''
+            }
+        };
+    },
+
+    methods: {
+        savePost: function savePost() {
+            var _this = this;
+
+            axios.post('/ajax/posts', { data: this.post }).then(function (_ref) {
+                var data = _ref.data;
+
+                _this.$router.push('/blog/' + data.post.slug);
+            });
+        }
+    }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/backend/app/blog/components/PostRow.vue":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1751,7 +1815,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
                 if (data.status == 'deleted') {
                     console.log('post deleted');
-                    _this3.$router.go('/blog');
+                    _this3.$router.go(-1);
                 } else {
                     alert(data.status);
                 }
@@ -20064,6 +20128,150 @@ if (false) {
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-9be610fa\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/backend/app/blog/components/PostCreate.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("article", { staticClass: "max-w-2xl mx-auto" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "section",
+        {
+          staticClass:
+            "flex max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg border border-red"
+        },
+        [
+          _c(
+            "div",
+            { staticClass: "w-full bg-white rounded px-8 pt-6 pb-8 mb-4" },
+            [
+              _c("div", { staticClass: "mb-4" }, [
+                _c(
+                  "label",
+                  {
+                    staticClass:
+                      "block text-grey-darker text-sm font-bold mb-2",
+                    attrs: { for: "title" }
+                  },
+                  [
+                    _vm._v(
+                      "\n                        Title\n                    "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.post.title,
+                      expression: "post.title"
+                    }
+                  ],
+                  staticClass:
+                    "shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker",
+                  domProps: { value: _vm.post.title },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.post, "title", $event.target.value)
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "mb-6" }, [
+                _c(
+                  "label",
+                  {
+                    staticClass:
+                      "block text-grey-darker text-sm font-bold mb-2",
+                    attrs: { for: "body" }
+                  },
+                  [
+                    _vm._v(
+                      "\n                        Content\n                    "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("textarea", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.post.body,
+                      expression: "post.body"
+                    }
+                  ],
+                  staticClass:
+                    "shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3",
+                  attrs: { rows: "15" },
+                  domProps: { value: _vm.post.body },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.post, "body", $event.target.value)
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "flex items-center justify-between" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded",
+                    on: { click: _vm.savePost }
+                  },
+                  [
+                    _vm._v(
+                      "\n                        Create Post\n                    "
+                    )
+                  ]
+                )
+              ])
+            ]
+          )
+        ]
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("header", { staticClass: "p-8 text-center" }, [
+      _c("h1", { staticClass: "tracking-tight text-5xl text-red" }, [
+        _vm._v("Create Post")
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-9be610fa", module.exports)
+  }
+}
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-dd780e78\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/backend/app/blog/components/PostShow.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20261,7 +20469,28 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
+    _c("article", { staticClass: "max-w-2xl mx-auto" }, [
+      _c(
+        "header",
+        { staticClass: "p-8 text-center" },
+        [
+          _c(
+            "router-link",
+            {
+              staticClass:
+                "bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 float-right no-underline rounded",
+              attrs: { to: { name: "post-create" } }
+            },
+            [_vm._v("Create Post")]
+          ),
+          _vm._v(" "),
+          _c("h1", { staticClass: "tracking-tight text-5xl text-red" }, [
+            _vm._v("LaravelUK - News and Updates")
+          ])
+        ],
+        1
+      )
+    ]),
     _vm._v(" "),
     _c(
       "div",
@@ -20277,30 +20506,7 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("article", { staticClass: "max-w-2xl mx-auto" }, [
-      _c("header", { staticClass: "p-8 text-center" }, [
-        _c(
-          "a",
-          {
-            staticClass:
-              "bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 float-right no-underline rounded",
-            attrs: { href: "#" }
-          },
-          [_vm._v("Create Post")]
-        ),
-        _vm._v(" "),
-        _c("h1", { staticClass: "tracking-tight text-5xl text-red" }, [
-          _vm._v("LaravelUK - News and Updates")
-        ])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -34162,6 +34368,54 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/assets/js/backend/app/blog/components/PostCreate.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
+/* script */
+var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/backend/app/blog/components/PostCreate.vue")
+/* template */
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-9be610fa\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/backend/app/blog/components/PostCreate.vue")
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/backend/app/blog/components/PostCreate.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-9be610fa", Component.options)
+  } else {
+    hotAPI.reload("data-v-9be610fa", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
 /***/ "./resources/assets/js/backend/app/blog/components/PostRow.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34314,14 +34568,16 @@ module.exports = Component.exports
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PostsList; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PostShow; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return PostsList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PostShow; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PostCreate; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__("./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 
 
 var PostsList = __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('posts-lists', __webpack_require__("./resources/assets/js/backend/app/blog/components/PostsList.vue"));
 var PostShow = __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('post-show', __webpack_require__("./resources/assets/js/backend/app/blog/components/PostShow.vue"));
+var PostCreate = __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('post-create', __webpack_require__("./resources/assets/js/backend/app/blog/components/PostCreate.vue"));
 
 /***/ }),
 
@@ -34334,11 +34590,15 @@ var PostShow = __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('post-show'
 
 /* harmony default export */ __webpack_exports__["a"] = ([{
     path: '/blog',
-    component: __WEBPACK_IMPORTED_MODULE_0__components_index__["b" /* PostsList */],
+    component: __WEBPACK_IMPORTED_MODULE_0__components_index__["c" /* PostsList */],
     name: 'posts-lists'
 }, {
+    path: '/blog/create',
+    component: __WEBPACK_IMPORTED_MODULE_0__components_index__["a" /* PostCreate */],
+    name: 'post-create'
+}, {
     path: '/blog/:slug',
-    component: __WEBPACK_IMPORTED_MODULE_0__components_index__["a" /* PostShow */],
+    component: __WEBPACK_IMPORTED_MODULE_0__components_index__["b" /* PostShow */],
     name: 'post-show'
 }]);
 
