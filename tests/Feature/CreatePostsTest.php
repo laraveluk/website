@@ -69,5 +69,4 @@ class CreatePostsTest extends TestCase
         // I should be redirected to the login page
         ->assertRedirect('/login');
     }
-
 }

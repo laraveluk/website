@@ -9,7 +9,7 @@ class Post extends Model
     protected $fillable = ['title', 'body', 'slug', 'user_id'];
     /**
      * A post belongs to a user
-     * 
+     *
      * @return Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function author()
