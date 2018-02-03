@@ -31,7 +31,9 @@ class SlackLoginController extends Controller
 
         Log::debug("{$slackUser->getName()} logged in with Slack");
 
-        $user = User::firstOrCreate([
+        $user = User::updateOrCreate([
+            'slack_id' => $slackUser->getId()
+        ], [
             'name' => $slackUser->getName(),
             'email' => $slackUser->getEmail(),
             'password' => bcrypt(str_random(16)),

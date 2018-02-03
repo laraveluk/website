@@ -102,7 +102,7 @@ let colors = {
   'blue': '#2B3450',
   'blue-light': '#3F4C73',
   'blue-lighter': '#6B7799',
-  'blue-lightest': '#6b77b4',
+  'blue-lightest': '#98a3d9',
 
   'indigo-darkest': '#191e38',
   'indigo-darker': '#2f365f',
@@ -167,6 +167,7 @@ module.exports = {
   */
 
   screens: {
+    'mobile': {max: '768px'},
     'sm': '576px',
     'md': '768px',
     'lg': '992px',
@@ -194,6 +195,7 @@ module.exports = {
 
   fonts: {
     'sans': [
+      'Noto Sans',
       'system-ui',
       'BlinkMacSystemFont',
       '-apple-system',
