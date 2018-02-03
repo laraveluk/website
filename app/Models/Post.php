@@ -13,7 +13,7 @@ class Post extends Model
 
     /**
      * Set the Route's Key Name
-     * 
+     *
      * @return string
      */
     public function getRouteKeyName()
@@ -23,7 +23,7 @@ class Post extends Model
 
     /**
      * Get the URL attribute (helper)
-     * 
+     *
      * @return string
      */
     public function getUrlAttribute()
