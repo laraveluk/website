@@ -6,4 +6,5 @@ Route::prefix('blog')->group(function () {
     Route::get('{post}', 'PostController@show')->name('posts.show');
     Route::get('{post}/edit', 'PostController@edit')->name('posts.edit');
     Route::patch('{post}', 'PostController@update')->name('posts.update');
+    Route::delete('{post}', 'PostController@destroy')->name('posts.destroy');
 });

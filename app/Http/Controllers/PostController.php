@@ -12,7 +12,7 @@ class PostController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth')->only('create');
+        $this->middleware('auth')->except(['index', 'show']);
     }
     
     /**
@@ -109,6 +109,10 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        if ($post->user_id != auth()->id()) {
+            return redirect($post->url);
+        }
+        $post->delete();
+        return redirect()->route('posts.index');g
     }
 }
