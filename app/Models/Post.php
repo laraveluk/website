@@ -32,6 +32,16 @@ class Post extends Model
     }
 
     /**
+     * Get the Excerpt attribute (helper)
+     *
+     * @return string
+     */
+    public function getExcerptAttribute()
+    {
+        return str_limit($this->body, 140);
+    }
+
+    /**
      * A post belongs to a user
      *
      * @return Illuminate\Database\Eloquent\Relations\BelongsTo

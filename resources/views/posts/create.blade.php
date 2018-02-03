@@ -1,4 +1,4 @@
-@extends('frontend.master')
+@extends('backend.master')
 
 @section('content')
     @include('backend.partials.nav')

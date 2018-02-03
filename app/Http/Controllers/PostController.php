@@ -12,7 +12,7 @@ class PostController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->only('create');
     }
     
     /**
@@ -22,7 +22,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::all()->sortByDesc('created_at');
+
+        return \view('posts.index', compact('posts'));
     }
 
     /**
@@ -62,7 +64,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return \view('posts.show', compact('post'));
     }
 
     /**

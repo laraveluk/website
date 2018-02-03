@@ -62,4 +62,12 @@ class PostTest extends TestCase
         $url = route('posts.show', $post);
         $this->assertEquals($url, $post->url);
     }
+
+    /** @test */
+    public function it_can_provide_an_excerpt()
+    {
+        $post = factory('App\Models\Post')->create();
+        $excerpt = str_limit($post->body, 140);
+        $this->assertEquals($excerpt, $post->excerpt);
+    }
 }
