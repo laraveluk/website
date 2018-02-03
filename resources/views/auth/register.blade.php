@@ -39,6 +39,20 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('location') ? ' has-error' : '' }}">
+                            <label for="name" class="col-md-4 control-label">Location</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control" name="location" value="{{ old('location') }}" required autofocus>
+
+                                @if ($errors->has('location'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('location') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 
