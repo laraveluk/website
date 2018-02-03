@@ -33,7 +33,7 @@ class SlackLoginController extends Controller
 
         $user = User::updateOrCreate([
             'slack_id' => $slackUser->getId()
-        ], [
+        ],[
             'name' => $slackUser->getName(),
             'email' => $slackUser->getEmail(),
             'password' => bcrypt(str_random(16)),
