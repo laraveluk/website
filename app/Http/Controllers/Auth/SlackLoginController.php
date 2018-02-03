@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Log;
+use Auth;
 use Socialite;
+use App\Models\User;
 use App\Http\Controllers\Controller;
 
 class SlackLoginController extends Controller
@@ -26,6 +29,8 @@ class SlackLoginController extends Controller
     {
         $user = Socialite::driver('slack')->user();
 
-        return $user;
+        Log::debug("{$user->getName()} logged in with Slack");
+
+        return view('frontend.welcome', compact('user'));
     }
 }
