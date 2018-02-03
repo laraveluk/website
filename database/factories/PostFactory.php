@@ -8,6 +8,6 @@ $factory->define(App\Models\Post::class, function (Faker $faker) {
         'title' => $title,
         'slug' => str_slug($title), // to be replaced with Sluggable Fake
         'body' => $faker->paragraph,
-        'user_id' => factory('App\Models\User')->create()->id
+        'user_id' => factory('App\Models\User')->create()->id,
     ];
 });

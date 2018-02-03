@@ -54,4 +54,12 @@ class PostTest extends TestCase
     {
         $this->assertInstanceOf(User::class, $this->post->author);
     }
+
+    /** @test */
+    public function it_can_tell_you_its_url()
+    {
+        $post = factory('App\Models\Post')->create();
+        $url = route('posts.show', $post);
+        $this->assertEquals($url, $post->url);
+    }
 }
