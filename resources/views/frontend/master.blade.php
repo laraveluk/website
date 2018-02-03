@@ -14,11 +14,6 @@
 
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
 
-    <script>
-        window.axios.defaults.headers.common = {
-            'X-Requested-With': 'XMLHttpRequest',
-        };
-    </script>
 </head>
 <body>
 
@@ -27,6 +22,6 @@
 
 </div>
 
-<script type="text/javascript" src="{{ mix('/js/app.js') }}"></script>
+<script type="text/javascript" src="{{ mix('/js/backend.js') }}"></script>
 </body>
 </html>
