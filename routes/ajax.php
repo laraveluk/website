@@ -7,3 +7,9 @@ Route::resource('members', 'MemberController', ['only' => [
     'show',
     'update',
 ]]);
+
+Route::resource('posts', 'PostController', ['only' => [
+    'index',
+    'show',
+    'update',
+]]);
