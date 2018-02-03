@@ -26,11 +26,9 @@ class AddSlackIdToUserTable extends Migration
     public function down()
     {
         if (Schema::hasColumn('users', 'slack_id')) {
-
             Schema::table('users', function (Blueprint $table) {
                 $table->dropColumn('slack_id');
             });
-
         }
     }
 }
