@@ -12,7 +12,7 @@ class ViewPostsTest extends TestCase
     public function any_user_may_see_the_blog_index()
     {
         // Given that there are posts in the database
-        $posts = factory('App\Models\Post',10)->create();
+        $posts = factory('App\Models\Post', 10)->create();
         // When we visit the posts index
         $this->call('GET', route('posts.index'))
         // It should load successfully
