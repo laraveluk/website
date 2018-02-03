@@ -6,4 +6,10 @@ export default [
         component: PostsList,
         name: 'posts-lists',
     }
+
+    {
+        path: '/blog/:id',
+        component: PostRow,
+        name: 'posts-row',
+    }
 ]

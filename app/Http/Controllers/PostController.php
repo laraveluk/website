@@ -50,21 +50,6 @@ class PostController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Post $post)
-    {
-        /** @todo change this to laravel authorization so we can allow staff to edit posts */
-        if ($post->user_id != auth()->id()) {
-            /** @todo alert() helper */
-            return redirect($post->url);
-        }
-        return view('posts.edit', compact('post'));
-    }
 
     /**
      * Update the specified resource in storage.
