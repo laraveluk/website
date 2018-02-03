@@ -50,8 +50,8 @@ class EditPostsTest extends TestCase
         $post = factory('App\Models\Post')->create(['user_id' => $user->id]);
         // and wants to update this post
         $updatedPost = factory('App\Models\Post')->make([
-            'user_id' => $user->id, 
-            'title' => 'Changing the World', 
+            'user_id' => $user->id,
+            'title' => 'Changing the World',
             'body' => 'I have changed'
         ]);
         // If I submit a request (aka filling out the form) to the edit post endpoint
