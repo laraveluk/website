@@ -61,11 +61,13 @@ class PostController extends Controller
         $post->user_id = auth()->id();
         $post->save();
 
-        $tags = explode(',', $request->data['tags']);
-        $tags = array_filter($tags);
-        foreach ($tags as $tag) {
-            $post->attachTag($tag);
-        }
+        $post->tag($request->data['tags']);
+
+        // $tags = explode(',', $request->data['tags']);
+        // $tags = array_filter($tags);
+        // foreach ($tags as $tag) {
+        //     $post->attachTag(trim($tag));
+        // }
 
         if (auth()->user()) {
             Log::debug(auth()->user()->name . " created post {$post->id}");
