@@ -22,7 +22,11 @@
                 @endif
             </a>
             @endif
+            @if (!isset($title))
             <h1 class="tracking-tight text-5xl text-red">LaravelUK - News and Updates</h1>
+            @else
+            <h1 class="tracking-tight text-5xl text-red">{{$title}}</h1>
+            @endif
         </header>
     </article>
     <div class="flex flex-wrap max-w-2xl mx-auto">

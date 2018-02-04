@@ -16,6 +16,8 @@ class PostTagController extends Controller
      */
     public function show($tag)
     {
-        return Post::withAnyTags([$tag])->get();
+        $posts = Post::withAnyTags([$tag])->get();
+        $title = "Posts Tagged: {$tag}";
+        return \view('frontend.posts.index', compact('posts', 'title'));
     }
 }
