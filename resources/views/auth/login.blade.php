@@ -25,16 +25,15 @@
                         <div class="md:w-2/3">
                             <input class="shadow appearance-none border rounded w-full py-2 px-3 text-blue-lightest" id="name" type="text" name="email" value="{{ old('email') }}" placeholder="Email">
                             @if ($errors->has('email'))
-                                <span class="">
-                        <strong>{{ $errors->first('email') }}</strong>
-                    </span>
+                                <span class="text-red  inline-block mt-4">
+                                    {{ $errors->first('email') }}
+                                </span>
                             @endif
                         </div>
                     </div>
                     <div class="md:flex md:items-center mb-6">
                         <div class="md:w-1/3">
-                            <label for="password"
-                                                 class="block text-grey font-bold md:text-right mb-1 md:mb-0 pr-4">
+                            <label for="password" class="block text-grey font-bold md:text-right mb-1 md:mb-0 pr-4">
                             Password
                         </label>
                     </div>
