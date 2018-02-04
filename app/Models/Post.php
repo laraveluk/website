@@ -12,7 +12,7 @@ class Post extends Model
     /** @var array $fillable */
     protected $fillable = ['title', 'body', 'slug', 'user_id'];
     /** @var array $appends */
-    // protected $appends = ['url'];
+    protected $appends = ['excerpt'];
 
     /**
      * Return the sluggable configuration array for this model.
