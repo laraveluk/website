@@ -1,17 +1,18 @@
 
 @extends('frontend.master')
+@include('frontend.partials.header')
 
 @section('content')
 
 
 <div class="flex justify-center items-center w-screen h-screen">
     <div class="flex content-center">
-        <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+        <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                                 {{ csrf_field() }}
-            <div class="text-blue-lightest shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col bg-blue-dark">
+            <div class="text-blue-lightest shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col bg-blue-dark ">
 
                 <div class="flex items-center justify-between">
-                    <a href="#"><img src="{{ asset('/images/slack-button.png') }}" class="shadow appearance-none border rounded w-full py-2 px-3 bg-white"></a>
+                    <a href="{{ route('login.slack') }}"><img src="{{ asset('/images/slack-button.png') }}" class="shadow appearance-none border rounded w-full py-2 px-3 bg-white"></a>
                 </div>
                 </br>
                 <div class="text-white font-bold flex content-center">
@@ -35,7 +36,7 @@
                     <label class="block text-blue-lightest text-sm font-bold mb-2" for="email">
                         Email
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-blue-lightest" id="name" type="text" name="email" value="{{ old('email') }}" placeholder="Email">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-blue-lightest" id="email" type="text" name="email" value="{{ old('email') }}" placeholder="Email">
         
                     @if ($errors->has('email'))
                     <span class="">
@@ -65,16 +66,27 @@
                     <label class="block text-blue-lightest text-sm font-bold mb-2" for="password">
                         Password
                     </label>
-                    <input class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3" id="password" type="password" placeholder="******************">
-                    <!-- <p class="text-red text-xs italic">Please choose a password.</p> -->
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3" id="password" name="password" type="password" placeholder="******************">
+                    @if ($errors->has('password'))
+                    <span class="">
+                        <strong>{{ $errors->first('password') }}</strong>
+                    </span>
+                    @endif
+
+                    <label class="block text-blue-lightest text-sm font-bold mb-2" for="password-confirm">
+                        Confirm Password
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3" id="password-confirm" type="password" name="password_confirmation" placeholder="******************">
+                    @if ($errors->has('password'))
+                    <span class="">
+                        <strong>{{ $errors->first('password') }}</strong>
+                    </span>
+                    @endif
                 </div>
                 <div class="flex items-center justify-between">
-                <button class="bg-red hover:bg-red-dark text-white font-bold py-2 px-4 rounded" type="button">
-                    Sign In
+                <button class="bg-red hover:bg-red-dark text-white font-bold py-2 px-4 rounded" type="submit">
+                    Register
                 </button>
-                <a class="inline-block align-baseline font-bold text-sm text-white hover:text-blue-darker" href="{{ route('password.request') }}">
-                    Forgot </br> Password?
-                </a>
                 </div>
             </div>
         </form>
