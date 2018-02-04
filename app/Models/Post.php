@@ -46,7 +46,7 @@ class Post extends Model
      */
     public function getUrlAttribute()
     {
-        return route('posts.show', $this);
+        return route('frontend.posts.show', [$this->post_type, $this]);
     }
 
     /**

@@ -59,7 +59,7 @@ class PostTest extends TestCase
     public function it_can_tell_you_its_url()
     {
         $post = factory('App\Models\Post')->create();
-        $url = route('posts.show', $post);
+        $url = route('frontend.posts.show', [$post->post_type, $post]);
         $this->assertEquals($url, $post->url);
     }
 
