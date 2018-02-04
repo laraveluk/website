@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Ajax;
+namespace App\Http\Controllers\Api;
 
 use Log;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class MemberController extends Controller
+class UserController extends Controller
 {
     public function index()
     {

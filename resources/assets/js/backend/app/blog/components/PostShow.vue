@@ -26,7 +26,7 @@
                             <a href="#" @click.prevent="editMode = !editMode" class="bg-red-light hover:bg-red text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded">Cancel</a>
                             <a href="#" @click.prevent="savePost()" class="bg-green-light hover:bg-green text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded">Save</a>
                         </div>
-                        <div v-else>    
+                        <div v-else>
                             <a href="#" @click.prevent="deletePost()" class="bg-red hover:bg-red-dark text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded">Delete Post</a>
                             <a href="#" @click.prevent="editPost()" class="bg-blue-light hover:bg-blue text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded">Edit Post</a>
                         </div>
@@ -50,7 +50,7 @@
         },
         methods: {
             getPost(slug) {
-                axios.get(`/ajax/posts/${slug}`)
+                axios.get(`/api/post/${slug}`)
                     .then(({data}) => {
                         this.post = data.post
                     })
@@ -60,14 +60,14 @@
             },
             savePost() {
                 let slug = this.$route.params.slug
-                axios.patch(`/ajax/posts/${slug}`, this.post)
+                axios.patch(`/api/post/${slug}`, this.post)
                     .then(({data}) => {
                         this.editMode = !this.editMode
                     })
             },
             deletePost() {
                 let slug = this.$route.params.slug
-                axios.delete(`/ajax/posts/${slug}`, this.post)
+                axios.delete(`/api/post/${slug}`, this.post)
                     .then(({data}) => {
                         if (data.status == 'deleted') {
                             console.log('post deleted')
