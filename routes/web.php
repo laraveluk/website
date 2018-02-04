@@ -1,5 +1,8 @@
 <?php
 
+/** Redirects*/
+Route::redirect('tutorials', '/blog/tutorials');
+
 /** Page Routes */
 Route::get('/', 'PagesController@homePage')->name('home');
 Route::get('/laravel-people', 'PagesController@laravelPeople')->name('laravelpeeps');
@@ -22,5 +25,5 @@ Route::prefix('blog')->namespace('Blog')->group(function () {
     Route::post('/{type}/{post}/comment', 'CommentController@store')->name('frontend.comments.store');
 });
 
-Route::redirect('tutorials', '/blog/tutorials');
-
+/** Profile Show Route */
+Route::get('profiles/{id}', 'ProfileShowController')->name('profile');

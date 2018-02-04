@@ -34,6 +34,8 @@ class SlackLoginController extends Controller
             $user->update([
                 'name' => $slackUser->getName(),
                 'email' => $slackUser->getEmail(),
+                'avatar' => $slackUser->getAvatar(),
+                'nickname' => $slackUser->getNickname()
             ]);
 
             Log::debug("{$slackUser->getName()} logged in with Slack");
@@ -45,6 +47,8 @@ class SlackLoginController extends Controller
                 'slack_id' => $slackUser->getId(),
                 'name' => $slackUser->getName(),
                 'email' => $slackUser->getEmail(),
+                'avatar' => $slackUser->getAvatar(),
+                'nickname' => $slackUser->getNickname(),
                 'password' => bcrypt(str_random(16)),
             ]);
 
