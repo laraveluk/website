@@ -1,8 +1,6 @@
 #!/bin/sh
 
-env = $1
-
-if [ $env -eq 'github' ]
+if [ $1 -eq 'github' ]
 then
     # activate maintenance mode
     php artisan down
