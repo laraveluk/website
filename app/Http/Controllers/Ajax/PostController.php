@@ -49,7 +49,6 @@ class PostController extends Controller
         $post = new Post;
 
         $post->title = $request->data['title'];
-        $post->slug = str_slug($request->data['title']);
         $post->body = $request->data['body'];
         $post->user_id = auth()->id();
         $post->save();
