@@ -16,6 +16,6 @@ class PostTagController extends Controller
      */
     public function show($tag)
     {
-        // return Post::withAnyTags([$tag])->get();
+        return Post::withAnyTags([$tag])->get();
     }
 }
