@@ -35,7 +35,44 @@
                     </div>
                 </p>
             </div>
+        </div>
+    
+        @foreach ($post->comments as $comment)
+        <div class="w-full rounded bg-white overflow-hidden shadow-lg mt-6">
+            <div class="px-6 py-4">
+                <div class="flex items-center">
+                    <div class="w-1/4 mb-2 p-2">
+                        <div class="inline-block">
+                            <img class="w-10 h-10 rounded-full mr-4 " src="https://pbs.twimg.com/profile_images/885868801232961537/b1F6H4KC_400x400.jpg" alt="Avatar of Jonathan Reinink">
+                        </div>
+                        <div class="inline-block">
+                            <p class="text-black leading-none">{{$comment->author->name}}</p>
+                            <p class="text-grey-dark">{{$comment->created_at->format('jS M Y H:i')}}</p>
+                        </div>
+                    </div>
+                    <div class="w-3/4 mb-2 p-2">
+                        {{$comment->body}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
 
+        <div class="w-full rounded bg-white overflow-hidden shadow-lg mt-6">
+            <form action="{{route('frontend.comments.store', [$post->post_type, $post])}}" method="POST">
+                {{csrf_field()}}
+                <div class="px-6 py-4">
+                    <div class="mb-2">Leave a Comment</div>
+                    <div class="mb-6">
+                        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" rows="5" name="body" id="body"></textarea>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" type="submit">
+                            Leave Comment
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 @endsection

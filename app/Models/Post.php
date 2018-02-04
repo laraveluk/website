@@ -68,4 +68,14 @@ class Post extends Model
     {
         return $this->belongsTo(\App\Models\User::class, 'user_id');
     }
+
+    /**
+     * A post has and belongs to many comments
+     * 
+     * @return Illuminate\Database\Eloquent\Relations\MorphMany
+     */
+    public function comments()
+    {
+        return $this->morphMany(\App\Models\Comment::class, 'commentable');
+    }
 }

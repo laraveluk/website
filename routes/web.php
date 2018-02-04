@@ -18,6 +18,9 @@ Route::prefix('blog')->namespace('Blog')->group(function () {
     Route::get('/tag/{tag}', 'PostTagController@show')->name('frontend.posts.tags.show');
     Route::get('/{type?}', 'PostController@index')->name('frontend.posts.index');
     Route::get('/{type}/{post}', 'PostController@show')->name('frontend.posts.show');
+    /** Comment Routes */
+    Route::post('/{type}/{post}/comment', 'CommentController@store')->name('frontend.comments.store');
 });
 
 Route::redirect('tutorials', '/blog/tutorials');
+
