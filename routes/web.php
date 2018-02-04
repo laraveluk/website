@@ -13,5 +13,12 @@ Route::get('login/slack', 'Auth\SlackLoginController@redirectToProvider')->name(
 Route::get('login/slack/callback', 'Auth\SlackLoginController@handleProviderCallback');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
+/** Blog Routes */
+Route::prefix('blog')->namespace('Blog')->group(function () {
+    Route::get('/tag/{tag}', 'PostTagController@show')->name('frontend.posts.tags.show');
+    Route::get('/{type?}', 'PostController@index')->name('frontend.posts.index');
+    Route::get('/{type}/{post}', 'PostController@show')->name('frontend.posts.show');
+});
+
 /** Profile Show Route */
 Route::get('profiles/{id}', 'ProfileShowController')->name('profile');

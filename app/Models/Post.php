@@ -3,14 +3,15 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentTaggable\Taggable;
 use Cviebrock\EloquentSluggable\Sluggable;
 
 class Post extends Model
 {
-    use Sluggable;
+    use Sluggable, Taggable;
 
     /** @var array $fillable */
-    protected $fillable = ['title', 'body', 'slug', 'user_id'];
+    protected $fillable = ['title', 'body', 'slug', 'user_id', 'post_type'];
     /** @var array $appends */
     protected $appends = ['excerpt'];
 
@@ -45,7 +46,7 @@ class Post extends Model
      */
     public function getUrlAttribute()
     {
-        return route('posts.show', $this);
+        return route('frontend.posts.show', [$this->post_type, $this]);
     }
 
     /**
