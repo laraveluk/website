@@ -26,15 +26,22 @@
                         <div class="pointer-events-none absolute pin-y pin-r flex items-center px-2 text-grey-darker">
                             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                         </div>
-
                     </div>
+
                     <div class="mb-6">
                         <label class="block text-grey-darker text-sm font-bold mb-2" for="body">
                             Content
                         </label>
                         <wysiwyg v-model="post.body" />
-                        <!-- <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3" rows="15" v-model="post.body"></textarea> -->
                     </div>
+
+                    <div class="mb-4">
+                        <label class="block text-grey-darker text-sm font-bold mb-2" for="title">
+                            Tags
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" v-model="post.tags">
+                    </div>
+
                     <div class="flex items-center justify-between">
                         <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" @click="savePost">
                             Create Post
@@ -53,7 +60,8 @@
                 post: {
                     title: '',
                     body: '',
-                    post_type: 'post'
+                    post_type: 'post',
+                    tags: ''
                 }
             }
         },
