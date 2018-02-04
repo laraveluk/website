@@ -9,15 +9,20 @@
                     LaravelUK
                 </div>
                 <div class="w-1/4 md:w-auto md:flex text-right">
-                    <div>
-                        <img class="inline-block h-8 w-8 rounded-full" src="https://avatars0.githubusercontent.com/u/526063?s=40&v=4" alt="">
+
+                <dropdown>
+                    <span slot="link" class="appearance-none flex items-center inline-block text-white font-medium bg-blue hover:bg-blue-dark px-4 py-2 rounded">
+                        <img class="inline-block h-8 w-8 rounded-full" :src="user.avatar" alt="user.name">
+                        <span class="ml-2 mr-1">{{ user.name }}</span>
+                        <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg>
+                    </span>
+                    <div slot="dropdown" class="bg-white shadow rounded border overflow-hidden">
+                        <a href="/logout" class="no-underline block px-4 py-3 border-b text-grey-darkest bg-white hover:text-white hover:bg-blue whitespace-no-wrap">Log out</a>
                     </div>
-                    <div class="hidden md:block md:flex md:items-center ml-2">
-                        <span class="text-white text-sm mr-1">Steve Popoola</span>
-                        <div>
-                            <svg class="fill-current text-white h-4 w-4 block opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M4.516 7.548c.436-.446 1.043-.481 1.576 0L10 11.295l3.908-3.747c.533-.481 1.141-.446 1.574 0 .436.445.408 1.197 0 1.615-.406.418-4.695 4.502-4.695 4.502a1.095 1.095 0 0 1-1.576 0S4.924 9.581 4.516 9.163c-.409-.418-.436-1.17 0-1.615z"/></svg>
-                        </div>
-                    </div>
+                </dropdown>
+
                 </div>
             </div>
         </div>
@@ -26,7 +31,16 @@
 
 <script>
     export default {
+        data(){
+            return {
+                'user': null,
+            }
+        },
+        mounted(){
+            console.debug('mounted');
 
+            this.user = window.App.user;
+        }
     }
 </script>
 

@@ -7,6 +7,7 @@ window.axios = require('axios')
 
 Vue.component('app', require('./components/App'));
 Vue.component('navbar', require('./components/Navbar'));
+Vue.component('dropdown', require('../components/Dropdown'));
 
 const app = new Vue({
     router: router,
