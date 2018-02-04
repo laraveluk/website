@@ -12,3 +12,6 @@ Auth::routes();
 Route::get('login/slack', 'Auth\SlackLoginController@redirectToProvider')->name('login.slack');;
 Route::get('login/slack/callback', 'Auth\SlackLoginController@handleProviderCallback');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+
+/** Profile Show Route */
+Route::get('profiles/{id}', 'ProfileShowController')->name('profile');

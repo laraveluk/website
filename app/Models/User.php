@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Post;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -16,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'location', 'password', 'slack_id'
+        'name', 'email', 'location', 'password', 'slack_id', 'avatar', 'nickname', 'slug'
     ];
 
     /**
@@ -31,10 +30,20 @@ class User extends Authenticatable
     /**
      * A user has many posts
      *
-     * @return Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany;
      */
     public function posts()
     {
         return $this->hasMany(Post::class);
+    }
+
+    /**
+     * A user has one profile
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne;
+     */
+    public function profile()
+    {
+        return $this->hasOne(Profile::class)->with('socialLinks');
     }
 }
