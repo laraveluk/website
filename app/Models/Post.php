@@ -56,7 +56,7 @@ class Post extends Model
      */
     public function getExcerptAttribute()
     {
-        return str_limit($this->body, 140);
+        return str_limit(strip_tags($this->body), 140);
     }
 
     /**
