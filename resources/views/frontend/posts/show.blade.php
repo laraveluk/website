@@ -57,7 +57,7 @@
             </div>
         </div>
         @endforeach
-
+        @if (auth()->check())
         <div class="w-full rounded bg-white overflow-hidden shadow-lg mt-6">
             <form action="{{route('frontend.comments.store', [$post->post_type, $post])}}" method="POST">
                 {{csrf_field()}}
@@ -74,5 +74,18 @@
                 </div>
             </form>
         </div>
+        @else
+        <div class="w-full rounded bg-white overflow-hidden shadow-lg mt-6">
+            <div class="px-6 py-4 text-center">
+                <div class="text-grey-darker p-2">Log in or sign up to leave a comment.</div>
+                <div class="text-grey-darker bg-grey p-2">
+                    <p>Sign In With</p>
+                    <a href="{{ route('login.slack') }}">
+                        <img src="{{ asset('/images/slack-button.png') }}" class="rounded py-2 px-3 bg-white hover:bg-green-lighter w-32">
+                    </a>
+                </div>
+            </div>
+        </div>
+        @endif
     </div>
 @endsection
