@@ -14,8 +14,7 @@
     <article class="max-w-2xl mx-auto">
         <header class="p-8 text-center">
             @if (auth()->check())
-            {{-- @todo authorization --}}
-            <a href="{{route('posts.create')}}" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 float-right no-underline rounded">Create Post</a>
+            <a href="/members/#/blog/create" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 float-right no-underline rounded">Create Post</a>
             @endif
             <h1 class="tracking-tight text-5xl text-red">LaravelUK - News and Updates</h1>
         </header>
@@ -25,7 +24,7 @@
             <div class="w-full sm:w-full md:w-1/2 mb-4 bg-grey">
                 <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal m-2">
                     <div class="mb-8">
-                        <div class="text-black font-bold text-xl mb-2"><a href="{{$post->url}}">{{$post->title}}</a></div>
+                        <div class="text-black font-bold text-xl mb-2"><a href="{{route('frontend.posts.show', $post)}}" class="no-underline">{{$post->title}}</a></div>
                         <p class="text-grey-darker text-base">{{$post->excerpt}}</p>
                     </div>
                     <div class="flex items-center">
