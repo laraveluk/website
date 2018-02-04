@@ -17,8 +17,8 @@ class ProfileShowController extends Controller
      */
     public function __invoke($id)
     {
-        $profile = User::with('profile')->findOrFail($id);
+        $user = User::with('profile')->findOrFail($id)->toArray();
 
-        dd($profile);
+        return view('frontend.profile', compact('user'));
     }
 }
