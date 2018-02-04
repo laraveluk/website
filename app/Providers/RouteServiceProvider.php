@@ -23,8 +23,6 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
-
         parent::boot();
     }
 
@@ -38,8 +36,6 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapApiRoutes();
 
         $this->mapWebRoutes();
-
-        $this->mapAjaxRoutes();
     }
 
     /**
@@ -59,31 +55,18 @@ class RouteServiceProvider extends ServiceProvider
     /**
      * Define the "api" routes for the application.
      *
-     * These routes are typically stateless.
+    * These routes all receive session state, CSRF protection, etc.
+     * and provide an API for the various Vue components to use
      *
      * @return void
      */
     protected function mapApiRoutes()
     {
         Route::prefix('api')
-             ->middleware('api')
-             ->namespace($this->namespace)
+             ->name('api.')
+            // ->middleware('api')
+             ->namespace($this->namespace.'\Api')
              ->group(base_path('routes/api.php'));
     }
 
-    /**
-     * Define the "ajax" routes for the application.
-     *
-     * These routes all receive session state, CSRF protection, etc.
-     * and provide an API for the various Vue components to use
-     *
-     * @return void
-     */
-    protected function mapAjaxRoutes()
-    {
-        Route::prefix('ajax')
-             ->middleware(['web', 'auth'])
-             ->namespace($this->namespace.'\Ajax')
-             ->group(base_path('routes/ajax.php'));
-    }
 }

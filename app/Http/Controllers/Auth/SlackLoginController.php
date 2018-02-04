@@ -29,7 +29,7 @@ class SlackLoginController extends Controller
     {
         $slackUser = Socialite::driver('slack')->user();
 
-        if ($user = User::where('slack_id', $slackUser->getId())) { // User already exists, so sign them back in
+        if ($user = User::where('slack_id', $slackUser->getId())->first()) { // User already exists, so sign them back in
 
             $user->update([
                 'name' => $slackUser->getName(),
@@ -54,6 +54,6 @@ class SlackLoginController extends Controller
 
         Auth::login($user);
 
-        return view('frontend.welcome', compact('user'));
+        return redirect()->route('home');
     }
 }

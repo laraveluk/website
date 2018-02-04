@@ -67,7 +67,7 @@
         },
         methods: {
             savePost() {
-                axios.post('/ajax/posts', { data: this.post })
+                axios.post('/api/post', { data: this.post })
                     .then(({data}) => {
                         this.$router.push(`/blog/${data.post.slug}`)
                     })
