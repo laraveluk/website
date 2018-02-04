@@ -17,6 +17,9 @@ composer install --no-interaction --no-dev --prefer-dist
 php artisan migrate --force
 	# --force		Required to run when in production.
 
+# Install frontend assets
+yarn prod
+
 
 # stop maintenance mode
 php artisan up

@@ -10,13 +10,31 @@
                             </div>
                         </div>
 
-                        <div class="text-grey-darker items-center border-b -mx-4 px-6 py-2">
+                        <div class="text-grey-darker items-center border-b -mx-4 px-6 py-1">
                             <div class="flex justify-between">
-                                <div class="title">Article Title</div>
-                                <div class="title">Author</div>
-                                <div class="title">Published date</div>
+                                <div class="flex-1 text-grey-darker  px-4 py-2 mb-1">Article Title</div>
+                                <div class="flex-1 text-grey-darker  px-4 py-2 mb-1">Author</div>
+                                <div class="flex-1 text-grey-darker  px-4 py-2 mb-1">Published date</div>
                             </div>
                         </div>
+
+                        <div class="text-grey-darker items-center border-b -mx-4 px-6 py-1" v-for="post in posts">
+                            <div class="flex justify-between">
+                                <div class="flex-1 text-grey-darker  px-4 py-2 mb-1">
+                                    <router-link :to="{name: 'post-show', params: { slug: post.slug} }" class="no-underline" v-text="post.title"></router-link>
+                                </div>
+                                <div class="flex-1 text-grey-darker  px-4 py-2 mb-1">{{post.author.name}}</div>
+                                <div class="flex-1 text-grey-darker  px-4 py-2 mb-1">{{post.created_at}}</div>
+                            </div>
+                        </div>
+
+                        <div class="text-grey-darker items-center border-b -mx-4 px-6 py-1">
+                            <div v-if="page > 1">
+                                <a @click.prevent="prevPage" href="#" class="flex-1 px-4 py-2 mb-1 float-left">Previous Page</a>
+                            </div>
+                            <a @click.prevent="nextPage" href="#" class="flex-1 px-4 py-2 mb-1 float-right">Next Page</a>
+                        </div>
+
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 px-4">
@@ -42,7 +60,29 @@
 
 <script>
     export default {
-
+        data() {
+            return { 
+                page: 1,
+                posts: this.getPosts(1)
+            }
+        },
+        methods: {
+            getPosts(page) {
+                console.log('posts for page '+ page)
+                axios.get(`/ajax/posts?page=${page}`)
+                    .then(({data}) => {
+                        this.posts = data.posts
+                    })
+            },
+            nextPage() {
+                this.page = this.page + 1
+                this.posts = this.getPosts(this.page)
+            },
+            prevPage() {
+                this.page = this.page - 1
+                this.posts = this.getPosts(this.page)
+            }
+        }
     }
 </script>
 

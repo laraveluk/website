@@ -1,4 +1,4 @@
-import { PostsList, PostRow } from '../components/index'
+import { PostsList, PostShow, PostCreate } from '../components/index'
 
 export default [
     {
@@ -6,10 +6,14 @@ export default [
         component: PostsList,
         name: 'posts-lists',
     },
-
     {
-        path: '/blog/:id',
-        component: PostRow,
-        name: 'posts-row',
+        path: '/blog/create',
+        component: PostCreate,
+        name: 'post-create'
+    },
+    {
+        path: '/blog/:slug',
+        component: PostShow,
+        name: 'post-show'
     }
 ]

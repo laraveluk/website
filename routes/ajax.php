@@ -11,5 +11,7 @@ Route::resource('members', 'MemberController', ['only' => [
 Route::resource('posts', 'PostController', ['only' => [
     'index',
     'show',
+    'store',
     'update',
+    'destroy'
 ]]);
