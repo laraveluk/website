@@ -1669,6 +1669,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -1730,8 +1731,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
 //
 //
 //
@@ -20328,44 +20327,36 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "mb-6" }, [
-                _c(
-                  "label",
-                  {
-                    staticClass:
-                      "block text-grey-darker text-sm font-bold mb-2",
-                    attrs: { for: "body" }
-                  },
-                  [
-                    _vm._v(
-                      "\n                        Content\n                    "
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c("textarea", {
-                  directives: [
+              _c(
+                "div",
+                { staticClass: "mb-6" },
+                [
+                  _c(
+                    "label",
                     {
-                      name: "model",
-                      rawName: "v-model",
+                      staticClass:
+                        "block text-grey-darker text-sm font-bold mb-2",
+                      attrs: { for: "body" }
+                    },
+                    [
+                      _vm._v(
+                        "\n                        Content\n                    "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("wysiwyg", {
+                    model: {
                       value: _vm.post.body,
+                      callback: function($$v) {
+                        _vm.$set(_vm.post, "body", $$v)
+                      },
                       expression: "post.body"
                     }
-                  ],
-                  staticClass:
-                    "shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3",
-                  attrs: { rows: "15" },
-                  domProps: { value: _vm.post.body },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.post, "body", $event.target.value)
-                    }
-                  }
-                })
-              ]),
+                  })
+                ],
+                1
+              ),
               _vm._v(" "),
               _c("div", { staticClass: "flex items-center justify-between" }, [
                 _c(
@@ -20469,49 +20460,27 @@ var render = function() {
             ]),
             _vm._v(" "),
             this.editMode
-              ? _c("div", [
-                  _c(
-                    "textarea",
-                    {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.post.body,
-                          expression: "post.body"
-                        }
-                      ],
-                      staticClass:
-                        "shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3",
-                      attrs: { rows: "10" },
-                      domProps: { value: _vm.post.body },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.post, "body", $event.target.value)
-                        }
+              ? _c(
+                  "div",
+                  [
+                    _c("wysiwyg", {
+                      model: {
+                        value: _vm.post.body,
+                        callback: function($$v) {
+                          _vm.$set(_vm.post, "body", $$v)
+                        },
+                        expression: "post.body"
                       }
-                    },
-                    [_vm._v(_vm._s(_vm.post.body))]
-                  )
-                ])
+                    })
+                  ],
+                  1
+                )
               : _c("div", [
-                  _c(
-                    "p",
-                    {
-                      staticClass:
-                        "text-grey-darker text-base pt-2 pb-2 mb-2 mt-2"
-                    },
-                    [
-                      _vm._v(
-                        "\n                        " +
-                          _vm._s(_vm.post.body) +
-                          "\n                    "
-                      )
-                    ]
-                  )
+                  _c("p", {
+                    staticClass:
+                      "text-grey-darker text-base pt-2 pb-2 mb-2 mt-2",
+                    domProps: { innerHTML: _vm._s(_vm.post.body) }
+                  })
                 ]),
             _vm._v(" "),
             _c("div", { staticClass: "px-1 py-4 mb-4" }, [
@@ -34713,7 +34682,12 @@ module.exports = Component.exports
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PostCreate; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__("./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
+throw new Error("Cannot find module \"vue-wysiwyg\"");
+throw new Error("Cannot find module \"vue-wysiwyg/dist/vueWysiwyg.css\"");
 
+
+
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_wysiwyg___default.a, {});
 
 var PostsList = __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('posts-lists', __webpack_require__("./resources/assets/js/backend/app/blog/components/PostsList.vue"));
 var PostShow = __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('post-show', __webpack_require__("./resources/assets/js/backend/app/blog/components/PostShow.vue"));
