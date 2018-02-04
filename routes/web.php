@@ -1,5 +1,8 @@
 <?php
 
+/** Redirects*/
+Route::redirect('tutorials', '/blog/tutorials');
+
 /** Page Routes */
 Route::get('/', 'PagesController@homePage')->name('home');
 Route::get('/laravel-people', 'PagesController@laravelPeople')->name('laravelpeeps');
