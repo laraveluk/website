@@ -26,6 +26,7 @@
         </header>
     </article>
     <div class="flex flex-wrap max-w-2xl mx-auto">
+        @unless($posts->isEmpty())
         @foreach($posts as $post)
             <div class="w-full sm:w-full md:w-1/2 mb-4 bg-grey">
                 <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal m-2">
@@ -59,5 +60,18 @@
                 </div>
             </div>
         @endforeach
+        @else
+            <div class="w-full mb-4 bg-grey">
+                <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal m-2">
+                    <h2 class="text-center">
+                        @if (request()->type)
+                        There are no {{request()->type}} yet. Check back soon!
+                        @else
+                        There are no posts yet.
+                        @endif
+                    </h2>
+                </div>
+            </div>
+        @endunless
     </div>
 @endsection
