@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index($postType = 'post')
     {
-        $posts = Post::with('author')->where('post_type', $postType)->get()->sortByDesc('created_at');
+        $posts = Post::with('author', 'tags')->where('post_type', $postType)->get()->sortByDesc('created_at');
 
         return \view('frontend.posts.index', compact('posts'));
     }

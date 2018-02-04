@@ -23,13 +23,19 @@
                 <div class="mb-2">Posted by <a href="">{{$post->author->name}}</a> - {{ $post->created_at->format('jS F Y') }}</div>
                 <p class="text-grey-darker text-base">
                     {!! nl2br($post->body) !!}
+                    <div class="px-1 py-4 mb-4">
                     @if (auth()->check())
-                        <div class="px-1 py-4 mb-4">
-                            <a href="/members/#/blog/{{$post->slug}}" class="bg-blue-light hover:bg-blue text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded">View / Edit in Backend</a>
-                        </div>
+                        <a href="/members/#/blog/{{$post->slug}}" class="bg-blue-light hover:bg-blue text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded">View / Edit in Backend</a>
                     @endif
+                    @foreach ($post->tags as $tag)
+                        <button class="bg-transparent border border-blue hover:bg-blue hover:text-white text-blue font-bold py-2 px-4 mx-1 float-right no-underline rounded">
+                            {{$tag->name}}
+                        </button>
+                    @endforeach
+                    </div>
                 </p>
             </div>
+
         </div>
     </div>
 @endsection

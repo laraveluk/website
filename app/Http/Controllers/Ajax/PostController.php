@@ -55,16 +55,14 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $post = new Post;
-
-        $tags = explode(',', $request->data['tags']);
-
         $post->title = $request->data['title'];
         $post->body = $request->data['body'];
         $post->post_type = $request->data['post_type'] ?? 'post';
         $post->user_id = auth()->id();
-        // $post->tags = $tags;
         $post->save();
 
+        $tags = explode(',', $request->data['tags']);
+        $tags = array_filter($tags);
         foreach ($tags as $tag) {
             $post->attachTag($tag);
         }
