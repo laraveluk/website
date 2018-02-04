@@ -10,7 +10,7 @@ class Post extends Model
     use Sluggable;
 
     /** @var array $fillable */
-    protected $fillable = ['title', 'body', 'slug', 'user_id'];
+    protected $fillable = ['title', 'body', 'slug', 'user_id', 'post_type'];
     /** @var array $appends */
     protected $appends = ['excerpt'];
 

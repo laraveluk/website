@@ -14,6 +14,20 @@
                         <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" v-model="post.title">
                     </div>
 
+                    <div class="mb-4">
+                        <label class="block text-grey-darker text-sm font-bold mb-2">
+                            Post Type
+                        </label>
+                        <select class="block appearance-none w-full bg-white border border-grey-light hover:border-grey px-4 py-2 pr-8 rounded shadow" v-model="post.post_type">
+                            <option value="post">News</option>
+                            <option value="events">Event</option>
+                            <option value="tutorials">Tutorial</option>
+                        </select>
+                        <div class="pointer-events-none absolute pin-y pin-r flex items-center px-2 text-grey-darker">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </div>
+
+                    </div>
                     <div class="mb-6">
                         <label class="block text-grey-darker text-sm font-bold mb-2" for="body">
                             Content
@@ -38,7 +52,8 @@
             return {
                 post: {
                     title: '',
-                    body: ''
+                    body: '',
+                    post_type: 'post'
                 }
             }
         },
