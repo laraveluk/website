@@ -18,3 +18,5 @@ Route::prefix('blog')->group(function () {
     Route::get('/{type?}', 'PostController@index')->name('frontend.posts.index');
     Route::get('/{type}/{post}', 'PostController@show')->name('frontend.posts.show');
 });
+
+Route::redirect('tutorials', '/blog/tutorials');

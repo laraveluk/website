@@ -14,7 +14,13 @@
     <article class="max-w-2xl mx-auto">
         <header class="p-8 text-center">
             @if (auth()->check())
-            <a href="/members/#/blog/create" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 float-right no-underline rounded">Create Post</a>
+            <a href="/members/#/blog/create" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 float-right no-underline rounded">
+                @if (request()->type)
+                    Create {{ucwords(str_singular(request()->type))}}
+                @else
+                    Create Post
+                @endif
+            </a>
             @endif
             <h1 class="tracking-tight text-5xl text-red">LaravelUK - News and Updates</h1>
         </header>
