@@ -16,12 +16,10 @@
                 <div class="px-6 py-4">
                     <div class="mb-2">Posted by <a href="">{{post.author.name}}</a> - {{ post.created_at }}</div>
                     <div v-if="this.editMode">
-                        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3" v-model="post.body" rows="10">{{post.body}}</textarea>
+                        <wysiwyg v-model="post.body" />
                     </div>
                     <div v-else>
-                        <p class="text-grey-darker text-base pt-2 pb-2 mb-2 mt-2">
-                            {{ post.body }}
-                        </p>
+                        <p class="text-grey-darker text-base pt-2 pb-2 mb-2 mt-2" v-html="post.body"></p>
                     </div>
                     <div class="px-1 py-4 mb-4">
                         <div v-if="this.editMode">
