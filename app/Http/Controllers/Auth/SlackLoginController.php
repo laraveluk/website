@@ -29,7 +29,7 @@ class SlackLoginController extends Controller
     {
         $slackUser = Socialite::driver('slack')->user();
 
-        Log::debug("{$slackUser->getName()} logged in with Slack");
+        Log::debug("{$slackUser->getName()} ({$slackUser->getId()}) logged in with Slack");
 
         $user = User::updateOrCreate([
             'slack_id' => $slackUser->getId()
