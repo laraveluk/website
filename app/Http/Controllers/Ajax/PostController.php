@@ -14,9 +14,17 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::with('author')->orderBy('created_at', 'DESC')->get();
+        $page = $request->page;
+
+        $posts = Post::with('author')->orderBy('created_at', 'DESC');
+
+        if (!$page) {
+            $posts = $posts->get();
+        } else {
+            $posts = $posts->take(10)->offset($page * 10)->get();
+        }
 
         return response()->json([
             'posts' => $posts

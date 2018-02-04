@@ -1934,23 +1934,42 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            posts: this.getPosts()
+            page: 1,
+            posts: this.getPosts(1)
         };
     },
 
     methods: {
-        getPosts: function getPosts() {
+        getPosts: function getPosts(page) {
             var _this = this;
 
-            axios.get('/ajax/posts').then(function (_ref) {
+            console.log('posts for page ' + page);
+            axios.get('/ajax/posts?page=' + page).then(function (_ref) {
                 var data = _ref.data;
 
                 _this.posts = data.posts;
             });
+        },
+        nextPage: function nextPage() {
+            this.page = this.page + 1;
+            this.posts = this.getPosts(this.page);
+        },
+        prevPage: function prevPage() {
+            this.page = this.page - 1;
+            this.posts = this.getPosts(this.page);
         }
     }
 });
@@ -20057,7 +20076,7 @@ var render = function() {
                         "div",
                         {
                           staticClass:
-                            "text-grey-darker items-center border-b -mx-4 px-6 py-2"
+                            "text-grey-darker items-center border-b -mx-4 px-6 py-1"
                         },
                         [
                           _c("div", { staticClass: "flex justify-between" }, [
@@ -20065,16 +20084,28 @@ var render = function() {
                               "div",
                               {
                                 staticClass:
-                                  "flex-1 text-grey-darker text-center px-4 py-2 mb-1"
+                                  "flex-1 text-grey-darker  px-4 py-2 mb-1"
                               },
-                              [_vm._v(_vm._s(post.title))]
+                              [
+                                _c("router-link", {
+                                  staticClass: "no-underline",
+                                  attrs: {
+                                    to: {
+                                      name: "post-show",
+                                      params: { slug: post.slug }
+                                    }
+                                  },
+                                  domProps: { textContent: _vm._s(post.title) }
+                                })
+                              ],
+                              1
                             ),
                             _vm._v(" "),
                             _c(
                               "div",
                               {
                                 staticClass:
-                                  "flex-1 text-grey-darker text-center px-4 py-2 mb-1"
+                                  "flex-1 text-grey-darker  px-4 py-2 mb-1"
                               },
                               [_vm._v(_vm._s(post.author.name))]
                             ),
@@ -20083,14 +20114,58 @@ var render = function() {
                               "div",
                               {
                                 staticClass:
-                                  "flex-1 text-grey-darker text-center px-4 py-2 mb-1"
+                                  "flex-1 text-grey-darker  px-4 py-2 mb-1"
                               },
                               [_vm._v(_vm._s(post.created_at))]
                             )
                           ])
                         ]
                       )
-                    })
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "text-grey-darker items-center border-b -mx-4 px-6 py-1"
+                      },
+                      [
+                        _vm.page > 1
+                          ? _c("div", [
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "flex-1 px-4 py-2 mb-1 float-left",
+                                  attrs: { href: "#" },
+                                  on: {
+                                    click: function($event) {
+                                      $event.preventDefault()
+                                      _vm.prevPage($event)
+                                    }
+                                  }
+                                },
+                                [_vm._v("Previous Page")]
+                              )
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "flex-1 px-4 py-2 mb-1 float-right",
+                            attrs: { href: "#" },
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                _vm.nextPage($event)
+                              }
+                            }
+                          },
+                          [_vm._v("Next Page")]
+                        )
+                      ]
+                    )
                   ],
                   2
                 )
@@ -20123,30 +20198,24 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "text-grey-darker items-center border-b -mx-4 px-6 py-2" },
+      { staticClass: "text-grey-darker items-center border-b -mx-4 px-6 py-1" },
       [
         _c("div", { staticClass: "flex justify-between" }, [
           _c(
             "div",
-            {
-              staticClass: "flex-1 text-grey-darker text-center px-4 py-2 mb-1"
-            },
+            { staticClass: "flex-1 text-grey-darker  px-4 py-2 mb-1" },
             [_vm._v("Article Title")]
           ),
           _vm._v(" "),
           _c(
             "div",
-            {
-              staticClass: "flex-1 text-grey-darker text-center px-4 py-2 mb-1"
-            },
+            { staticClass: "flex-1 text-grey-darker  px-4 py-2 mb-1" },
             [_vm._v("Author")]
           ),
           _vm._v(" "),
           _c(
             "div",
-            {
-              staticClass: "flex-1 text-grey-darker text-center px-4 py-2 mb-1"
-            },
+            { staticClass: "flex-1 text-grey-darker  px-4 py-2 mb-1" },
             [_vm._v("Published date")]
           )
         ])
