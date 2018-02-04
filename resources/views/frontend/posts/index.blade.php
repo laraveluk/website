@@ -23,7 +23,13 @@
             </a>
             @endif
             @if (!isset($title))
-            <h1 class="tracking-tight text-5xl text-red">LaravelUK - News and Updates</h1>
+            <h1 class="tracking-tight text-5xl text-red">
+                @if (request()->type)
+                    LaravelUK - {{ ucwords(request()->type) }}
+                @else
+                    LaravelUK - News and Updates
+                @endif
+            </h1>
             @else
             <h1 class="tracking-tight text-5xl text-red">{{$title}}</h1>
             @endif
