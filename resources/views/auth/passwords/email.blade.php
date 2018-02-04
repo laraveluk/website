@@ -1,12 +1,8 @@
 @extends('frontend.master')
 
-@include('frontend.partials.header')
-
-
 @section('content')
 
-
-
+@include('frontend.partials.header')
 
 <div class="flex justify-center items-center w-screen h-screen">
     <div class="flex content-center">
@@ -25,7 +21,7 @@
                         Email
                     </label>
                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-blue-lightest" id="name" type="text" name="email" value="{{ old('email') }}" placeholder="Email">
-        
+
                     @if ($errors->has('email'))
                     <span class="">
                         <strong>{{ $errors->first('email') }}</strong>
@@ -38,7 +34,7 @@
                     <button class="bg-red hover:bg-red-dark text-white font-bold py-2 px-4 rounded" type="submit">
                         Send Password Reset Link
                     </button>
- 
+
                 </div>
 
             </div>

@@ -1,7 +1,8 @@
 @extends('frontend.master')
-@include('frontend.partials.header')
 
 @section('content')
+
+    @include('frontend.partials.header')
 
     <div class="py-6 pb-8 pt-20 md:pt-16 w-full">
         <div class="h-100 w-full flex items-center justify-center bg-grey-lighter font-sans">
