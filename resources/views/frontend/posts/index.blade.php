@@ -45,11 +45,14 @@
                             @case('post')
                             News
                                 @break
-                            @case('tutorial')
+                            @case('tutorials')
                                 Tutorial
                                 @break
-                            @case('event')
+                            @case('events')
                                 Event
+                                @break
+                            @case('interviews')
+                                Interview
                                 @break
                             @default
                                 News

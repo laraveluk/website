@@ -13,9 +13,13 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($postType = 'post')
+    public function index($postType = null)
     {
-        $posts = Post::with('author', 'tags')->where('post_type', $postType)->get()->sortByDesc('created_at');
+        if (is_null($postType)) {
+            $posts = Post::with('author', 'tags')->get()->sortByDesc('created_at');
+        } else {
+            $posts = Post::with('author', 'tags')->where('post_type', $postType)->get()->sortByDesc('created_at');
+        }
 
         return \view('frontend.posts.index', compact('posts'));
     }
