@@ -12,9 +12,9 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($postType = 'post')
     {
-        $posts = Post::with('author')->get()->sortByDesc('created_at');
+        $posts = Post::with('author')->where('post_type', $postType)->get()->sortByDesc('created_at');
 
         return \view('frontend.posts.index', compact('posts'));
     }
@@ -25,7 +25,7 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show($postType, Post $post)
     {
         return \view('frontend.posts.show', compact('post'));
     }

@@ -23,8 +23,24 @@
         @foreach($posts as $post)
             <div class="w-full sm:w-full md:w-1/2 mb-4 bg-grey">
                 <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal m-2">
+                    <p class="text-sm text-grey-dark flex items-center">
+                        @switch($post->post_type)
+                            @case('post')
+                            News
+                                @break
+                            @case('tutorial')
+                                Tutorial
+                                @break
+                            @case('event')
+                                Event
+                                @break
+                            @default
+                                News
+                                @break
+                        @endswitch
+                    </p>
                     <div class="mb-8">
-                        <div class="text-black font-bold text-xl mb-2"><a href="{{route('frontend.posts.show', $post)}}" class="no-underline">{{$post->title}}</a></div>
+                        <div class="text-black font-bold text-xl mb-2"><a href="{{route('frontend.posts.show', [$post->post_type, $post])}}" class="no-underline">{{$post->title}}</a></div>
                         <p class="text-grey-darker text-base">{{$post->excerpt}}</p>
                     </div>
                     <div class="flex items-center">

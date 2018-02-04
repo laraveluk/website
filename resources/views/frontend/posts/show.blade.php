@@ -13,7 +13,7 @@
     @include('frontend.partials.header')
     <article class="max-w-2xl mx-auto">
         <header class="p-8 text-center">
-            <h1 class="tracking-tight text-5xl text-red">{{$post->title}}</h1>
+            <h1 class="tracking-tight text-4xl text-red">{{$post->title}}</h1>
         </header>
     </article>
     <div class="flex flex-wrap max-w-2xl mx-auto">

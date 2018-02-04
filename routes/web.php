@@ -15,6 +15,6 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 /** Blog Routes */
 Route::prefix('blog')->group(function () {
-    Route::get('/', 'PostController@index')->name('frontend.posts.index');
-    Route::get('{post}', 'PostController@show')->name('frontend.posts.show');
+    Route::get('/{type?}', 'PostController@index')->name('frontend.posts.index');
+    Route::get('/{type}/{post}', 'PostController@show')->name('frontend.posts.show');
 });
