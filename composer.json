@@ -7,8 +7,12 @@
     "require": {
         "php": ">=7.0.0",
         "fideloper/proxy": "~3.3",
+        "joepriest/passwordreset": "^1.2.1",
         "laravel/framework": "5.5.*",
-        "laravel/tinker": "~1.0"
+        "laravel/passport": "^4.0",
+        "laravel/socialite": "^3.0",
+        "laravel/tinker": "~1.0",
+        "socialiteproviders/slack": "^3.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.1",
@@ -35,6 +39,7 @@
     "extra": {
         "laravel": {
             "dont-discover": [
+                "laravel/socialite"
             ]
         }
     },
