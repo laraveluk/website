@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ $1 == 'github' ]
+if [ "$1" = "github" ]
 then
     # activate maintenance mode
     php artisan down
