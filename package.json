@@ -25,6 +25,7 @@
         "animate.css": "^3.5.2",
         "dotenv": "^5.0.0",
         "vue-router": "^3.0.1",
+        "vue-wysiwyg": "^1.4.1",
         "vuex": "^3.0.1"
     }
 }

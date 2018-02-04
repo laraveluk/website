@@ -18,7 +18,8 @@
                         <label class="block text-grey-darker text-sm font-bold mb-2" for="body">
                             Content
                         </label>
-                        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3" rows="15" v-model="post.body"></textarea>
+                        <wysiwyg v-model="post.body" />
+                        <!-- <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3" rows="15" v-model="post.body"></textarea> -->
                     </div>
                     <div class="flex items-center justify-between">
                         <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" @click="savePost">
