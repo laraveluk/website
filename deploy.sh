@@ -18,7 +18,8 @@ php artisan migrate --force
 	# --force		Required to run when in production.
 
 # Install frontend assets
-yarn prod
+yarn
+npm run prod
 
 
 # stop maintenance mode
