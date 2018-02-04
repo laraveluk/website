@@ -10,7 +10,7 @@
 
 @section('content')
     <div class="bgimg">
-        <div class="middle">
+        <div class="middle text-black">
             <h1>Laravelphp.uk Coming Soon!</h1>
             <hr>
 

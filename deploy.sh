@@ -1,5 +1,6 @@
 #!/bin/sh
 
+whoami
 # activate maintenance mode
 php artisan down
 
@@ -19,8 +20,7 @@ php artisan migrate --force
 
 # Install frontend assets
 yarn
-npm run prod
 
-
+yarn run production
 # stop maintenance mode
 php artisan up
