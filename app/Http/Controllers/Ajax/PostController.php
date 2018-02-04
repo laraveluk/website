@@ -9,50 +9,106 @@ use App\Http\Controllers\Controller;
 
 class PostController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        return Post::all();
+        $posts = Post::with('author')->orderBy('created_at', 'DESC')->get();
+
+        return response()->json([
+            'posts' => $posts
+        ]);
     }
 
-    public function show($post_id)
+    /**
+     * Display a post
+     * 
+     * @param App\Models\Post $post
+     * @return Illuminate\Http\Response
+     */
+    public function show(Post $post)
     {
-        return Post::findOrFail($post_id);
+        $post = $post->load('author');
+
+        return response()->json([
+            'post' => $post
+        ]);
     }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
-        // TODO: Add the fillable post fields
-        $post = Post::create($request->only(/* */));
+        $post = new Post;
 
-        if (Auth::user()) {
-            Log::debug(Auth::user()->name . " created post {$post->id}");
+        $post->title = $request->data['title'];
+        $post->slug = str_slug($request->data['title']);
+        $post->body = $request->data['body'];
+        $post->user_id = auth()->id();
+        $post->save();
+
+        if (auth()->user()) {
+            Log::debug(auth()->user()->name . " created post {$post->id}");
         }
 
-        return $post;
+        return response()->json([
+            'post' => $post
+        ]);
     }
 
-    public function update(Request $request, $post_id)
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  Post  $post
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Post $post)
     {
-        $post = Post::findOrFail($post_id);
-
-        // TODO: Add the fillable post fields
-        $post->update($request->only(/* */));
-
-        if (Auth::user()) {
-            Log::debug(Auth::user()->name . " updated post {$post->id}");
+        $post->update([
+            'title' => $request->title ?? $post->title,
+            'body' => $request->body ?? $post->body,
+        ]);
+        
+        if (auth()->user()) {
+            Log::debug(auth()->user()->name . " updated post {$post->id}");
         }
 
-        return $post;
+        return response()->json([
+            'post' => $post
+        ]);
     }
 
-    public function destroy($post_id)
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param Post $post
+     * @return \Illuminate\Http\Response
+     * @throws \Exception
+     */
+    public function destroy(Post $post)
     {
-        Post::findOrFail($post_id)->delete();
-
-        if (Auth::user()) {
-            Log::debug(Auth::user()->name . " deleted post {$post_id}");
+        if ($post->user_id != auth()->id()) {
+            return response([
+                'status' => 'error'
+            ]);
         }
 
-        return response()->json(['message' => "post {$post_id} deleted"]);
+        if (auth()->user()) {
+            Log::debug(auth()->user()->name . " deleted post {$post->id}");
+        }
+
+        $post->delete();
+
+        return response([
+            'status' => 'deleted'
+        ]);
     }
 }
