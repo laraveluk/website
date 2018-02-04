@@ -1,8 +1,5 @@
 <?php
 
-/** Redirects*/
-Route::redirect('tutorials', '/blog/tutorials');
-
 /** Page Routes */
 Route::get('/', 'PagesController@homePage')->name('home');
 Route::get('/laravel-people', 'PagesController@laravelPeople')->name('laravelpeeps');
@@ -27,3 +24,7 @@ Route::prefix('blog')->namespace('Blog')->group(function () {
 
 /** Profile Show Route */
 Route::get('profiles/{id}', 'ProfileShowController')->name('profile');
+
+/** Redirects*/
+Route::redirect('tutorials', '/blog/tutorials');
+Route::redirect('/', '/blog', 302);
