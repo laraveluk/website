@@ -20,4 +20,5 @@ Route::prefix('blog')->namespace('Blog')->group(function () {
     Route::get('/{type}/{post}', 'PostController@show')->name('frontend.posts.show');
 });
 
-Route::redirect('tutorials', '/blog/tutorials');
+/** Profile Show Route */
+Route::get('profiles/{id}', 'ProfileShowController')->name('profile');
