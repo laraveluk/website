@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use Spatie\Tags\HasTags;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 
 class Post extends Model
 {
-    use Sluggable;
+    use Sluggable, HasTags;
 
     /** @var array $fillable */
     protected $fillable = ['title', 'body', 'slug', 'user_id', 'post_type'];
