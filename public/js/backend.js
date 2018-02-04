@@ -1925,8 +1925,35 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            posts: this.getPosts()
+        };
+    },
+
+    methods: {
+        getPosts: function getPosts() {
+            var _this = this;
+
+            axios.get('/ajax/posts').then(function (_ref) {
+                var data = _ref.data;
+
+                _this.posts = data.posts;
+            });
+        }
+    }
+});
 
 /***/ }),
 
@@ -19997,56 +20024,36 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "font-sans bg-grey-lighter flex flex-col min-h-screen w-full"
-      },
-      [
-        _c(
-          "div",
-          { staticClass: "flex-grow container mx-auto sm:px-4 pt-6 pb-8" },
-          [
-            _c("div", { staticClass: "flex flex-wrap -mx-4" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "w-full mb-6 lg:mb-0 lg:w-1/2 px-4 flex flex-col"
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "flex-grow flex flex-col bg-white border-t border-b sm:rounded sm:border shadow overflow-hidden"
-                    },
-                    [
-                      _c("div", { staticClass: "border-b" }, [
-                        _c(
-                          "div",
-                          { staticClass: "flex justify-between px-2 -mb-px" },
-                          [
-                            _c(
-                              "h3",
-                              {
-                                staticClass:
-                                  "text-blue-dark py-4 font-normal text-lg"
-                              },
-                              [_vm._v("Recent Articles")]
-                            )
-                          ]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c(
+  return _c(
+    "div",
+    {
+      staticClass: "font-sans bg-grey-lighter flex flex-col min-h-screen w-full"
+    },
+    [
+      _c(
+        "div",
+        { staticClass: "flex-grow container mx-auto sm:px-4 pt-6 pb-8" },
+        [
+          _c("div", { staticClass: "flex flex-wrap -mx-4" }, [
+            _c(
+              "div",
+              {
+                staticClass: "w-full mb-6 lg:mb-0 lg:w-1/2 px-4 flex flex-col"
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "flex-grow flex flex-col bg-white border-t border-b sm:rounded sm:border shadow overflow-hidden"
+                  },
+                  [
+                    _vm._m(0),
+                    _vm._v(" "),
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _vm._l(_vm.posts, function(post) {
+                      return _c(
                         "div",
                         {
                           staticClass:
@@ -20054,67 +20061,131 @@ var staticRenderFns = [
                         },
                         [
                           _c("div", { staticClass: "flex justify-between" }, [
-                            _c("div", { staticClass: "title" }, [
-                              _vm._v("Article Title")
-                            ]),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex-1 text-grey-darker text-center px-4 py-2 mb-1"
+                              },
+                              [_vm._v(_vm._s(post.title))]
+                            ),
                             _vm._v(" "),
-                            _c("div", { staticClass: "title" }, [
-                              _vm._v("Author")
-                            ]),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex-1 text-grey-darker text-center px-4 py-2 mb-1"
+                              },
+                              [_vm._v(_vm._s(post.author.name))]
+                            ),
                             _vm._v(" "),
-                            _c("div", { staticClass: "title" }, [
-                              _vm._v("Published date")
-                            ])
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "flex-1 text-grey-darker text-center px-4 py-2 mb-1"
+                              },
+                              [_vm._v(_vm._s(post.created_at))]
+                            )
                           ])
                         ]
                       )
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "w-full lg:w-1/2 px-4" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "bg-white border-t border-b sm:rounded sm:border shadow"
-                  },
-                  [
-                    _c("div", { staticClass: "border-b" }, [
-                      _c(
-                        "div",
-                        { staticClass: "flex justify-between px-6 -mb-px" },
-                        [
-                          _c(
-                            "h3",
-                            {
-                              staticClass:
-                                "text-blue-dark py-4 font-normal text-lg"
-                            },
-                            [_vm._v("Recent Activity")]
-                          )
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("div", { staticClass: "text-center px-6 py-4" }, [
-                        _c("div", { staticClass: "py-8" }, [
-                          _c("div", { staticClass: "mb-4" }, [
-                            _vm._v("You don't have any activity yet")
-                          ])
-                        ])
-                      ])
-                    ])
-                  ]
+                    })
+                  ],
+                  2
                 )
-              ])
-            ])
-          ]
-        )
+              ]
+            ),
+            _vm._v(" "),
+            _vm._m(2)
+          ])
+        ]
+      )
+    ]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "border-b" }, [
+      _c("div", { staticClass: "flex justify-between px-2 -mb-px" }, [
+        _c("h3", { staticClass: "text-blue-dark py-4 font-normal text-lg" }, [
+          _vm._v("Recent Articles")
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "text-grey-darker items-center border-b -mx-4 px-6 py-2" },
+      [
+        _c("div", { staticClass: "flex justify-between" }, [
+          _c(
+            "div",
+            {
+              staticClass: "flex-1 text-grey-darker text-center px-4 py-2 mb-1"
+            },
+            [_vm._v("Article Title")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "flex-1 text-grey-darker text-center px-4 py-2 mb-1"
+            },
+            [_vm._v("Author")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "flex-1 text-grey-darker text-center px-4 py-2 mb-1"
+            },
+            [_vm._v("Published date")]
+          )
+        ])
       ]
     )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-full lg:w-1/2 px-4" }, [
+      _c(
+        "div",
+        {
+          staticClass: "bg-white border-t border-b sm:rounded sm:border shadow"
+        },
+        [
+          _c("div", { staticClass: "border-b" }, [
+            _c("div", { staticClass: "flex justify-between px-6 -mb-px" }, [
+              _c(
+                "h3",
+                { staticClass: "text-blue-dark py-4 font-normal text-lg" },
+                [_vm._v("Recent Activity")]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c("div", { staticClass: "text-center px-6 py-4" }, [
+              _c("div", { staticClass: "py-8" }, [
+                _c("div", { staticClass: "mb-4" }, [
+                  _vm._v("You don't have any activity yet")
+                ])
+              ])
+            ])
+          ])
+        ]
+      )
+    ])
   }
 ]
 render._withStripped = true

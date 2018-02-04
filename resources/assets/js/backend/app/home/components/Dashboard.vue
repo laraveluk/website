@@ -12,11 +12,20 @@
 
                         <div class="text-grey-darker items-center border-b -mx-4 px-6 py-2">
                             <div class="flex justify-between">
-                                <div class="title">Article Title</div>
-                                <div class="title">Author</div>
-                                <div class="title">Published date</div>
+                                <div class="flex-1 text-grey-darker text-center px-4 py-2 mb-1">Article Title</div>
+                                <div class="flex-1 text-grey-darker text-center px-4 py-2 mb-1">Author</div>
+                                <div class="flex-1 text-grey-darker text-center px-4 py-2 mb-1">Published date</div>
                             </div>
                         </div>
+
+                        <div class="text-grey-darker items-center border-b -mx-4 px-6 py-2" v-for="post in posts">
+                            <div class="flex justify-between">
+                                <div class="flex-1 text-grey-darker text-center px-4 py-2 mb-1">{{post.title}}</div>
+                                <div class="flex-1 text-grey-darker text-center px-4 py-2 mb-1">{{post.author.name}}</div>
+                                <div class="flex-1 text-grey-darker text-center px-4 py-2 mb-1">{{post.created_at}}</div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 px-4">
@@ -42,7 +51,19 @@
 
 <script>
     export default {
-
+        data() {
+            return { 
+                posts: this.getPosts()
+            }
+        },
+        methods: {
+            getPosts() {
+                axios.get('/ajax/posts')
+                    .then(({data}) => {
+                        this.posts = data.posts
+                    })
+            }
+        }
     }
 </script>
 
