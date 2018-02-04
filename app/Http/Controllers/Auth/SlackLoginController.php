@@ -29,15 +29,28 @@ class SlackLoginController extends Controller
     {
         $slackUser = Socialite::driver('slack')->user();
 
-        Log::debug("{$slackUser->getName()} ({$slackUser->getId()}) logged in with Slack");
+        if ($user = User::where('slack_id', $slackUser->getId())) { // User already exists, so sign them back in
 
-        $user = User::updateOrCreate([
-            'slack_id' => $slackUser->getId()
-        ], [
-            'name' => $slackUser->getName(),
-            'email' => $slackUser->getEmail(),
-            'password' => bcrypt(str_random(16)),
-        ]);
+            $user->update([
+                'name' => $slackUser->getName(),
+                'email' => $slackUser->getEmail(),
+            ]);
+
+            Log::debug("{$slackUser->getName()} logged in with Slack");
+
+        }
+        else{ // User does not exist, so register them
+
+            $user = User::create([
+                'slack_id' => $slackUser->getId()
+                'name' => $slackUser->getName(),
+                'email' => $slackUser->getEmail(),
+                'password' => bcrypt(str_random(16)),
+            ]);
+
+            Log::debug("{$slackUser->getName()} registered with Slack");
+
+        }
 
         Auth::login($user);
 
