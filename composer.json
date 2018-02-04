@@ -7,6 +7,7 @@
     "require": {
         "php": ">=7.0.0",
         "cviebrock/eloquent-sluggable": "^4.3",
+        "cviebrock/eloquent-taggable": "^3.2",
         "fideloper/proxy": "~3.3",
         "joepriest/passwordreset": "^1.2.1",
         "laravel/framework": "5.5.*",
