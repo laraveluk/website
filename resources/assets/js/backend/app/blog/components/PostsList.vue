@@ -29,7 +29,7 @@
         },
         methods: {
             fetchPosts() {
-                axios.get('/ajax/posts')
+                axios.get('/api/post')
                     .then(({data}) => {
                         this.posts = data.posts
                     })

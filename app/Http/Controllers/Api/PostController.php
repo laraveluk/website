@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Ajax;
+namespace App\Http\Controllers\Api;
 
 use Log;
 use App\Models\Post;
@@ -33,7 +33,7 @@ class PostController extends Controller
 
     /**
      * Display a post
-     * 
+     *
      * @param App\Models\Post $post
      * @return Illuminate\Http\Response
      */
@@ -83,7 +83,7 @@ class PostController extends Controller
             'title' => $request->title ?? $post->title,
             'body' => $request->body ?? $post->body,
         ]);
-        
+
         if (auth()->user()) {
             Log::debug(auth()->user()->name . " updated post {$post->id}");
         }

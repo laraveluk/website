@@ -61,7 +61,7 @@
 <script>
     export default {
         data() {
-            return { 
+            return {
                 page: 1,
                 posts: this.getPosts(1)
             }
@@ -69,7 +69,7 @@
         methods: {
             getPosts(page) {
                 console.log('posts for page '+ page)
-                axios.get(`/ajax/posts?page=${page}`)
+                axios.get(`/api/post?page=${page}`)
                     .then(({data}) => {
                         this.posts = data.posts
                     })
