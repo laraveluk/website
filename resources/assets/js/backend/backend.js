@@ -6,6 +6,7 @@ window.Vue = require('vue');
 window.axios = require('axios')
 
 Vue.component('app', require('./components/App'));
+Vue.component('navbar', require('./components/Navbar'));
 
 const app = new Vue({
     router: router,
