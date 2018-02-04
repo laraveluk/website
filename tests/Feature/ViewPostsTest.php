@@ -31,7 +31,7 @@ class ViewPostsTest extends TestCase
         // Given that there is a post in the database
         $post = factory('App\Models\Post')->create();
         // When we visit that post's URL
-        $this->call('GET', route('frontend.posts.show', $post))
+        $this->call('GET', route('frontend.posts.show', [$post->post_type, $post]))
         // It should load successfully
         ->assertStatus(200)
         // and we should at a minimum see the title, date, body and author name.
