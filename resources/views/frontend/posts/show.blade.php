@@ -17,7 +17,7 @@
         </header>
     </article>
     <div class="flex flex-wrap max-w-2xl mx-auto">
-        <div class="w-full rounded bg-white overflow-hidden shadow-lg">
+        <div class="w-full rounded bg-white overflow-hidden shadow">
             {{-- <img class="w-full" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains"> --}}
             <div class="px-6 py-4">
                 <div class="mb-2">Posted by <a href="">{{$post->author->name}}</a> - {{ $post->created_at->format('jS F Y') }}</div>
@@ -38,7 +38,7 @@
         </div>
     
         @foreach ($post->comments as $comment)
-        <div class="w-full rounded bg-white overflow-hidden shadow-lg mt-6">
+        <div class="w-full rounded bg-white overflow-hidden shadow mt-6">
             <div class="px-6 py-4">
                 <div class="flex items-center">
                     <div class="w-1/4 mb-2 p-2">
