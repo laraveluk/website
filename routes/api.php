@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 // Deploy route
 Route::post('deploy', 'UtilController@deploy')->name('deploy');
 
-Route::middleware(['web', 'auth'])->group(function() {
+Route::middleware(['web', 'auth', 'api'])->group(function() {
 
     Route::resource('user', 'UserController', [
         'only' => [
