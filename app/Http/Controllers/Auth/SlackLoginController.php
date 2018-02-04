@@ -42,7 +42,7 @@ class SlackLoginController extends Controller
         else{ // User does not exist, so register them
 
             $user = User::create([
-                'slack_id' => $slackUser->getId()
+                'slack_id' => $slackUser->getId(),
                 'name' => $slackUser->getName(),
                 'email' => $slackUser->getEmail(),
                 'password' => bcrypt(str_random(16)),
