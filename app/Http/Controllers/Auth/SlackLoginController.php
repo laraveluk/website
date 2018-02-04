@@ -54,6 +54,6 @@ class SlackLoginController extends Controller
 
         Auth::login($user);
 
-        return view('frontend.welcome', compact('user'));
+        return redirect()->route('home');
     }
 }
