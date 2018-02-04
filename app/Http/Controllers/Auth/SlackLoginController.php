@@ -11,7 +11,7 @@ use App\Http\Controllers\Controller;
 class SlackLoginController extends Controller
 {
     /**
-     * Redirect the user to the GitHub authentication page.
+     * Redirect the user to the Slack authentication page.
      *
      * @return \Illuminate\Http\Response
      */
@@ -21,7 +21,7 @@ class SlackLoginController extends Controller
     }
 
     /**
-     * Obtain the user information from slack.
+     * Obtain the user information from Slack.
      *
      * @return \Illuminate\Http\Response
      */
