@@ -38,6 +38,23 @@
                 </div>
             </section>
         </section>
+        
+        <section class="flex max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg">
+                {{-- Add your profile pic --}}
+            <figure class="w-2/3 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url('https://pbs.twimg.com/profile_images/591437812932608000/oeuRzWJo_400x400.jpg')"></figure>
+            <section class="flex flex-col justify-between">
+                {{-- Your name and a bit about you --}}
+                <div class="p-4 text-lg leading-normal">
+                    <h3 class="text-xl mb-2">Ian Landsman</h3>
+                    <p>Founder of UserScape. We've been involved with Laravel since near the beginning. We currently run <a href="https://laracon.net">Laracon Online</a>, <a href="https://larajobs.com">LaraJobs</a>, and <a href="https://laratalent.com">LaraTalent</a> as well as participate in a number of Laravel community events.</p>
+                </div>
+                <div class="bg-red px-4 py-3 text-right">
+                    <a href="https://twitter.com/ianlandsman" class="text-white no-underline hover:underline p-2">@ianlandsman</a>
+                    <a href="https://ianlandsman.com" class="text-white no-underline hover:underline p-2">https://ianlandsman.com</a>
+                </div>
+            </section>
+        </section>        
+        
     </article>
 
 @stop
