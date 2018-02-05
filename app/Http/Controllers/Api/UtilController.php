@@ -18,7 +18,7 @@ class UtilController extends Controller
 
         if (hash_equals($githubHash, $localHash)) {
             $root_path = base_path();
-            $process = new Process('cd ' . $root_path && './deploy.sh github');
+            $process = new Process('cd ' . $root_path && './deploy github');
             $process->run(function ($type, $buffer) {
                 echo $buffer;
             });
