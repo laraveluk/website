@@ -7,6 +7,7 @@ if [[ "$DEPLOY_SOURCE" = "github" ]]; then
 
     # update source code
     git pull
+    echo "Codebase updated"
 
     # update PHP dependencies
     export COMPOSER_HOME='/tmp/composer'
