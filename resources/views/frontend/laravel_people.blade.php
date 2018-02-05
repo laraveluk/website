@@ -23,7 +23,8 @@
                 <a href="https://larahack.com">Larahack</a>.</p>
         </section>
 
-        <section class="flex max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg">
+        <!-- Section start -->
+        <section class="flex max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg mb-2">
                 {{-- Add your profile pic --}}
             <figure class="w-2/3 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url('https://pbs.twimg.com/profile_images/787796804301533184/eaQsLz6d_400x400.jpg')"></figure>
             <section class="flex flex-col justify-between">
@@ -38,7 +39,10 @@
                 </div>
             </section>
         </section>
-        
+
+        <!-- Section ends -->
+
+        <!-- Section start -->
         <section class="flex max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg">
                 {{-- Add your profile pic --}}
             <figure class="w-2/3 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url('https://pbs.twimg.com/profile_images/591437812932608000/oeuRzWJo_400x400.jpg')"></figure>
@@ -53,7 +57,8 @@
                     <a href="https://ianlandsman.com" class="text-white no-underline hover:underline p-2">https://ianlandsman.com</a>
                 </div>
             </section>
-        </section>        
+        </section>
+        <!-- Section ends -->
         
     </article>
 
