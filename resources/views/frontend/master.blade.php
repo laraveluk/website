@@ -11,6 +11,15 @@
 
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
 
+    <script>
+        window.App = {!!
+            json_encode([
+                'signedIn' => auth()->check(),
+                'user'     => auth()->user()
+            ]);
+        !!}
+    </script>
+
 </head>
 <body class="font-sans bg-grey">
 

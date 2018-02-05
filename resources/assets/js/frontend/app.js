@@ -16,6 +16,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('Dropdown', require('../components/Dropdown'));
+Vue.component('Navbar', require('../components/Navbar'));
 
 const app = new Vue({
     el: '#app'
