@@ -21,17 +21,17 @@ class PostController extends Controller
             $posts = Post::with('author', 'tags')->where('post_type', $postType)->get()->sortByDesc('created_at');
         }
 
-        return \view('frontend.posts.index', compact('posts'));
+        return view('frontend.posts.index', compact('posts'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Post  $post
+     * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
     public function show($postType, Post $post)
     {
-        return \view('frontend.posts.show', compact('post'));
+        return view('frontend.posts.show', compact('post'));
     }
 }
