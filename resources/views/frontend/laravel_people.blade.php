@@ -60,6 +60,24 @@
         </section>
         <!-- Section ends -->
         
+        <!-- Section start -->
+        <section class="flex max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg">
+                {{-- Add your profile pic --}}
+            <figure class="w-2/3 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url('https://pbs.twimg.com/profile_images/829704528522047488/MUgBrW2J_400x400.jpg')"></figure>
+            <section class="flex flex-col justify-between">
+                {{-- Your name and a bit about you --}}
+                <div class="p-4 text-lg leading-normal">
+                    <h3 class="text-xl mb-2">Laura Elizabeth</h3>
+                    <p>I run <a href="https://designacademy.io">Design Academy</a> which aims to help developers conquer their fear of design (yes, it can be done!). I'm also the owner of <a href="https://client-portal.io">Client Portal</a> which is a client-friendly way to keep your projects organised. I spoke at both Laracon US and EU, have been lucky enough to work with Ian Landsman on LaraTalent, and currently working on a few other Laravel based projects. </p>
+                </div>
+                <div class="bg-red px-4 py-3 text-right">
+                    <a href="https://twitter.com/laurium" class="text-white no-underline hover:underline p-2">@laurium</a>
+                    <a href="https://designacademy.io" class="text-white no-underline hover:underline p-2">https://designacademy.io</a>
+                </div>
+            </section>
+        </section>
+        <!-- Section ends -->
+        
     </article>
 
 @stop
