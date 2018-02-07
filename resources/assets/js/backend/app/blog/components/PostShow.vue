@@ -13,7 +13,7 @@
         <div class="flex flex-wrap max-w-2xl mx-auto">
             <div class="w-full rounded bg-white overflow-hidden shadow-lg">
                 <!-- <img class="w-full" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains"> -->
-                <div class="px-6 py-4">
+                <div class="px-6 py-4 leading-normal">
                     <div class="mb-2">Posted by <a href="">{{post.author.name}}</a> - {{ post.created_at }}</div>
                     <div v-if="this.editMode">
                         <wysiwyg v-model="post.body" />
