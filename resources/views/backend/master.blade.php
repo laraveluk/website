@@ -23,7 +23,7 @@
         !!}
     </script>
 </head>
-<body>
+<body class="font-sans bg-grey">
 
     <div id="app">
         @yield('content')
