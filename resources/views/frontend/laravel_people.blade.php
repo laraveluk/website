@@ -24,7 +24,29 @@
         </section>
 
         <div class="py-8 mx-4 lg:mx-0">
+
             <!-- Section start -->
+
+            <section class="flex flex-wrap md:flex-no-wrap justify-center md:justify-start max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg mb-8">
+                    {{-- Add your profile pic --}}
+                <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url('https://pbs.twimg.com/profile_images/378800000501505377/4df558a3066b7c67e33204d665f7954f_400x400.jpeg')"></figure>
+                <section class="flex flex-col justify-between w-full md:w-4/5">
+                    {{-- Your name and a bit about you --}}
+                    <div class="p-4 text-lg leading-normal">
+                        <h3 class="text-xl mb-2">Eric L. Barnes</h3>
+                        <p>Founder and creator of <a href="https://laravel-news.com">Laravel News</a> and run a weekly <a href="https://laravel-news.com/newsletter">Laravel Newsletter</a>. I've been using Laravel since before it was cool. I love the community and thankful to be a part of it!</p>
+                    </div>
+                    <div class="bg-red px-4 py-3 text-right">
+                        <a href="https://twitter.com/ericlbarnes" class="text-white no-underline hover:underline p-2">@ericlbarnes</a>
+                        <a href="https://ericlbarnes.com" class="text-white no-underline hover:underline p-2">https://ericlbarnes.com</a>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Section ends -->
+
+            <!-- Section start -->
+
             <section class="flex flex-wrap md:flex-no-wrap justify-center md:justify-start max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg mb-8">
                     {{-- Add your profile pic --}}
                 <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url('https://pbs.twimg.com/profile_images/787796804301533184/eaQsLz6d_400x400.jpg')"></figure>
