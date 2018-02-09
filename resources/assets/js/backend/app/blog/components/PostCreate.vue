@@ -31,13 +31,13 @@
 
                     <div class="mb-4">
                         <label for="title">Tags <sup>*</sup></label>
-                        <p class="info">Please seperate tags with a comma.</p>
+                        <p class="info">Please separate tags with a comma.</p>
                         <input class="" v-model="post.tags">
                     </div>
 
                     <button @click="savePost" :disabled='!isComplete'>Create Post</button>
 
-                    <p class="info"><sup>*</sup> Please conplete all maditory fields.</p>
+                    <p class="info"><sup>*</sup> Please complete all mandatory fields.</p>
 
                 </div>
             </section>
