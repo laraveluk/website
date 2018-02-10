@@ -61,7 +61,10 @@ class PostController extends Controller
         $post->user_id = auth()->id();
         $post->save();
 
-        $post->tag($request->data['tags']);
+        // Only Store tags if they have been passed through
+        if ($request->data['tags']) {
+            $post->tag($request->data['tags']);
+        }
 
         // $tags = explode(',', $request->data['tags']);
         // $tags = array_filter($tags);

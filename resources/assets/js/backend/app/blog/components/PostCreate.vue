@@ -30,7 +30,7 @@
                     </div>
 
                     <div class="mb-4">
-                        <label for="title">Tags <sup>*</sup></label>
+                        <label for="title">Tags <sup>optional</sup></label>
                         <p class="info">Please separate tags with a comma.</p>
                         <input class="" v-model="post.tags">
                     </div>
@@ -68,7 +68,7 @@ export default {
   },
   computed: {
     isComplete() {
-      return this.post.title && this.post.body && this.post.tags;
+      return this.post.title && this.post.body;
     }
   }
 };
