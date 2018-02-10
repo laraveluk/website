@@ -51,7 +51,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="text-white mt-4 text-sm">If login in with Slack, make sure you are logged out of other teams in the browser.</div>
+                    <div class="text-white mt-4 text-sm">If login in with Slack, make sure you are not currently switched to another slack team in the browser.</div>
                 </form>
             </div>
         </div>
