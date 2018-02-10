@@ -1,4 +1,4 @@
-import { PostsList, PostShow, PostCreate } from '../components/index'
+import { PostShow, PostCreate } from '../components/index'
 
 export default [
     {
