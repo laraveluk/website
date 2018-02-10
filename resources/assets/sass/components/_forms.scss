@@ -1,0 +1,38 @@
+/**
+ * A place to add form based styles
+ */
+label {
+        @apply .block .text-grey-darker .text-sm .font-bold .mb-2;
+        sup {
+                @apply .text-red .font-bold;
+        }
+}
+p.info {
+        @apply .block .text-xs .text-grey-dark .font-normal .pb-4 .tracking-wide;
+}
+input, textarea {
+         @apply .appearance-none .bg-grey-lighter .border .border-grey .rounded .w-full .p-4 .text-grey-darker;
+ }
+
+ select {
+         @apply .block .appearance-none .w-full .bg-grey-lighter .border .border-grey .p-4 .rounded .cursor-pointer;
+          transition: border-color 800ms;
+         &:hover {
+                 @apply .border-grey-dark;
+         }
+ }
+
+ button {
+         @apply .my-3 .bg-blue-light .text-white .font-bold .p-4 .rounded;
+         transition: background-color 800ms;
+         &:hover {
+                 @apply .bg-blue-dark;
+         }
+         &:disabled {
+                 @apply .bg-grey-light .cursor-not-allowed;
+         }
+ }
+
+ .editr--toolbar {
+         @apply .bg-grey-lighter .border .border-grey;
+ }
