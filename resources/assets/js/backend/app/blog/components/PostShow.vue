@@ -39,12 +39,9 @@
 
 <script>
     export default {
-        created() {
-            this.post = this.getPost(this.$route.params.slug)
-        },
         data() {
             return {
-                post: [],
+                post: this.getPost(this.$route.params.slug),
                 editMode: false
             }
         },
