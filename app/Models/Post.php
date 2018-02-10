@@ -71,7 +71,7 @@ class Post extends Model
 
     /**
      * A post has and belongs to many comments
-     * 
+     *
      * @return Illuminate\Database\Eloquent\Relations\MorphMany
      */
     public function comments()
