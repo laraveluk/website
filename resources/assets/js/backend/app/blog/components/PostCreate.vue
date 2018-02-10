@@ -59,8 +59,6 @@ export default {
   },
   methods: {
     savePost() {
-      console.log("post entry");
-
       axios.post("/api/post", { data: this.post }).then(({ data }) => {
         this.$router.push(`/blog/${data.post.slug}`);
       });
