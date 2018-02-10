@@ -10,7 +10,7 @@
                 <form role="form" class="mb-4" method="POST" action="{{ route('login') }}">
                     {{ csrf_field() }}
                     <div class="lg:w-1/8 md:w-1/4 mb-6">
-                        <div class="text-white p-2">Login with </div>
+                        <div class="text-white p-2">Login with Slack</div>
                         <a href="{{ route('login.slack') }}">
                             <img src="{{ asset('/images/slack-button.png') }}"
                                  class="rounded py-2 px-3 bg-white hover:bg-grey w-32 hover:bg-green-lighter">
@@ -51,6 +51,7 @@
                             </button>
                         </div>
                     </div>
+                    <div class="text-white mt-4 text-sm">If login in with Slack, make sure you are not currently switched to another slack team in the browser.</div>
                 </form>
             </div>
         </div>

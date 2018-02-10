@@ -29,10 +29,11 @@
 
                 <a href="/laravel-people" class="text-blue-lightest hover:text-white no-underline p-3 md:px-2">LaraCelebs</a>
 
-                <div class="guest" v-if="user === null">
-                    <a href="/login" class="text-blue-lightest hover:text-white no-underline p-3 md:px-2">Log in</a>
-                    <a href="/join-slack" class="text-grey bg-red hover:bg-red-dark no-underline rounded-full border border-red-lighter px-4 py-2 lg:ml-2 shadow-lg">Join us on Slack</a>
-                </div>
+            <div class="guest" v-if="user === null">
+                <a href="/login" class="text-blue-lightest hover:text-white no-underline p-3 md:px-2">Log in</a>
+                <a href="/register" class="text-blue-lightest hover:text-white no-underline p-3 md:px-2">Sign up</a>
+                <!--<a href="/join-slack" class="text-grey bg-red hover:bg-red-dark no-underline rounded-full border border-red-lighter px-4 py-2 lg:ml-2 shadow-lg">Join us on Slack</a>-->
+            </div>
 
                 <div v-if="user !== null">
                     <dropdown>
