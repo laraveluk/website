@@ -14,7 +14,7 @@ class CommentController extends Controller
      * @param string $postType
      * @param \App\Models\Post $post description
      * @param  \Illuminate\Http\Request  $request
-     * 
+     *
      * @return \Illuminate\Http\Response
      */
     public function store($postType, Post $post, Request $request)

@@ -39,9 +39,7 @@ class SlackLoginController extends Controller
             ]);
 
             Log::debug("{$slackUser->getName()} logged in with Slack");
-
-        }
-        else{ // User does not exist, so register them
+        } else { // User does not exist, so register them
 
             $user = User::create([
                 'slack_id' => $slackUser->getId(),
@@ -53,7 +51,6 @@ class SlackLoginController extends Controller
             ]);
 
             Log::debug("{$slackUser->getName()} registered with Slack");
-
         }
 
         Auth::login($user);

@@ -93,4 +93,13 @@ class User extends Authenticatable
     {
         return $this->roles()->detach($role);
     }
+
+    public function getAvatarAttribute($avatar)
+    {
+        if (is_null($avatar)) {
+            return asset('/images/default-avatar.png');
+        } else {
+            return $avatar;
+        }
+    }
 }
