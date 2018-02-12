@@ -84,7 +84,7 @@
             <!-- Section ends -->
 
             <!-- Section start -->
-            <section class="flex flex-wrap md:flex-no-wrap justify-center md:justify-start max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg">
+            <section class="flex flex-wrap md:flex-no-wrap justify-center md:justify-start max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg mb-8">
                     {{-- Add your profile pic --}}
                 <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url('https://pbs.twimg.com/profile_images/829704528522047488/MUgBrW2J_400x400.jpg')"></figure>
                 <section class="flex flex-col justify-between w-full md:w-4/5">
@@ -100,8 +100,26 @@
                 </section>
             </section>
             <!-- Section ends -->
-        </div>
 
+            <!-- Section start -->
+            <section class="flex flex-wrap md:flex-no-wrap justify-center md:justify-start max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg mb-8">
+                    {{-- Add your profile pic --}}
+                <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url('https://pbs.twimg.com/profile_images/869972011291779072/cORueTQM_400x400.jpg')"></figure>
+                <section class="flex flex-col justify-between w-full md:w-4/5">
+                    {{-- Your name and a bit about you --}}
+                    <div class="p-4 text-lg leading-normal">
+                        <h3 class="text-xl mb-2">Matt Stauffer</h3>
+                        <p>Co-founder of <a href="https://tighten.co/">Tighten</a> and author of <a href="http://laravelupandrunning.com/">Laravel: Up and Running</a>. I speak at conferences some times, tell people to be nicer to each other, and run the <a href="http://laravelpodcast.com/">Laravel Podcast</a>.</p>
+                    </div>
+                    <div class="bg-red px-4 py-3 text-right">
+                        <a href="https://twitter.com/stauffermatt" class="text-white no-underline hover:underline p-2">@stauffermatt</a>
+                        <a href="https://mattstauffer.com" class="text-white no-underline hover:underline p-2">https://mattstauffer.com</a>
+                    </div>
+                </section>
+            </section>
+            <!-- Section ends -->
+
+        </div>
 
     </article>
 
