@@ -40,4 +40,23 @@ class ViewPostsTest extends TestCase
         ->assertSee($post->body)
         ->assertSee($post->author->name);
     }
+
+    /** @test */
+    public function any_blog_post_gets_its_own_dynamic_metadata_information()
+    {
+        // Given that there is a post in the database
+        $post = factory('App\Models\Post')->create();
+
+        $title = $post->title;
+        $excerpt = $post->excerpt;
+        // When we visit that post's URL
+        $this->call('GET', route('frontend.posts.show', [$post->post_type, $post]))
+        // It should load successfully
+        ->assertStatus(200)
+        // and check that we have the metadata title set to the post title.
+        ->assertSee('<title>' . $title . '</title>')
+        // and the post excerpt / facebook information
+        ->assertSee('<meta name="description" content="' . $excerpt . '">')
+        ->assertSee('<meta property="og:description" content="' . $excerpt . '">');
+    }
 }
