@@ -46,4 +46,60 @@ class User extends Authenticatable
     {
         return $this->hasOne(Profile::class)->with('socialLinks');
     }
+
+    /**
+     * User is linked to a role
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class)->withTimestamps();
+    }
+
+    /**
+     * Check User role
+     *
+     * @param string $name
+     * @return bool
+     */
+    public function hasRole($name)
+    {
+        foreach ($this->roles as $role) {
+            if ($role->name == $name) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Assign user to role
+     *
+     * @param $role
+     */
+    public function assignRole(Role $role)
+    {
+        $this->roles()->attach($role);
+    }
+
+    /**
+     * Remove user role
+     *
+     * @param $role
+     * @return int
+     */
+    public function removeRole($role)
+    {
+        return $this->roles()->detach($role);
+    }
+
+    public function getAvatarAttribute($avatar)
+    {
+        if (is_null($avatar)) {
+            return asset('/images/default-avatar.png');
+        } else {
+            return $avatar;
+        }
+    }
 }

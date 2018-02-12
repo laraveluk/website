@@ -24,9 +24,12 @@
                 <p class="text-grey-darker text-base">
                     {!! nl2br($post->body) !!}
                     <div class="px-1 py-4 mb-4">
-                    @if (auth()->check())
-                        <a href="/members/#/blog/{{$post->slug}}" class="bg-blue-light hover:bg-blue text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded">View / Edit in Backend</a>
-                    @endif
+                        @can('update', $post)
+                            <a href="/members/#/blog/{{$post->slug}}"
+                               class="bg-blue-light hover:bg-blue text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded">
+                                Edit / Delete
+                            </a>
+                        @endcan
                     @foreach ($post->tags as $tag)
                         <a href="{{route('frontend.posts.tags.show', $tag->name)}}" class="bg-transparent border border-blue hover:bg-blue hover:text-white text-blue font-bold py-2 px-4 mx-1 float-right no-underline rounded">
                             {{$tag->name}}
@@ -43,7 +46,7 @@
                 <div class="flex items-center">
                     <div class="w-1/4 mb-2 p-2">
                         <div class="inline-block">
-                            <img class="w-10 h-10 rounded-full mr-4 " src="https://pbs.twimg.com/profile_images/885868801232961537/b1F6H4KC_400x400.jpg" alt="Avatar of Jonathan Reinink">
+                            <img class="w-10 h-10 rounded-full mr-4 " src="{{ $comment->author->avatar }}" alt="Avatar of {{$comment->author->name}}">
                         </div>
                         <div class="inline-block">
                             <p class="text-black leading-none">{{$comment->author->name}}</p>
