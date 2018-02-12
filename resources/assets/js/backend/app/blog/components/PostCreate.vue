@@ -26,7 +26,7 @@
 
                     <div class="mb-6">
                         <label for="body">Content <sup>*</sup></label>
-                        <wysiwyg v-model="post.body" />
+                        <vue-editor v-model="post.body"></vue-editor>  
                     </div>
 
                     <div class="mb-4">
@@ -46,6 +46,9 @@
 </template>
 
 <script>
+
+import { VueEditor} from 'vue2-editor'
+
 export default {
   data() {
     return {
@@ -57,6 +60,11 @@ export default {
       }
     };
   },
+
+  components: {
+    VueEditor
+  },
+
   methods: {
     savePost() {
       axios.post("/api/post", { data: this.post }).then(({ data }) => {
