@@ -10,13 +10,14 @@
                 </div>
             </header>
         </article>
+        
         <div class="flex flex-wrap max-w-2xl mx-auto">
             <div class="w-full rounded bg-white overflow-hidden shadow-lg">
                 <!-- <img class="w-full" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains"> -->
                 <div class="px-6 py-4 leading-normal">
                     <div class="mb-2">Posted by <a href="">{{post.author.name}}</a> - {{ post.created_at }}</div>
                     <div v-if="this.editMode">
-                        <wysiwyg v-model="post.body" />
+                        <vue-editor v-model="post.body"></vue-editor>
                     </div>
                     <div v-else>
                         <p class="text-grey-darker text-base pt-2 pb-2 mb-2 mt-2" v-html="post.body"></p>
@@ -38,12 +39,18 @@
 </template>
 
 <script>
+    import { VueEditor} from 'vue2-editor'
+
     export default {
         data() {
             return {
                 post: this.getPost(this.$route.params.slug),
                 editMode: false
             }
+        },
+
+         components: {
+            VueEditor
         },
         methods: {
             getPost(slug) {
