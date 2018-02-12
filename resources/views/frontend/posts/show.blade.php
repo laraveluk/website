@@ -25,7 +25,7 @@
                     {!! nl2br($post->body) !!}
                     <div class="px-1 py-4 mb-4">
                         @can('update', $post)
-                            <a href="/members/#/blog/{{$post->slug}}"
+                            <a href="/members/#/blog/edit/{{$post->slug}}"
                                class="bg-blue-light hover:bg-blue text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded">
                                 Edit / Delete
                             </a>
