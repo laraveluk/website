@@ -18,6 +18,13 @@ class PostTagController extends Controller
     {
         $posts = Post::withAnyTags([$tag])->get();
         $title = "Posts Tagged: {$tag}";
-        return \view('frontend.posts.index', compact('posts', 'title'));
+
+        $metadata = [
+                'title' => 'Laravel UK | Articles by ' . $tag . ' tag',
+                'description' => 'A comprehensive list of our latets news, events, tutorials and interviews marked as ' . $tag,
+                'keywords' => config('site.keywords') . $tag
+            ];
+
+        return \view('frontend.posts.index', compact('posts', 'title', 'metadata'));
     }
 }

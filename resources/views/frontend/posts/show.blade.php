@@ -1,13 +1,5 @@
 @extends('frontend.master')
 
-@section('title_and_meta')
-    <title>LaravelUK - {{$post->title}}</title>
-    <meta name="title" content="LaravelUK - {{$post->title}}" />
-    <meta name="description" content="LaravelUK - {{$post->title}}" />
-    <meta name="og_title" content="LaravelUK - {{$post->title}}" />
-    <meta name="og_description" content="LaravelUK - {{$post->title}}" />
-@stop
-
 
 @section('content')
     @include('frontend.partials.header')
@@ -39,7 +31,7 @@
                 </p>
             </div>
         </div>
-    
+
         @foreach ($post->comments as $comment)
         <div class="w-full rounded bg-white overflow-hidden shadow mt-6">
             <div class="px-6 py-4">

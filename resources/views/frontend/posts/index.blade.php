@@ -1,14 +1,5 @@
 @extends('frontend.master')
 
-@section('title_and_meta')
-    <title>LaravelUK - News and Updates</title>
-    <meta name="title" content="LaravelUK - News and Updates" />
-    <meta name="description" content="LaravelUK - News and Updates" />
-    <meta name="og_title" content="LaravelUK - News and Updates" />
-    <meta name="og_description" content="LaravelUK - News and Updates" />
-@stop
-
-
 @section('content')
     @include('frontend.partials.header')
     <article class="max-w-2xl mx-auto">

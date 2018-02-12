@@ -1,13 +1,5 @@
 @extends('frontend.master')
 
-@section('title_and_meta')
-    <title>Welcome To LaravelUK Community - Celebrating Top Laravel People</title>
-    <meta name="title" content="Welcome To LaravelUK Community - Celebrating Top Laravel People" />
-    <meta name="description" content="Welcome To LaravelUK Community - Celebrating Top Laravel People" />
-    <meta name="og_title" content="Welcome To LaravelUK Community - Celebrating Top Laravel People" />
-    <meta name="og_description" content="Welcome To LaravelUK Community - Celebrating Top Laravel People" />
-@stop
-
 @section('content')
     @include('frontend.partials.header')
 
