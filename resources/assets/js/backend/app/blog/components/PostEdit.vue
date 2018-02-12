@@ -1,13 +1,12 @@
 <template>
     <div v-if="post !== undefined">
-        <article class="max-w-2xl mx-auto">
-            <header class="p-8 text-center">
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" v-model="post.title">
-            </header>
-        </article>
-        
+  
         <div class="flex flex-wrap max-w-2xl mx-auto">
-            <div class="w-full rounded bg-white overflow-hidden shadow-lg">
+            <div class="w-full rounded overflow-hidden shadow-lg">
+                <div class="mt-6">
+                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" v-model="post.title">
+                </div>
+               
                 <!-- <img class="w-full" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains"> -->
                 <div class="px-6 py-4 leading-normal">
                     <div class="mb-2">Posted by <a href="">{{post.author.name}}</a> - {{ post.created_at }}</div>

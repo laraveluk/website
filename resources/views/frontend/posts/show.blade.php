@@ -27,7 +27,7 @@
                         @can('update', $post)
                             <a href="/members/#/blog/edit/{{$post->slug}}"
                                class="bg-blue-light hover:bg-blue text-white font-bold py-2 px-4 mx-1 float-right no-underline rounded">
-                                Edit / Delete
+                                Edit
                             </a>
                         @endcan
                     @foreach ($post->tags as $tag)
