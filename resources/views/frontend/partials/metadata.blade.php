@@ -27,13 +27,13 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="format-detection" content="telephone=no" />
 
-<meta itemprop="name" content="{!!  isset($metadata['title']) ? 'metadata text' : config('laraveluk.site.name') !!}">
+<meta itemprop="name" content="{!!  isset($metadata['title']) ? $metadata['title'] : config('laraveluk.site.name') !!}">
 <meta itemprop="description" content="{!!  isset($metadata['description']) ? $metadata['description'] : config('laraveluk.site.description') !!}">
 <meta itemprop="image" content="https://laravelphp.uk/images/social/google-share.jpg">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ URL::current() }}">
-<meta property="og:title" content="{!!  isset($metadata['title']) ? 'metadata text' : config('laraveluk.site.name') !!}">
+<meta property="og:title" content="{!!  isset($metadata['title']) ? $metadata['title'] : config('laraveluk.site.name') !!}">
 <meta property="og:image" content="https://laravelphp.uk/images/social/facebook-share.jpg">
 <meta property="og:description" content="{!!  isset($metadata['description']) ? $metadata['description'] : config('laraveluk.site.description') !!}">
 <meta property="og:site_name" content="{!!config('laraveluk.site.name')!!}">
@@ -45,7 +45,7 @@
 <meta name="twitter:site" content="{!!config('laraveluk.social.twitter_handle')!!}">
 <meta name="twitter:creator" content="{!!config('laraveluk.social.twitter_handle')!!}">
 <meta name="twitter:url" content="{{ URL::current() }}">
-<meta name="twitter:title" content="{!!  isset($metadata['title']) ? 'metadata text' : config('laraveluk.site.name') !!}">
+<meta name="twitter:title" content="{!!  isset($metadata['title']) ? $metadata['title'] : config('laraveluk.site.name') !!}">
 <meta name="twitter:description" content="{!!  isset($metadata['description']) ? $metadata['description'] : config('laraveluk.site.description') !!}">
 <meta name="twitter:image" content="https://laravelphp.uk/images/social/twitter-share.jpg">
 <!-- google analytics -->
