@@ -20,7 +20,7 @@
         <section class="px-8 md:px-0 py-8 max-w-lg mx-auto text-lg leading-normal text-grey-darkest">
             <p>These wonderful folk contribute so much to the Laravel community.
                 They have also been fantastically wonderful to make a commit to our website codebase during
-                <a href="https://larahack.com">Larahack</a>.</p>
+                <a href="https://larahack.com" class="red-link">Larahack</a>.</p>
         </section>
 
         <div class="py-8 mx-4 lg:mx-0">
@@ -34,7 +34,7 @@
                     {{-- Your name and a bit about you --}}
                     <div class="p-4 text-lg leading-normal">
                         <h3 class="text-xl mb-2">Eric L. Barnes</h3>
-                        <p>Founder and creator of <a href="https://laravel-news.com">Laravel News</a> and run a weekly <a href="https://laravel-news.com/newsletter">Laravel Newsletter</a>. I've been using Laravel since before it was cool. I love the community and thankful to be a part of it!</p>
+                        <p>Founder and creator of <a href="https://laravel-news.com" class="red-link">Laravel News</a> and run a weekly <a href="https://laravel-news.com/newsletter" class="red-link">Laravel Newsletter</a>. I've been using Laravel since before it was cool. I love the community and thankful to be a part of it!</p>
                     </div>
                     <div class="bg-red px-4 py-3 text-right">
                         <a href="https://twitter.com/ericlbarnes" class="text-white no-underline hover:underline p-2">@ericlbarnes</a>
@@ -54,7 +54,7 @@
                     {{-- Your name and a bit about you --}}
                     <div class="p-4 text-lg leading-normal">
                         <h3 class="text-xl mb-2">Michael Dyrynda</h3>
-                        <p>I've been using Laravel since 2012 and have been around the community in some way or another ever since! Most notably, I'm one of the co-hosts of the <a href="https://laravel-news.com/podcast" target="_blank">Laravel News</a> and <a href="http://www.northmeetssouth.audio" target="_blank">North Meets South</a> podcasts. </p>
+                        <p>I've been using Laravel since 2012 and have been around the community in some way or another ever since! Most notably, I'm one of the co-hosts of the <a href="https://laravel-news.com/podcast" class="red-link" target="_blank">Laravel News</a> and <a href="http://www.northmeetssouth.audio" class="red-link" target="_blank">North Meets South</a> podcasts. </p>
                     </div>
                     <div class="bg-red px-4 py-3 text-right">
                         <a href="https://twitter.com/michaeldyrynda" class="text-white no-underline hover:underline p-2">@michaeldyrynda</a>
@@ -73,7 +73,10 @@
                     {{-- Your name and a bit about you --}}
                     <div class="p-4 text-lg leading-normal">
                         <h3 class="text-xl mb-2">Ian Landsman</h3>
-                        <p>Founder of UserScape. We've been involved with Laravel since near the beginning. We currently run <a href="https://laracon.net">Laracon Online</a>, <a href="https://larajobs.com">LaraJobs</a>, and <a href="https://laratalent.com">LaraTalent</a> as well as participate in a number of Laravel community events.</p>
+                        <p>Founder of UserScape. We've been involved with Laravel since near the beginning. We currently run 
+                            <a href="https://laracon.net" class="red-link">Laracon Online</a>, 
+                            <a href="https://larajobs.com" class="red-link">LaraJobs</a>, and 
+                            <a href="https://laratalent.com" class="red-link">LaraTalent</a> as well as participate in a number of Laravel community events.</p>
                     </div>
                     <div class="bg-red px-4 py-3 text-right">
                         <a href="https://twitter.com/ianlandsman" class="text-white no-underline hover:underline p-2">@ianlandsman</a>
@@ -91,7 +94,9 @@
                     {{-- Your name and a bit about you --}}
                     <div class="p-4 text-lg leading-normal">
                         <h3 class="text-xl mb-2">Laura Elizabeth</h3>
-                        <p>I run <a href="https://designacademy.io">Design Academy</a> which aims to help developers conquer their fear of design (yes, it can be done!). I'm also the owner of <a href="https://client-portal.io">Client Portal</a> which is a client-friendly way to keep your projects organised. I spoke at both Laracon US and EU, have been lucky enough to work with Ian Landsman on LaraTalent, and currently working on a few other Laravel based projects. </p>
+                        <p>I run <a href="https://designacademy.io" class="red-link">Design Academy</a> which aims to help developers conquer their fear of design (yes, it can be done!). I'm also the owner of 
+                        <a href="https://client-portal.io" class="red-link">Client Portal</a> which is a client-friendly way to keep your projects organised. 
+                        I spoke at both Laracon US and EU, have been lucky enough to work with Ian Landsman on LaraTalent, and currently working on a few other Laravel based projects. </p>
                     </div>
                     <div class="bg-red px-4 py-3 text-right">
                         <a href="https://twitter.com/laurium" class="text-white no-underline hover:underline p-2">@laurium</a>
@@ -109,7 +114,7 @@
                     {{-- Your name and a bit about you --}}
                     <div class="p-4 text-lg leading-normal">
                         <h3 class="text-xl mb-2">Matt Stauffer</h3>
-                        <p>Co-founder of <a href="https://tighten.co/">Tighten</a> and author of <a href="http://laravelupandrunning.com/">Laravel: Up and Running</a>. I speak at conferences some times, tell people to be nicer to each other, and run the <a href="http://laravelpodcast.com/">Laravel Podcast</a>.</p>
+                        <p>Co-founder of <a href="https://tighten.co/" class="red-link">Tighten</a> and author of <a href="http://laravelupandrunning.com/" class="red-link">Laravel: Up and Running</a>. I speak at conferences some times, tell people to be nicer to each other, and run the <a href="http://laravelpodcast.com/" class="red-link">Laravel Podcast</a>.</p>
                     </div>
                     <div class="bg-red px-4 py-3 text-right">
                         <a href="https://twitter.com/stauffermatt" class="text-white no-underline hover:underline p-2">@stauffermatt</a>

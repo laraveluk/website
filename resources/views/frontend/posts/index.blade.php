@@ -14,7 +14,8 @@
     <article class="max-w-2xl mx-auto">
         <header class="p-8 text-center">
             @if (auth()->check())
-            <a href="/members/#/blog/create" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 float-right no-underline rounded">
+            <a href="/members/#/blog/create" 
+                class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 float-right no-underline rounded">
                 @if (request()->type)
                     Create {{ucwords(str_singular(request()->type))}}
                 @else
@@ -60,7 +61,8 @@
                         @endswitch
                     </p>
                     <div class="mb-8">
-                        <div class="text-black font-bold text-xl mb-2"><a href="{{route('frontend.posts.show', [$post->post_type, $post])}}" class="no-underline">{{$post->title}}</a></div>
+                        <div class="text-black font-bold text-xl mb-2">
+                            <a href="{{route('frontend.posts.show', [$post->post_type, $post])}}" class="no-underline text-red">{{$post->title}}</a></div>
                         <p class="text-grey-darker text-base">{!! $post->excerpt !!}</p>
                     </div>
                     <div class="flex items-center">

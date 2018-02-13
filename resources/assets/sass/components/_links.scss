@@ -1,6 +1,7 @@
 a {
-  @apply .text-red;
-
+  &.red-link {
+    @apply .text-red;
+  }
   &:hover {
     @apply .no-underline;
   }
