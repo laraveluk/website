@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
 <head>
-    @include('frontend.partials.metadata');
+    @include('frontend.partials.metadata')
     <script>
         window.App = {!!
             json_encode([
