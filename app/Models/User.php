@@ -96,7 +96,7 @@ class User extends Authenticatable
 
     public function getAvatarAttribute($avatar)
     {
-        if (is_null($avatar)) {
+        if (is_null($avatar) || empty($avatar)) {
             return asset('/images/default-avatar.png');
         } else {
             return $avatar;
