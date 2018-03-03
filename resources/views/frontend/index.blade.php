@@ -9,19 +9,78 @@
 @stop
 
 @section('content')
-    <div class="bgimg">
-        <div class="middle text-black">
-            <h1>Laravelphp.uk Coming Soon!</h1>
-            <hr>
+    @include('frontend.partials.header')
+   <section class="hero bg-cover bg-center bg-no-repeat bg-fixed flex items-center justify-center">
+       <div class="hero-inner text-white text-center">
+           <h1 class="mb-2 text-2xl lg:text-5xl">Welcome to Laravel UK</h1>
+           <h2>The most exciting developer group in the UK</h2>
+       </div>
+   </section>
 
-            <div class="info">
-                <p>Join us as we build this website in a weekend  #Larahack.</p>
-                <p>February 3 - 4 2018!</p>
+    <div class="container mx-auto my-6 bg-white p-6">
+        <h2 class="mb-4 text-purple-darker">
+            Hello and welcome to Laravel UK community.
+        </h2>
+        <p class="leading-normal text-lg mb-4">
+            If you are already a member of the LaravelUK Slack community, then you will know what an amazing place it is to be. If you haven’t joined us yet, then you really should.
+        </p>
+        <p class="leading-normal text-lg mb-4">
+            The skill levels range from learner to decades of experience in PHP and many other languages and from junior Devs to business owners, entrepreneurs, conference speakers and book authors.
+
+            All you need to do is sign up at
+            <a href="https://laraveluk.signup.team/" class="no-underline text-grey-darkest hover:text-blue-light">https://laraveluk.signup.team/</a>
+        </p>
+        <p class="leading-normal text-lg">
+            See you soon :-)
+        </p>
+    </div>
+
+    <div class="container mx-auto my-6 bg-white p-6">
+        <h2 class="mb-4 text-purple-darker">
+            Up-coming Events.
+        </h2>
+        <p class="leading-normal text-lg mb-4">
+            Larahack - Date to be announced soon. Watch this space!
+        </p>
+    </div>
+
+    <div class="container mx-auto my-6 flex">
+       <div class="w-1/3 bg-white mr-4">
+           <h3 class="text-center text-purple-darker">Recent Posts</h3>
+           <div class="content p-4 leading-normal">
+               @foreach ($posts as $post)
+                    <a href="{{ $post->slug }}"
+                       class="no-underline text-grey-darkest hover:text-purple-darkest mb-2">
+                        {{ str_limit($post->title, 40) }}
+                    </a>
+               @endforeach
+
+               <div class="more-posts text-center mt-2">
+                   Read more posts from our
+                   <a href="{{ url('/blog') }}"
+                      class="no-underline text-grey-darkest hover:text-purple-darkest mb-2">
+                       Blog
+                   </a>
+               </div>
+           </div>
+       </div>
+        <div class="w-1/3 bg-white mr-4">
+            <h3 class="text-center text-purple-darker">Interviews</h3>
+            <div class="content p-4 leading-normal">
+                <!-- Hard coded for now -->
+                Laravel UK recently had a chat with one of us, Simon Bennet, creator of Snapshooter.io
+                <a href="/blog/interviews/laravel-talks-to-simon-bennett-of-snapshooter-io-2">
+                    Read more
+                </a>
             </div>
-
         </div>
-        <div class="bottom-center">
-            <p>Laravel UK - The most exciting coding group in the UK</p>
+        <div class="w-1/3 bg-white mr-4">
+            <h3 class="text-center text-purple-darker">Resources</h3>
+            <div class="content p-4 leading-normal">
+               Watch this space for a list of helpful resources and links shared by our members
+            </div>
         </div>
     </div>
+
+
 @stop

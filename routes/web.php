@@ -27,4 +27,3 @@ Route::get('profiles/{id}', 'ProfileShowController')->name('profile');
 
 /** Redirects*/
 Route::redirect('tutorials', '/blog/tutorials');
-Route::redirect('/', '/blog', 302);
