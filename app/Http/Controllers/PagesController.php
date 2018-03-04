@@ -14,6 +14,17 @@ class PagesController extends Controller
         return view('frontend.index', compact('posts'));
     }
 
+    public function aboutUs()
+    {
+        $metadata = [
+            'title' => 'Laravel UK / About Us',
+            'description' => 'The most exciting coding community in the UK',
+            'keywords' => config('site.keywords') . ', Laravel, LaravelUK, United Kingdom, coding, programming, community, Laracon, Slack, About Us, Ian Landsman, Laura Elizabeth, Matt Stauffer, Taylor Otwell, Jeffery Way, Evan You, Chris Fidao, Adam Watham, Mohamed Said, Michael Dyrynda, Steve Schoger, Jacob Bennett'
+        ];
+
+        return view('frontend.about', compact('metadata'));
+    }
+
     public function laravelPeople()
     {
         $metadata = [

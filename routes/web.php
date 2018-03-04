@@ -2,6 +2,7 @@
 
 /** Page Routes */
 Route::get('/', 'PagesController@homePage')->name('home');
+Route::get('/about', 'PagesController@aboutUs')->name('about');
 Route::get('/laravel-people', 'PagesController@laravelPeople')->name('laravelpeeps');
 
 /** Dashboard Routes **/
