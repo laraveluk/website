@@ -15,13 +15,16 @@ class CreatePromotionsTable extends Migration
     {
         Schema::create('promotions', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned()->index();
+            $table->unsignedInteger('user_id');
             $table->string('name');
             $table->string('description', 140);
             $table->string('url');
             $table->boolean('published')->default(true);
             $table->softDeletes();
             $table->timestamps();
+
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

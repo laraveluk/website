@@ -37,6 +37,14 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function promotions()
+    {
+        return $this->hasMany(Promotion::class);
+    }
+
 	/**
 	 * A user has many profile key/pairs
 	 * @return \Illuminate\Database\Eloquent\Relations\HasMany
