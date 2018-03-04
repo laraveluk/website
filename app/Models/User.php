@@ -38,6 +38,8 @@ class User extends Authenticatable
     }
 
     /**
+     * A user has many promotions
+     *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function promotions()
