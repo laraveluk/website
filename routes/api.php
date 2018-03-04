@@ -41,4 +41,10 @@ Route::middleware(['web', 'auth', 'api'])->group(function () {
 		]
 	]);
 
+	Route::group(['prefix' => 'promotions'], function() {
+        Route::post('/store', 'PromotionsController@store');
+        Route::get('/get/{promotion}', 'PromotionsController@get');
+        Route::put('/update/{promotion}', 'PromotionsController@update');
+        Route::delete('/delete/{promotion}', 'PromotionsController@delete');
+    });
 });
