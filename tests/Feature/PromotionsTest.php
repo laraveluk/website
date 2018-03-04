@@ -11,10 +11,15 @@ class PromotionsTest extends TestCase
 {
     use RefreshDatabase;
 
+    public function setup()
+    {
+        parent::setUp();
+        $this->disableExceptionHandling();
+    }
+
     /** @test */
     public function a_user_can_create_a_promotion()
     {
-        $this->disableExceptionHandling();
         $this->signIn();
 
         $response = $this->post('/api/promotions/store', [
@@ -75,7 +80,6 @@ class PromotionsTest extends TestCase
     /** @test */
     public function a_user_can_delete_their_promotion()
     {
-        $this->disableExceptionHandling();
         $user = factory('App\Models\User')->create();
         $this->signIn($user);
 
