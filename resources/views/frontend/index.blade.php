@@ -44,9 +44,9 @@
         </p>
     </div>
 
-    <div class="container mx-auto my-6 flex">
-       <div class="w-1/3 bg-white mr-4">
-           <h3 class="text-center text-purple-darker">Recent Posts</h3>
+    <div class="container mx-auto my-6 lg:flex">
+       <div class="sm:w-full mb-2 lg:w-1/3 bg-white lg:mr-4">
+           <h3 class="text-center text-purple-darker my-2">Recent Posts</h3>
            <div class="content p-4 leading-normal">
                @foreach ($posts as $post)
                     <a href="{{ $post->slug }}"
@@ -64,8 +64,8 @@
                </div>
            </div>
        </div>
-        <div class="w-1/3 bg-white mr-4">
-            <h3 class="text-center text-purple-darker">Interviews</h3>
+        <div class="sm:w-full mb-2 lg:w-1/3 bg-white lg:mr-4">
+            <h3 class="text-center text-purple-darker my-2">Interviews</h3>
             <div class="content p-4 leading-normal">
                 <!-- Hard coded for now -->
                 Laravel UK recently had a chat with one of us, Simon Bennet, creator of Snapshooter.io
@@ -74,8 +74,8 @@
                 </a>
             </div>
         </div>
-        <div class="w-1/3 bg-white mr-4">
-            <h3 class="text-center text-purple-darker">Resources</h3>
+        <div class="sm:w-full mb-2 lg:w-1/3 sm:mb-2 bg-white">
+            <h3 class="text-center text-purple-darker my-2">Resources</h3>
             <div class="content p-4 leading-normal">
                Watch this space for a list of helpful resources and links shared by our members
             </div>
