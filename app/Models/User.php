@@ -37,15 +37,13 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
-    /**
-     * A user has one profile
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne;
-     */
-    public function profile()
-    {
-        return $this->hasOne(Profile::class)->with('socialLinks');
-    }
+	/**
+	 * A user has many profile key/pairs
+	 * @return \Illuminate\Database\Eloquent\Relations\HasMany
+	 */
+	public function profiles() {
+		return $this->hasMany(Profile::class);
+	}
 
     /**
      * User is linked to a role

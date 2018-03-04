@@ -32,4 +32,13 @@ Route::middleware(['web', 'auth', 'api'])->group(function () {
             'destroy'
         ]
     ]);
+
+	Route::resource('profile', 'ProfileController', [
+		'only' => [
+			'show',
+			'update',
+			'destroy'
+		]
+	]);
+
 });

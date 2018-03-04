@@ -12,7 +12,7 @@ class Profile extends Model
      * @var array
      */
     protected $fillable = [
-        'past', 'present', 'future', 'hobbies'
+	    'profile_key_id','value'
     ];
 
     /**
@@ -25,13 +25,15 @@ class Profile extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
-    /**
-     * A profile has many socialLinks
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany;
-     */
-    public function socialLinks()
-    {
-        return $this->hasMany(SocialLinks::class);
-    }
+	/**
+	 * A profile belongs to a profile key
+	 *
+	 * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+	 */
+	public function profile_key() {
+		return $this->belongsTo('App\ProfileKey');
+	}
+
+
+
 }
