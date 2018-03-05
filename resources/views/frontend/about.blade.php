@@ -9,7 +9,7 @@
             <!-- <h2 class="text-grey-dark font-normal">About Us</h2> -->
         </header>
 
-        <section class="px-8 md:px-0 py-8 max-w-lg mx-auto text-lg leading-normal text-grey-darkest text-center">
+        <section class="w-full bg-white px-8 md:px-0 py-8 sm:text-base lg:text-xl leading-normal text-grey-darkest text-center">
             <p>"The most exciting coding group in the UK"</p>
             <p>"Everybody Teaches, Everybody Learns"</p>
 
