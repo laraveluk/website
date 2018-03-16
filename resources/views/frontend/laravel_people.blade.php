@@ -41,7 +41,7 @@
 
             <section class="flex flex-wrap md:flex-no-wrap justify-center md:justify-start max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg mb-8">
                     {{-- Add your profile pic --}}
-                <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url('https://pbs.twimg.com/profile_images/787796804301533184/eaQsLz6d_400x400.jpg')"></figure>
+                <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url('https://avatars2.githubusercontent.com/u/558441?s=400&v=4')"></figure>
                 <section class="flex flex-col justify-between w-full md:w-4/5">
                     {{-- Your name and a bit about you --}}
                     <div class="p-4 text-lg leading-normal">
