@@ -45,7 +45,7 @@
             </div>
             <div class="3/4">
                 <p class="mt-6">
-                    Many thanks to <a href="" class="no-underline text-grey-dark">SnapShooter.io</a> for sponsoring the hosting of our website. SnapShooter helps you
+                    Many thanks to <a href="https://snapshooter.io" class="no-underline text-grey-dark">SnapShooter.io</a> for sponsoring the hosting of our website. SnapShooter helps you
                     to schedule frequent customizable DigitalOcean backups of your droplets and volumes.
                 </p>
             </div>
