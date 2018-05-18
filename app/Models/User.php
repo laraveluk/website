@@ -110,4 +110,11 @@ class User extends Authenticatable
             return $avatar;
         }
     }
+
+    public function attemptSlackNotification() {
+
+        $token = env('SLACK_LEGACY_TOKEN');
+        \Unirest\Request::post(env('SLACK_SIGNUP_URL'), [], ['token' => $token, 'email' => $this->email]);
+
+    }
 }
