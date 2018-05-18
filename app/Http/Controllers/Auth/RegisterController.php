@@ -74,6 +74,7 @@ class RegisterController extends Controller
         ]);
 
         $user->assignRole($role);
+        $user->attemptSlackNotification();
 
         return $user;
     }

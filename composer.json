@@ -14,6 +14,7 @@
         "laravel/passport": "^4.0",
         "laravel/socialite": "^3.0",
         "laravel/tinker": "~1.0",
+        "mashape/unirest-php": "^3.0",
         "socialiteproviders/slack": "^3.0"
     },
     "require-dev": {
