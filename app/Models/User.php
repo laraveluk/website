@@ -113,8 +113,8 @@ class User extends Authenticatable
 
     public function attemptSlackNotification() {
 
-        $token = env('SLACK_LEGACY_TOKEN');
-        \Unirest\Request::post(env('SLACK_SIGNUP_URL'), [], ['token' => $token, 'email' => $this->email]);
+        $token = config('slack.legacy_token');
+        \Unirest\Request::post(config('slack.invitation_url'), [], ['token' => $token, 'email' => $this->email]);
 
     }
 }
