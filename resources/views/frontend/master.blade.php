@@ -6,7 +6,7 @@
         window.App = {!!
             json_encode([
                 'signedIn' => auth()->check(),
-                'user'     => auth()->user()
+                'user'     => auth()->user(),
             ]);
         !!}
     </script>

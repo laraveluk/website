@@ -29,7 +29,7 @@
                         <vue-editor v-model="post.body"></vue-editor>  
                     </div>
 
-                    <div class="mb-4">
+                    <div class="mb-4" v-if="isAdmin">
                         <label for="title">Tags <sup>optional</sup></label>
                         <p class="info">Please separate tags with a comma.</p>
                         <input class="" v-model="post.tags">
@@ -56,8 +56,9 @@ export default {
         title: "",
         body: "",
         post_type: "post",
-        tags: ""
-      }
+        tags: "",
+      },
+      isAdmin: window.App.is_admin
     };
   },
 
