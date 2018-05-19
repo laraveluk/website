@@ -5,9 +5,11 @@
         @foreach ($posts as $post)
         <div class="flex items-center mb-4">
             <!-- Avatar -->
+            @if ($post->author)
             <a href="{{route('profile', $post->author)}}">
                 <img class="w-10 h-10 rounded-full mr-4" src="{{$post->author->avatar}}" alt="{{$post->author->name}}'s Avatar">
             </a>
+            @endif
             <!-- / Avatar -->
             <!-- Blog Content -->
             <div class="text-sm">
@@ -18,15 +20,17 @@
                 </p>
                 <p class="text-grey-dark">{{$post->created_at->format('jS F Y')}}</p>
                 <!-- Tags -->
-                @foreach ($post->tags as $tag)
-                <a href="{{route('frontend.posts.tags.show', $tag)}}" class="no-underline hover:text-purple-darkest">
-                    @if (!$loop->last)
-                        {{$tag}},
-                    @else
-                        {{$tag}}
-                    @endif
-                </a>
-                @endforeach
+                @if ($post->tags)
+                    @foreach ($post->tags as $tag)
+                    <a href="{{route('frontend.posts.tags.show', $tag)}}" class="no-underline hover:text-purple-darkest">
+                        @if (!$loop->last)
+                            {{$tag}},
+                        @else
+                            {{$tag}}
+                        @endif
+                    </a>
+                    @endforeach
+                @endif
                 <!-- / Tags -->
             </div>
             <!-- / Blog Content -->
