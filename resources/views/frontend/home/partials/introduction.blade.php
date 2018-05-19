@@ -8,7 +8,7 @@
     </p>
 
     <p class="leading-normal text-lg mb-4">
-        The skill levels range from learner to decades of experience in PHP and many other languages and from junior developers to business owners, entrepreneurs, conference speakers and book authors.
+        The skill levels range from learner to decades of experience in PHP and many other languages; from junior developers to business owners, entrepreneurs, conference speakers and book authors.
 
         All you need to do is <a href="{{route('register')}}">sign up on our website</a> and you'll receive a Slack invitation in your email inbox.
     </p>
