@@ -57,7 +57,7 @@
            <h3 class="text-center text-purple-darker my-2">Recent Posts</h3>
            <div class="content p-4 leading-normal">
                @foreach ($posts as $post)
-                    <a href="{{ $post->slug }}"
+                    <a href="{{ route('frontend.posts.show', [$post->post_type, $post]) }}"
                        class="no-underline text-grey-darkest hover:text-purple-darkest mb-2">
                         {{ str_limit($post->title, 40) }}
                     </a>
