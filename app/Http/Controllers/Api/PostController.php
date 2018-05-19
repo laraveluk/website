@@ -62,7 +62,7 @@ class PostController extends Controller
         $post->save();
 
         // Only allow administrators to save tags.
-        if (auth()->user()->hasRole(config('laraveluk.admin_role_name'))) {
+        if (auth()->user()->hasRole(config('laraveluk.site.admin_role_name'))) {
             // Only Store tags if they have been passed through
             if ($request->data['tags']) {
                 $post->tag($request->data['tags']);

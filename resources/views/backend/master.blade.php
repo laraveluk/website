@@ -18,7 +18,8 @@
         window.App = {!!
             json_encode([
                 'signedIn' => auth()->check(),
-                'user'     => auth()->user()
+                'user'     => auth()->user(),
+                'is_admin'     => auth()->user()->hasRole(config('laraveluk.site.admin_role_name'))
             ]);
         !!}
     </script>
