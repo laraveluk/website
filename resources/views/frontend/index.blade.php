@@ -10,6 +10,7 @@
 
 @section('content')
     @include('frontend.partials.header')
+
     <section class="hero bg-cover bg-center bg-no-repeat bg-fixed flex items-center justify-center">
         <div class="hero-inner text-white text-center">
             <h1 class="mb-2 text-2xl lg:text-5xl">Welcome to Laravel UK</h1>
@@ -35,13 +36,11 @@
         @include('frontend.home.partials.latest-interviews')
         <!-- / Latest Interviews -->
 
+        <!-- Latest Resources -->
+        @include('frontend.home.partials.latest-resources')
+        <!-- / Latest Resources -->    
+    </div>
 
 
-            <div class="sm:w-full mb-2 lg:w-1/3 sm:mb-2 bg-white">
-                <h3 class="text-center text-purple-darker my-2">Resources</h3>
-                <div class="content p-4 leading-normal">
-                    Watch this space for a list of helpful resources and links shared by our members
-                </div>
-            </div>
-        </div>
+
 @endsection
