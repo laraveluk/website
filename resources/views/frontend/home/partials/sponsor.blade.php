@@ -4,7 +4,9 @@
     </h2>
     <div class="flex">
         <div class="w-1/4">
-            <img class="w-32 h-32" src="https://snapshooter.io/high-restwitter.png" alt="snapshooter.io">
+            <a href="https://snapshooter.io" target="_blank" rel="noopener">
+                <img class="w-32 h-32" src="https://snapshooter.io/high-restwitter.png" alt="snapshooter.io">
+            </a>
         </div>
         <div class="3/4">
             <p class="mt-6">
