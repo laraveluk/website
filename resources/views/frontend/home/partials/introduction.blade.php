@@ -10,7 +10,7 @@
     <p class="leading-normal text-lg mb-4">
         The skill levels range from learner to decades of experience in PHP and many other languages and from junior Devs to business owners, entrepreneurs, conference speakers and book authors.
 
-        All you need to do is sign up at <a href="https://laraveluk.signup.team/" class="no-underline text-grey-darkest hover:text-blue-light">https://laraveluk.signup.team/</a>
+        All you need to do is <a href="{{route('register')}}">sign up on our website</a> and you'll receive a Slack invitation in your email inbox.
     </p>
 
     <p class="leading-normal text-lg">
