@@ -5,6 +5,11 @@ Route::get('/', 'PagesController@homePage')->name('home');
 Route::get('/about', 'PagesController@aboutUs')->name('about');
 Route::get('/laravel-people', 'PagesController@laravelPeople')->name('laravelpeeps');
 
+/** Slack Invitation Routes */
+Route::get('/slack', 'Auth\SlackLoginController@showInviteForm');
+Route::post('/slack', 'Auth\SlackLoginController@sendInvite');
+
+
 /** Dashboard Routes **/
 Route::get('/members', 'MemberDashboardController@dashboard')->name('dashboard');
 
