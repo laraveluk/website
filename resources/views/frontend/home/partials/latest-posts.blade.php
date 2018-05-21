@@ -1,6 +1,6 @@
 <div class="flex flex-col w-full rounded shadow border-t-4 border-blue-navy mb-8 p-4 bg-white md:w-1/3 md:mr-4 md:mb-0">
     <h3 class="text-center text-blue-navy border-b-2 border-grey pb-4">Recent Posts</h3>
-    <div class="content leading-normal p-4">
+    <div class="flex flex-col flex-grow justify-center content leading-normal p-4">
         @foreach ($posts as $post)
         @if($loop->last)
         <div class="flex items-center">
