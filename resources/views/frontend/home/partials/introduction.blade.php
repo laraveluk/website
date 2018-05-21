@@ -1,4 +1,4 @@
-<div class="flex flex-col justify-center items-center bg-white min-h-50">
+<div class="flex flex-col text-center justify-center items-center bg-white min-h-50 md:text-left">
     <div class="flex flex-col items-center container w-3/4 py-12 md:flex-row md:p-12">
         <div class="flex flex-col md:mr-8 md:w-1/2">
             <h2 class="mb-4 text-blue-navy">
