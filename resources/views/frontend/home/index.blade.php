@@ -16,22 +16,26 @@
     <!-- Introduction to LaravelUK -->
     @include('frontend.home.partials.introduction')
     <!-- / Introduction to LaravelUK -->
-    
-    <!-- LaravelUK Sponsors -->
-    @include('frontend.home.partials.sponsor')
-    <!-- / LaravelUK Sponsors -->
 
-    <div class="flex container mx-auto my-6">
-        <!-- Latest Posts -->
-        @include('frontend.home.partials.latest-posts')
-        <!-- / Latest Posts -->
+    <div class="flex flex-col justify-center items-center min-h-75">
+        <div class="container mx-auto py-12 px-4 md:p-12">   
+            <!-- LaravelUK Sponsors -->
+            @include('frontend.home.partials.sponsor')
+            <!-- / LaravelUK Sponsors -->
 
-        <!-- Latest Interviews -->
-        @include('frontend.home.partials.latest-interviews')
-        <!-- / Latest Interviews -->
+            <div class="flex flex-col md:flex-row md:-px-4">
+                <!-- Latest Posts -->
+                @include('frontend.home.partials.latest-posts')
+                <!-- / Latest Posts -->
 
-        <!-- Latest Resources -->
-        @include('frontend.home.partials.latest-resources')
-        <!-- / Latest Resources -->    
+                <!-- Latest Interviews -->
+                @include('frontend.home.partials.latest-interviews')
+                <!-- / Latest Interviews -->
+
+                <!-- Latest Resources -->
+                @include('frontend.home.partials.latest-resources')
+                <!-- / Latest Resources -->    
+            </div>
+        </div> 
     </div>
 @endsection

@@ -1,15 +1,8 @@
-<div class="container mx-auto my-6 bg-white p-6">
-    <h2 class="mb-4 text-purple-darker">
-        Our Sponsors
-    </h2>
-    <div class="flex">
-        <div class="w-1/4 mr-2">
-            <a href="https://snapshooter.io" target="_blank" rel="noopener">
-                <img class="w-32 h-32" src="https://snapshooter.io/high-restwitter.png" alt="snapshooter.io">
-            </a>
-        </div>
+<div class="text-center mx-auto mb-8 w-3/4">
+    <h2 class="text-blue-navy border-b-2 border-grey mb-4">Special Thanks To Our Sponsors</h3>
+    <div class="flex items-center">
         <div class="3/4">
-            <p class="mt-6">
+            <p class="text-lg leading-normal">
                 Many thanks to <a href="https://snapshooter.io" target="_blank" rel="noopener" class="no-underline text-grey-dark">SnapShooter.io</a> for sponsoring the hosting of our website. SnapShooter helps you to schedule frequent customizable DigitalOcean backups of your droplets and volumes.
             </p>
         </div>
