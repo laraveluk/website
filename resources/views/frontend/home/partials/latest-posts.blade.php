@@ -46,7 +46,7 @@
     </div>
     @else
     <div class="text-xs text-center text-grey-darker pt-4 border-t border-grey">
-        Read more posts from our <a href="{{ url('/blog') }}"class="no-underline text-grey-darkest hover:text-purple-darkest mb-2">Blog</a>
+        Read more posts from our <a href="{{ url('/blog') }}" class="no-underline text-grey-darkest hover:text-purple-darkest mb-2">blog</a>.
     </div>
     @endif
 </div>
