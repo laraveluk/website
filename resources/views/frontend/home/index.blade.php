@@ -9,11 +9,7 @@
 @stop
 
 @section('content')
-    <!-- Header
-    @include('frontend.partials.header') -->
-    <!-- / Header -->
-
-    <!-- Hero -->
+    <!-- Hero (header included within)-->
     @include('frontend.home.partials.hero')
     <!-- / Hero -->
 
