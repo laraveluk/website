@@ -1,9 +1,9 @@
-<div class="w-full rounded shadow border-t-4 border-blue-navy mb-2 p-4 bg-white md:w-1/3 md:mr-4">
+<div class="flex flex-col w-full rounded shadow border-t-4 border-blue-navy mb-2 p-4 bg-white md:w-1/3 md:mr-4">
     <h3 class="text-center text-blue-navy border-b-2 border-grey pb-4">Recent Posts</h3>
     <div class="content leading-normal p-4">
         @foreach ($posts as $post)
         @if($loop->last)
-        <div class="flex items-center pb-4 border-b">
+        <div class="flex items-center">
         @else
         <div class="flex items-center pb-4 mb-4 border-b border-grey">
         @endif
@@ -41,11 +41,11 @@
         @endforeach
     </div>
     @if(!$posts->count())
-    <div class="text-xs text-center text-grey-darker">
+    <div class="text-xs text-center text-grey-darker pt-4 border-t border-grey">
         We haven't made any posts yet - check back soon!
     </div>
     @else
-    <div class="text-xs text-center text-grey-darker">
+    <div class="text-xs text-center text-grey-darker pt-4 border-t border-grey">
         Read more posts from our <a href="{{ url('/blog') }}"class="no-underline text-grey-darkest hover:text-purple-darkest mb-2">Blog</a>
     </div>
     @endif

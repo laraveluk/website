@@ -21,7 +21,7 @@
     @include('frontend.home.partials.sponsor')
     <!-- / LaravelUK Sponsors -->
 
-    <div class="container mx-auto my-6 lg:flex">
+    <div class="flex container mx-auto my-6">
         <!-- Latest Posts -->
         @include('frontend.home.partials.latest-posts')
         <!-- / Latest Posts -->
