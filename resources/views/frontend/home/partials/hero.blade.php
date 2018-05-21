@@ -1,12 +1,12 @@
-<section class="hero bg-cover bg-center bg-no-repeat bg-fixed flex items-center justify-center">
-    <div class="hero-inner text-white text-center">
+<section class="hero bg-cover bg-center bg-no-repeat flex flex-col">
+	<div class="p-6">
+    	<navbar></navbar>
+    </div>
+    <div class="flex flex-col justify-center items-center hero-inner text-white text-center p-6 -mt-nav min-h-75">
         <h1 class="mb-2 text-2xl lg:text-5xl">Welcome to Laravel UK</h1>
-        <h2>The most exciting developer group in the UK</h2>
-        <p class="m-4">
-            <a href="{{route('login.slack')}}">
-                <img src="https://api.slack.com/img/sign_in_with_slack.png">
-            </a>
-        </p>
-
+        <h2 class="mb-4 opacity-75 font-light">The most exciting developer group in the United Kingdom</h2>
+        <a href="{{route('login.slack')}}">
+            <img src="https://api.slack.com/img/sign_in_with_slack.png">
+        </a>
     </div>
 </section>

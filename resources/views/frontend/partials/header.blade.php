@@ -1,1 +1,3 @@
-<navbar></navbar>
+<div class="bg-blue-navy">
+	<navbar></navbar>
+</div>

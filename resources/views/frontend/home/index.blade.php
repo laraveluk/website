@@ -9,8 +9,8 @@
 @stop
 
 @section('content')
-    <!-- Header -->
-    @include('frontend.partials.header')
+    <!-- Header
+    @include('frontend.partials.header') -->
     <!-- / Header -->
 
     <!-- Hero -->

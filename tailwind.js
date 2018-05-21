@@ -554,6 +554,7 @@ module.exports = {
 
   minHeight: {
     '0': '0',
+    '75': '75vh',
     'full': '100%',
     'screen': '100vh'
   },
@@ -633,7 +634,7 @@ module.exports = {
     '6': '1.5rem',
     '8': '2rem',
     '10': '2.5eem',
-    '12': '3rem'
+    '12': '3rem',
   },
 
 
@@ -691,6 +692,7 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    'nav': '124.89px',
   },
 
 
