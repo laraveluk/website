@@ -26,14 +26,14 @@
 
                 <div v-if="user !== null">
                     <dropdown>
-                        <span slot="link" class="appearance-none flex items-center inline-block text-white font-medium bg-blue hover:bg-blue-dark px-4 py-2 rounded">
+                        <span slot="link" class="appearance-none flex items-center inline-block text-center text-blue-navy font-medium bg-white hover:opacity-75 px-4 py-2 rounded-full align-middle">
                             <!--<img class="inline-block h-8 w-8 rounded-full" :src="user.avatar" alt="user.name">-->
-                            <span class="mr-1">{{ user.name }}</span>
-                            <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <span class="text-sm font-light mr-1">{{ user.name }}</span>
+                            <svg class="h-4 w-4 fill-current align-middle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                 <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                             </svg>
                         </span>
-                        <div slot="dropdown" class="bg-white shadow rounded border overflow-hidden">
+                        <div slot="dropdown" class="bg-white mt-2 ml-1 shadow rounded border overflow-hidden">
                             <a href="/logout" class="no-underline block px-4 py-3 border-b text-grey-darkest bg-white hover:text-white hover:bg-blue whitespace-no-wrap">Log out</a>
                         </div>
                     </dropdown>
