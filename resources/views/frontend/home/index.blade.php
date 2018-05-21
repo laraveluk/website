@@ -17,8 +17,8 @@
     @include('frontend.home.partials.introduction')
     <!-- / Introduction to LaravelUK -->
 
-    <div class="flex flex-col justify-center items-center min-h-75">
-        <div class="container mx-auto py-12 px-4 md:p-12">   
+    <div class="flex flex-col">
+        <div class="flex flex-col justify-center items-center container mx-auto py-12 px-4 md:p-12 min-h-75">   
             <!-- LaravelUK Sponsors -->
             @include('frontend.home.partials.sponsor')
             <!-- / LaravelUK Sponsors -->
