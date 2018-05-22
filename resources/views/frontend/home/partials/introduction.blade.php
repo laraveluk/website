@@ -18,7 +18,9 @@
         </div>
         <div class="hidden justify-end md:flex md:w-1/2">
             <blockquote class="twitter-tweet" data-lang="en-gb"><p lang="en" dir="ltr"><a href="https://twitter.com/laravelphp?ref_src=twsrc%5Etfw">@laravelphp</a> <a href="https://twitter.com/laravelnews?ref_src=twsrc%5Etfw">@laravelnews</a> <a href="https://twitter.com/taylorotwell?ref_src=twsrc%5Etfw">@taylorotwell</a> <a href="https://twitter.com/jeffrey_way?ref_src=twsrc%5Etfw">@jeffrey_way</a> <a href="https://twitter.com/alexjgarrett?ref_src=twsrc%5Etfw">@alexjgarrett</a> Can somebody check my <a href="https://twitter.com/hashtag/laravel?src=hash&amp;ref_src=twsrc%5Etfw">#laravel</a> <a href="https://twitter.com/hashtag/php?src=hash&amp;ref_src=twsrc%5Etfw">#php</a> code for me please? 😄 <a href="https://t.co/MtqYAK8APc">pic.twitter.com/MtqYAK8APc</a></p>&mdash; barry (@SymfonyCoda) <a href="https://twitter.com/SymfonyCoda/status/837038353287630848?ref_src=twsrc%5Etfw">1 March 2017</a></blockquote>
+            @section('js')   
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            @endsection
         </div>
     </div>
 </div>
