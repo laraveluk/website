@@ -3,7 +3,7 @@
     <div class="flex flex-col flex-grow justify-center">
 	    <div class="p-4 leading-normal">
 	        <!-- Hard coded for now -->
-	        <a class="font-bold no-underline text-grey-darkest text-sm hover:text-blue-navy" href="/blog/interviews/laravel-talks-to-simon-bennett-of-snapshooter-io-2">Simon Bennet</a>
+	        <a class="no-underline text-grey-darkest font-bold text-sm hover:text-blue-navy" href="/blog/interviews/laravel-talks-to-simon-bennett-of-snapshooter-io-2">Simon Bennet</a>
 	        <h3 class="font-light text-grey-dark text-sm mb-2">4th February 2018</h3>
 	        <p class="text-grey-darkest text-sm mb-2">
 	        	Laravel UK recently had a chat with one of us, Simon Bennet, creator of Snapshooter.io.

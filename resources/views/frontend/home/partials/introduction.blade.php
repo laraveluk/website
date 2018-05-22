@@ -1,18 +1,18 @@
 <div class="flex flex-col text-center justify-center items-center bg-white min-h-50 md:text-left">
     <div class="flex flex-col items-center container w-3/4 py-12 md:flex-row md:p-12">
-        <div class="flex flex-col md:mr-8 md:w-1/2">
-            <h2 class="mb-4 text-blue-navy">
+        <div class="flex flex-col font-light text-grey-darkest md:mr-12 md:w-1/2">
+            <h2 class="mb-4 text-blue-navy text-2xl md:text-3xl">
                 Hello and welcome to Laravel UK community.
             </h2>
-            <p class="leading-normal text-lg mb-4">
+            <p class="leading-normal mb-4 md:text-lg">
                 If you are already a member of the LaravelUK Slack community, then you will know what an amazing place it is to be. If you haven’t joined us yet, then you really should.
             </p>
-            <p class="leading-normal text-lg mb-4">
+            <p class="leading-normal mb-4 md:text-lg">
                 The skill levels range from learner to decades of experience in PHP and many other languages; from junior developers to business owners, entrepreneurs, conference speakers and book authors.
 
                 All you need to do is <a href="{{route('register')}}">sign up on our website</a> and you'll receive a Slack invitation in your email inbox.
             </p>
-            <p class="leading-normal text-lg">
+            <p class="leading-normal md:text-lg">
                 See you soon 😁
             </p>
         </div>
