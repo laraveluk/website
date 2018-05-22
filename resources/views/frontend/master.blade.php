@@ -12,7 +12,7 @@
     </script>
 
 </head>
-<body class="font-sans bg-grey">
+<body class="font-sans bg-grey-lightest">
     <div id="app">
         @yield('content')
     </div>
