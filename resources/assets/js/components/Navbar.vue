@@ -15,7 +15,7 @@
                 <label for="mainNavTogger" class="w-10 h-10 flex items-center justify-center p-3 mt-8 mr-6 absolute pin-t pin-r text-2xl leading-none text-white bg-red rounded-full md:hidden">&times;</label>
                 <a href="/" class="hover:text-white no-underline mr-6" :class="[isActiveRoute('home') ? activeClass : inactiveClass]">Home</a>
                 <a href="/about" class="hover:text-white no-underline mr-6" :class="[isActiveRoute('about') ? activeClass : inactiveClass]">About us</a>
-                <a href="/blog" class="hover:text-white no-underline mr-6" :class="[isActiveRoute('frontend.post.peeps') ? activeClass : inactiveClass]">Posts</a>
+                <a href="/blog" class="hover:text-white no-underline mr-6" :class="[isActiveRoute('frontend.posts.index') ? activeClass : inactiveClass]">Posts</a>
                 <a href="/laravel-people" class="hover:text-white no-underline mr-6" :class="[isActiveRoute('laravelpeeps') ? activeClass : inactiveClass]">LaraCelebs</a>
 
                 <div class="guest" v-if="user === null">
