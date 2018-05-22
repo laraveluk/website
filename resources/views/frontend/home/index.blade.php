@@ -9,33 +9,33 @@
 @stop
 
 @section('content')
-    <!-- Header -->
-    @include('frontend.partials.header')
-    <!-- / Header -->
-
-    <!-- Hero -->
+    <!-- Hero (header included within)-->
     @include('frontend.home.partials.hero')
     <!-- / Hero -->
 
     <!-- Introduction to LaravelUK -->
     @include('frontend.home.partials.introduction')
     <!-- / Introduction to LaravelUK -->
-    
-    <!-- LaravelUK Sponsors -->
-    @include('frontend.home.partials.sponsor')
-    <!-- / LaravelUK Sponsors -->
 
-    <div class="container mx-auto my-6 lg:flex">
-        <!-- Latest Posts -->
-        @include('frontend.home.partials.latest-posts')
-        <!-- / Latest Posts -->
+    <div class="flex flex-col">
+        <div class="flex flex-col justify-center items-center container mx-auto py-12 px-4 md:p-12 min-h-75">   
+            <!-- LaravelUK Sponsors -->
+            @include('frontend.home.partials.sponsor')
+            <!-- / LaravelUK Sponsors -->
 
-        <!-- Latest Interviews -->
-        @include('frontend.home.partials.latest-interviews')
-        <!-- / Latest Interviews -->
+            <div class="flex flex-col md:flex-row md:-px-4">
+                <!-- Latest Posts -->
+                @include('frontend.home.partials.latest-posts')
+                <!-- / Latest Posts -->
 
-        <!-- Latest Resources -->
-        @include('frontend.home.partials.latest-resources')
-        <!-- / Latest Resources -->    
+                <!-- Latest Interviews -->
+                @include('frontend.home.partials.latest-interviews')
+                <!-- / Latest Interviews -->
+
+                <!-- Latest Resources -->
+                @include('frontend.home.partials.latest-resources')
+                <!-- / Latest Resources -->    
+            </div>
+        </div> 
     </div>
 @endsection

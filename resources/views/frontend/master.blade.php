@@ -13,12 +13,12 @@
 
 </head>
 <body class="font-sans bg-grey">
+    <div id="app">
+        @yield('content')
+    </div>
 
-<div id="app">
-    @yield('content')
-</div>
-
-<script type="text/javascript" src="{{ mix('/js/app.js') }}"></script>
+    <script type="text/javascript" src="{{ mix('/js/app.js') }}"></script>
+    @yield('js')
 
     @include('frontend.partials.footer')
 </body>
