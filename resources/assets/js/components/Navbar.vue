@@ -13,10 +13,10 @@
             <input type="checkbox" id="mainNavTogger" class="hidden">
             <nav class="invisible fixed pin flex flex-col md:visible md:static md:flex md:flex-row justify-center items-center text-center text-xl md:text-sm lg:text-base bg-blue md:bg-transparent z-10">
                 <label for="mainNavTogger" class="w-10 h-10 flex items-center justify-center p-3 mt-8 mr-6 absolute pin-t pin-r text-2xl leading-none text-white bg-red rounded-full md:hidden">&times;</label>
-                <a href="/" class="text-blue-lightest hover:text-white no-underline mr-6">Home</a>
-                <a href="/about" class="text-blue-lightest hover:text-white no-underline mr-6">About us</a>
-                <a href="/blog" class="text-blue-lightest hover:text-white no-underline mr-6">Posts</a>
-                <a href="/laravel-people" class="text-blue-lightest hover:text-white no-underline mr-6">LaraCelebs</a>
+                <a href="/" class="hover:text-white no-underline mr-6" :class="[isActiveRoute('home') ? activeClass : inactiveClass]">Home</a>
+                <a href="/about" class="hover:text-white no-underline mr-6" :class="[isActiveRoute('about') ? activeClass : inactiveClass]">About us</a>
+                <a href="/blog" class="hover:text-white no-underline mr-6" :class="[isActiveRoute('frontend.post.peeps') ? activeClass : inactiveClass]">Posts</a>
+                <a href="/laravel-people" class="hover:text-white no-underline mr-6" :class="[isActiveRoute('laravelpeeps') ? activeClass : inactiveClass]">LaraCelebs</a>
 
                 <div class="guest" v-if="user === null">
                     <a href="/login" class="text-blue-lightest hover:text-white no-underline mr-6">Log in</a>
@@ -45,16 +45,25 @@
 
 <script>
 export default {
-  data() {
-    return {
-      user: {}
-    };
-  },
-  mounted() {
-    console.debug("mounted");
+    props: ['currentRoute'],
 
-    this.user = window.App.user;
-  }
+    data() {
+        return {
+            user: {},
+            activeClass: 'text-white',
+            inactiveClass: 'text-blue-lightest',
+        };
+    },
+    mounted() {
+        console.debug("mounted");
+
+        this.user = window.App.user;
+    },
+    methods: {
+        isActiveRoute: function(routeName) {
+            return this.currentRoute == routeName ? 1 : 0;
+        }
+    }
 };
 </script>
 
