@@ -61,16 +61,13 @@ class PostController extends Controller
         $post->user_id = auth()->id();
         $post->save();
 
-        // Only Store tags if they have been passed through
-        if ($request->data['tags']) {
-            $post->tag($request->data['tags']);
+        // Only allow administrators to save tags.
+        if (auth()->user()->hasRole(config('laraveluk.site.admin_role_name'))) {
+            // Only Store tags if they have been passed through
+            if ($request->data['tags']) {
+                $post->tag($request->data['tags']);
+            }
         }
-
-        // $tags = explode(',', $request->data['tags']);
-        // $tags = array_filter($tags);
-        // foreach ($tags as $tag) {
-        //     $post->attachTag(trim($tag));
-        // }
 
         if (auth()->user()) {
             Log::debug(auth()->user()->name . " created post {$post->id}");

@@ -11,7 +11,7 @@ class PagesController extends Controller
     {
         $posts = Post::with('author', 'tags')->get()->sortByDesc('created_at')->take(5);
 
-        return view('frontend.index', compact('posts'));
+        return view('frontend.home.index', compact('posts'));
     }
 
     public function aboutUs()

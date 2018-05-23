@@ -84,7 +84,7 @@ class User extends Authenticatable
     /**
      * Assign user to role
      *
-     * @param $role
+     * @param App\Models\Role $role
      */
     public function assignRole(Role $role)
     {
@@ -94,7 +94,7 @@ class User extends Authenticatable
     /**
      * Remove user role
      *
-     * @param $role
+     * @param App\Models\Role $role
      * @return int
      */
     public function removeRole($role)
@@ -102,6 +102,12 @@ class User extends Authenticatable
         return $this->roles()->detach($role);
     }
 
+    /**
+     * Get the avatar attribute
+     * 
+     * @param string $avatar
+     * @return string
+     */
     public function getAvatarAttribute($avatar)
     {
         if (is_null($avatar) || empty($avatar)) {
