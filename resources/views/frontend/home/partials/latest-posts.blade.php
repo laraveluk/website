@@ -16,7 +16,7 @@
             <!-- / Avatar -->
             <!-- Blog Content -->
             <div class="flex flex-col text-sm w-full">
-                <div class="flex flex-row items-center">
+                <div class="flex flex-row items-center mb-1">
                     <div class="flex-col flex-grow leading-none">
                         <a href="{{ route('frontend.posts.show', [$post->post_type, $post]) }}" class="no-underline text-grey-darkest hover:text-blue-navy ">
                             {{ str_limit($post->title, 40) }}
@@ -28,19 +28,21 @@
                     </a>
                 </div>
                 
-                <!-- Tags -->
-                @if ($post->tags)
-                    @foreach ($post->tags as $tag)
-                    <a href="{{route('frontend.posts.tags.show', $tag)}}" class="no-underline text-xs text-grey-darker hover:text-grey-darkest font-light mt-2">
-                        @if (!$loop->last)
-                            {{$tag}},
-                        @else
-                            {{$tag}}
-                        @endif
-                    </a>
-                    @endforeach
-                @endif
-                <!-- / Tags -->
+                <div class="flex flex-row flex-wrap">
+                    <!-- Tags -->
+                    @if ($post->tags)
+                        @foreach ($post->tags as $tag)
+                        <a href="{{route('frontend.posts.tags.show', $tag)}}" class="no-underline text-xs text-grey-darker hover:text-grey-darkest font-light mt-2 mr-1">
+                            @if (!$loop->last)
+                                {{$tag}},
+                            @else
+                                {{$tag}}
+                            @endif
+                        </a>
+                        @endforeach
+                    @endif
+                    <!-- / Tags -->
+                </div>
             </div>
             <!-- / Blog Content -->
         </div>    
