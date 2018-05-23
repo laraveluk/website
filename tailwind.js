@@ -693,7 +693,8 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
-    'nav': '124.89px',
+    'nav-md': '124.89px',
+    'nav': '74.94px',
   },
 
 
