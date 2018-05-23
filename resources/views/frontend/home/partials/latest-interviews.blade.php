@@ -1,4 +1,4 @@
-<div class="flex flex-col w-full rounded shadow border-t-4 border-blue-navy mb-8 p-4 bg-white md:w-1/3 md:mr-4 md:mb-0">
+<div class="flex flex-col w-full rounded shadow border-t-4 border-blue-navy mb-8 p-4 bg-white md:w-1/4 md:mr-4 md:mb-0">
 	<h3 class="text-center text-blue-navy border-b-2 border-grey-lighter pb-4">Interviews</h3>
     <div class="flex flex-col flex-grow">
 	    <div class="p-4 leading-normal">
