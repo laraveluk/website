@@ -1,7 +1,7 @@
 @extends('frontend.master')
 
 @section('content')
-    @include('frontend.partials.about.hero')
+    @include('frontend.about.partials.hero')
     
     <article class="w-full mx-auto bg-white p-12">
         <div class="flex flex-col text-center justify-center items-center bg-white">
