@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Helpers\Slack;
+use Illuminate\Http\Request;
 use Log;
 use Auth;
 use Socialite;
@@ -56,5 +58,18 @@ class SlackLoginController extends Controller
         Auth::login($user);
 
         return redirect()->route('home');
+    }
+
+    public function showInviteForm() {
+        return view('frontend.slack.invite');
+    }
+
+    public function sendInvite(Request $request) {
+
+        $request->validate([
+            'email' => 'required'
+        ]);
+
+        return Slack::sendInvitation($request->input('email'));
     }
 }

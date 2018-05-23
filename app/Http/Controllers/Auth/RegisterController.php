@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Helpers\Slack;
 use App\Models\Role;
 use App\Models\User;
 use App\Http\Controllers\Controller;
@@ -74,7 +75,8 @@ class RegisterController extends Controller
         ]);
 
         $user->assignRole($role);
-        $user->attemptSlackNotification();
+
+        Slack::sendInvitation($user->email);
 
         return $user;
     }

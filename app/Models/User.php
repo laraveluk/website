@@ -116,15 +116,4 @@ class User extends Authenticatable
             return $avatar;
         }
     }
-
-    /**
-     * Attempt the slack notification email
-     * 
-     * @return Unirest\Request
-     */
-    public function attemptSlackNotification() 
-    {
-        $token = config('slack.legacy_token');
-        \Unirest\Request::post(config('slack.invitation_url'), [], ['token' => $token, 'email' => $this->email]);
-    }
 }
