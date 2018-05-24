@@ -128,7 +128,7 @@
                     </div>
                     <div class="bg-red px-4 py-3 text-right">
                         <a href="https://twitter.com/taylorotwell" class="text-white no-underline hover:underline p-2">@taylorotwell</a>
-                        <a href="https://taylorotwell.com" class="text-white no-underline hover:underline p-2">https://taylorotwell.com</a>
+                        <a href="http://taylorotwell.com" class="text-white no-underline hover:underline p-2">https://taylorotwell.com</a>
                     </div>
                 </section>
             </section>
