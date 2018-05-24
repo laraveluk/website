@@ -16,32 +16,31 @@
             <!-- / Avatar -->
             <!-- Blog Content -->
             <div class="flex flex-col text-sm w-full">
-                <div class="flex flex-row items-center mb-1">
+                <div class="flex flex-row items-center">
                     <div class="flex-col flex-grow leading-none">
-                        <a href="{{ route('frontend.posts.show', [$post->post_type, $post]) }}" class="no-underline text-grey-darkest hover:text-blue-navy ">
+                        <a href="{{ route('frontend.posts.show', [$post->post_type, $post]) }}" class="no-underline text-grey-darkest hover:text-blue-navy">
                             {{ str_limit($post->title, 40) }}
                         </a>
-                        <p class="text-grey-dark font-light mt-1">{{$post->created_at->format('jS F Y')}}</p>
+                        <p class="text-grey-dark font-light mt-1 mb-1">{{$post->created_at->format('jS F Y')}}</p>
+                        <div class="flex flex-row flex-wrap">   
+                            <!-- Tags -->
+                            @if ($post->tags)
+                                @foreach ($post->tags as $tag)
+                                <a href="{{route('frontend.posts.tags.show', $tag)}}" class="no-underline text-xs text-grey-darker hover:text-grey-darkest font-light mt-2 mr-1">
+                                    @if (!$loop->last)
+                                        {{$tag}},
+                                    @else
+                                        {{$tag}}
+                                    @endif
+                                </a>
+                                @endforeach
+                            @endif
+                            <!-- / Tags -->
+                        </div>
                     </div>
                     <a class="no-underline text-grey-darkest" href="{{ route('frontend.posts.show', [$post->post_type, $post]) }}">
                         @include('frontend.svg.chevron-right')
                     </a>
-                </div>
-                
-                <div class="flex flex-row flex-wrap">
-                    <!-- Tags -->
-                    @if ($post->tags)
-                        @foreach ($post->tags as $tag)
-                        <a href="{{route('frontend.posts.tags.show', $tag)}}" class="no-underline text-xs text-grey-darker hover:text-grey-darkest font-light mt-2 mr-1">
-                            @if (!$loop->last)
-                                {{$tag}},
-                            @else
-                                {{$tag}}
-                            @endif
-                        </a>
-                        @endforeach
-                    @endif
-                    <!-- / Tags -->
                 </div>
             </div>
             <!-- / Blog Content -->
