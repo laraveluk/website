@@ -7,12 +7,12 @@
             <div class="flex flex-row items-center w-full border-b border-grey-light md:mx-4">
                 @if (!isset($title))
                     <div class="flex mx-auto font-bold text-lg md:text-3xl md:flex-grow md:mx-0">
-                        <a href="/blog" class="no-underline text-grey-light pb-4 border-b -mb-px mr-8 hover:text-blue-navy hover:border-blue-navy {{ request()->path() == 'blog' ? ' text-blue-navy border-blue-navy' : '' }}">
+                        <a href="/blog" class="no-underline text-grey-light pb-4 border-b -mb-px mr-8 hover:text-blue-navy hover:border-blue-navy">
                             All
                         </a>
-                        <a href="/blog/news" class="no-underline text-grey-light pb-4 border-b border-grey-light -mb-px mr-8 hover:text-blue-navy hover:border-blue-navy {{ request()->path() == 'blog/news' ? ' text-blue-navy border-blue-navy' : '' }} pb-4">News</a>
-                        <a href="/blog/interviews" class="no-underline text-grey-light pb-4 border-b border-grey-light -mb-px mr-8 hover:text-blue-navy hover:border-blue-navy {{ request()->path() == 'blog/interviews' ? ' text-blue-navy border-blue-navy' : '' }}">Interviews</a>
-                        <a href="/blog/events" class="no-underline text-grey-light pb-4 border-b border-grey-light -mb-px hover:text-blue-navy hover:border-blue-navy {{ request()->path() == 'blog/events' ? ' text-blue-navy border-blue-navy' : '' }}">Events</a>
+                        <a href="/blog/news" class="no-underline text-grey-light pb-4 border-b border-grey-light -mb-px mr-8 hover:text-blue-navy hover:border-blue-navy pb-4">News</a>
+                        <a href="/blog/interviews" class="no-underline text-grey-light pb-4 border-b border-grey-light -mb-px mr-8 hover:text-blue-navy hover:border-blue-navy">Interviews</a>
+                        <a href="/blog/events" class="no-underline text-grey-light pb-4 border-b border-grey-light -mb-px hover:text-blue-navy hover:border-blue-navy">Events</a>
                     </div>
                     @if (auth()->check())
                         <a href="/members/#/blog/create" class="hidden bg-blue-navy text-white no-underline py-2 font-bold px-4 rounded text-sm uppercase shadow md:block">
@@ -67,9 +67,7 @@
             @endforeach
             @else    
                 <h2 class="text-center mx-auto text-lg text-grey-darkest font-light mt-8">
-                    @if (request()->type)
                     There's nothing here yet :(
-                    @endif
                 </h2>
             @endunless
         </div>
