@@ -7,7 +7,7 @@
         <div class="flex flex-col text-center justify-center items-center bg-white">
             <div class="flex flex-col justify-center container md:w-3/4">
                 <div class="flex justify-center flex-row text-lg">
-                    <div class="font-light text-grey-darkest leading-normal text-left md:text-xl md:mr-12 md:w-2/3 md:p-12">
+                    <div class="font-light text-grey-darkest leading-normal text-left md:text-xl md:w-2/3 md:px-12">
                         <h2 class="text-blue-navy mb-2 text-2xl md:text-3xl md:text-left">Our Story</h2>
                         <h3 class="mb-8 leading-normal text-grey-darker text-lg md:text-xl">
                             LaravelUK is the brainchild of community owner and founder member Barry, better known in the LaravelUK community as <a class="font-bold text-blue-navy no-underline">@symfonycoda</a>. 

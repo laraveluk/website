@@ -1,14 +1,38 @@
 @extends('frontend.master')
 
 @section('content')
-    @include('frontend.about.partials.hero')
-    <div class="flex flex-col bg-white">
-        <div class="flex flex-row flex-wrap items-center container mx-auto py-12 px-4 md:p-12 min-h-75">   
+    @include('frontend.posts.partials.hero')
+    <div class="bg-white min-h-50 py-12 px-4 md:p-12 ">
+        <div class="flex flex-col max-w-2xl mx-auto md:flex-row md:flex-wrap">
+            <div class="flex flex-row items-center w-full border-b border-grey-light md:mx-4">
+                @if (!isset($title))
+                    <div class="flex mx-auto font-bold text-lg md:text-3xl md:flex-grow md:mx-0">
+                        <a href="/blog" class="no-underline text-grey-light pb-4 border-b -mb-px mr-8 hover:text-blue-navy hover:border-blue-navy {{ request()->path() == 'blog' ? ' text-blue-navy border-blue-navy' : '' }}">
+                            All
+                        </a>
+                        <a href="/blog/news" class="no-underline text-grey-light pb-4 border-b border-grey-light -mb-px mr-8 hover:text-blue-navy hover:border-blue-navy {{ request()->path() == 'blog/news' ? ' text-blue-navy border-blue-navy' : '' }} pb-4">News</a>
+                        <a href="/blog/interviews" class="no-underline text-grey-light pb-4 border-b border-grey-light -mb-px mr-8 hover:text-blue-navy hover:border-blue-navy {{ request()->path() == 'blog/interviews' ? ' text-blue-navy border-blue-navy' : '' }}">Interviews</a>
+                        <a href="/blog/events" class="no-underline text-grey-light pb-4 border-b border-grey-light -mb-px hover:text-blue-navy hover:border-blue-navy {{ request()->path() == 'blog/events' ? ' text-blue-navy border-blue-navy' : '' }}">Events</a>
+                    </div>
+                    @if (auth()->check())
+                        <a href="/members/#/blog/create" class="hidden bg-blue-navy text-white no-underline py-2 font-bold px-4 rounded text-sm uppercase shadow md:block">
+                            Create
+                        </a>
+                    @endif
+                @else
+                    <h1 class="tracking-tight text-2xl text-red mb-8 w-full md:text-3xl">{{$title}}</h1>
+                @endif
+            </div>
+            @if (auth()->check())
+                <a href="/members/#/blog/create" class="bg-blue-navy text-white no-underline py-2 font-bold px-4 rounded text-sm uppercase mx-auto mt-8 shadow md:hidden">
+                    Create
+                </a>
+            @endif
             @unless($posts->isEmpty())
             @foreach($posts as $post)
-                <div class="w-full md:w-1/2 mb-4">
-                    <div class="flex flex-col border border-grey-light bg-white rounded p-4 justify-between leading-normal shadow md:mr-4">
-                        <p class="text-sm text-grey-dark flex items-center">
+                <div class="flex flex-col w-full md:w-1/2 mt-8">
+                    <div class="flex flex-col h-full border border-grey-light bg-white p-6 leading-normal rounded shadow mx-4">
+                        <p class="text-xs uppercase text-grey-dark flex items-center">
                             @switch($post->post_type)
                                 @case('post')
                                 News
@@ -27,33 +51,26 @@
                                     @break
                             @endswitch
                         </p>
-                        <div class="mb-8">
-                            <div class="text-black font-bold text-xl mb-2">
-                                <a href="{{route('frontend.posts.show', [$post->post_type, $post])}}" class="no-underline text-red">{{$post->title}}</a></div>
-                            <p class="text-grey-darker text-base">{!! $post->excerpt !!}</p>
+                        <div class="flex flex-col flex-grow mb-4">
+                            <a href="{{route('frontend.posts.show', [$post->post_type, $post])}}" class="no-underline text-blue-navy font-bold text-lg md:text-xl">{{ $post->title }}</a>
+                            <p class="text-grey-darkest font-light leading-normal md:text-lg">{!! $post->excerpt !!}</p>
                         </div>
                         <div class="flex items-center">
                             {{-- <img class="w-10 h-10 rounded-full mr-4" src="https://pbs.twimg.com/profile_images/885868801232961537/b1F6H4KC_400x400.jpg" alt="Avatar of Jonathan Reinink"> --}}
                             <div class="text-sm">
-                                <p class="text-black leading-none">{{ $post->author->name }}</p>
-                                <p class="text-grey-dark">{{ $post->created_at->format('jS F Y') }}</p>
+                                <p class="text-grey-darkest leading-none font-light">{{ $post->author->name }}</p>
+                                <p class="text-grey-dark font-light">{{ $post->created_at->format('jS F Y') }}</p>
                             </div>
                         </div>
                     </div>
                 </div>
             @endforeach
-            @else
-                <div class="w-full mb-4 bg-grey">
-                    <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal m-2">
-                        <h2 class="text-center">
-                            @if (request()->type)
-                            There are no {{request()->type}} yet. Check back soon!
-                            @else
-                            There are no posts yet.
-                            @endif
-                        </h2>
-                    </div>
-                </div>
+            @else    
+                <h2 class="text-center mx-auto text-lg text-grey-darkest font-light mt-8">
+                    @if (request()->type)
+                    There's nothing here yet :(
+                    @endif
+                </h2>
             @endunless
         </div>
     </div>
