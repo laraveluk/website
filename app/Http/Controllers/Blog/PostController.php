@@ -16,10 +16,9 @@ class PostController extends Controller
     public function index($postType = null)
     {
         if (is_null($postType)) {
-            $posts = Post::with('author', 'tags')->get()->sortByDesc('created_at');
             $metadata_title = 'Laravel UK / News, Interviews & Articles';
         } else {
-            $posts = Post::with('author', 'tags')->where('post_type', $postType)->get()->sortByDesc('created_at');
+           // $posts = Post::with('author', 'tags')->where('post_type', $postType)->get()->sortByDesc('created_at');
             $metadata_title = 'Laravel UK | ' . title_case($postType);
         }
 
@@ -29,7 +28,7 @@ class PostController extends Controller
                 'keywords' => config('site.keywords') . ', news, articles, tutorials, interviews, event, events'
             ];
 
-        return view('frontend.posts.index', compact('posts', 'metadata'));
+        return view('frontend.posts.index', compact( 'metadata', 'postType'));
     }
 
     /**

@@ -10,7 +10,7 @@
             <p class="leading-normal mb-4 md:text-lg">
                 The skill levels range from learner to decades of experience in PHP and many other languages; from junior developers to business owners, entrepreneurs, conference speakers and book authors.
 
-                All you need to do is <a href="{{route('register')}}">sign up on our website</a> and you'll receive a Slack invitation in your email inbox.
+                All you need to do is <a class="no-underline blue-navy" href="{{route('register')}}">sign up </a>on our website and you'll receive a Slack invitation in your email inbox.
             </p>
             <p class="leading-normal md:text-lg">
                 See you soon 😁
