@@ -65,9 +65,9 @@
                     {{-- Your name and a bit about you --}}
                     <div class="p-4 text-lg leading-normal">
                         <h3 class="text-xl mb-2">Ian Landsman</h3>
-                        <p>Founder of UserScape. We've been involved with Laravel since near the beginning. We currently run 
-                            <a href="https://laracon.net" class="red-link">Laracon Online</a>, 
-                            <a href="https://larajobs.com" class="red-link">LaraJobs</a>, and 
+                        <p>Founder of UserScape. We've been involved with Laravel since near the beginning. We currently run
+                            <a href="https://laracon.net" class="red-link">Laracon Online</a>,
+                            <a href="https://larajobs.com" class="red-link">LaraJobs</a>, and
                             <a href="https://laratalent.com" class="red-link">LaraTalent</a> as well as participate in a number of Laravel community events.</p>
                     </div>
                     <div class="bg-red px-4 py-3 text-right">
@@ -86,8 +86,8 @@
                     {{-- Your name and a bit about you --}}
                     <div class="p-4 text-lg leading-normal">
                         <h3 class="text-xl mb-2">Laura Elizabeth</h3>
-                        <p>I run <a href="https://designacademy.io" class="red-link">Design Academy</a> which aims to help developers conquer their fear of design (yes, it can be done!). I'm also the owner of 
-                        <a href="https://client-portal.io" class="red-link">Client Portal</a> which is a client-friendly way to keep your projects organised. 
+                        <p>I run <a href="https://designacademy.io" class="red-link">Design Academy</a> which aims to help developers conquer their fear of design (yes, it can be done!). I'm also the owner of
+                        <a href="https://client-portal.io" class="red-link">Client Portal</a> which is a client-friendly way to keep your projects organised.
                         I spoke at both Laracon US and EU, have been lucky enough to work with Ian Landsman on LaraTalent, and currently working on a few other Laravel based projects. </p>
                     </div>
                     <div class="bg-red px-4 py-3 text-right">
@@ -129,6 +129,26 @@
                     <div class="bg-red px-4 py-3 text-right">
                         <a href="https://twitter.com/taylorotwell" class="text-white no-underline hover:underline p-2">@taylorotwell</a>
                         <a href="http://taylorotwell.com" class="text-white no-underline hover:underline p-2">https://taylorotwell.com</a>
+                    </div>
+                </section>
+            </section>
+            <!-- Section ends -->
+
+            <!-- Section start -->
+            <section class="flex flex-wrap md:flex-no-wrap justify-center md:justify-start max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg mb-8">
+                {{-- Add your profile pic --}}
+                <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url('https://www.gravatar.com/avatar/3564926bec533732670816999c460a35?s=200')"></figure>
+                <section class="flex flex-col justify-between w-full md:w-4/5">
+                    {{-- Your name and a bit about you --}}
+                    <div class="p-4 text-lg leading-normal">
+                        <h3 class="text-xl mb-2">Alex Garrett-Smith</h3>
+                        <p>
+                            Founder of <a href="https://codecourse.com">Codecourse</a>. Teaching web development with a healthy dose of Laravel.
+                        </p>
+                    </div>
+                    <div class="bg-red px-4 py-3 text-right">
+                        <a href="https://twitter.com/alexjgarrett" class="text-white no-underline hover:underline p-2">@alexjgarrett</a>
+                        <a href="https://codecourse.com" class="text-white no-underline hover:underline p-2">https://codecourse.com</a>
                     </div>
                 </section>
             </section>
