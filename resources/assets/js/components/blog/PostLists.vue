@@ -27,7 +27,14 @@
                         Events
                     </a>
                 </div>
+                <a v-if="auth" href="/members/#/blog/create" class="hidden bg-blue-navy text-white no-underline py-2 font-bold px-4 rounded text-sm uppercase shadow md:block">
+                  Create
+                </a>
             </div>
+            
+            <a href="/members/#/blog/create" class="bg-blue-navy text-white no-underline py-2 font-bold px-4 rounded text-sm uppercase mx-auto mt-8 shadow md:hidden">
+              Create
+            </a>
             
             <PostItem
                 v-for="post in posts"
@@ -42,7 +49,7 @@
     import PostItem from './PostItem'
 
     export default {
-      props: ['type'],
+      props: ['type', 'auth'],
 
       components: {
         PostItem
