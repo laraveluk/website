@@ -4,7 +4,7 @@
             <p class="text-xs uppercase text-grey-dark flex items-center">
                 {{ postType }}
             </p> <div class="flex flex-col flex-grow mb-4">
-            <a href="//localhost:3000/blog/events/laravel-london-september-2017" class="no-underline text-blue-navy font-bold text-lg md:text-xl">
+            <a :href= "postLink" class="no-underline text-blue-navy font-bold text-lg md:text-xl">
                 {{ post.title }}
             </a> <p class="text-grey-darkest font-light leading-normal md:text-lg">
                 {{ post.excerpt}}
@@ -49,6 +49,9 @@
           }
 
           return ptype
+        },
+        postLink () {
+          return `/blog/${this.post.post_type}/${this.post.slug}`
         }
       },
 
