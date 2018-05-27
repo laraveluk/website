@@ -52,7 +52,7 @@
         We haven't made any posts yet - check back soon!
     </div>
     @else
-    <div class="text-xs text-center text-grey-dark pt-4 border-t border-grey-lighter font-light">
+    <div class="text-xs text-center text-grey-dark pt-4 border-t border-grey-light">
         Read more posts from our <a href="{{ url('/blog') }}" class="no-underline text-grey-dark hover:text-purple-darkest mb-2">blog</a>.
     </div>
     @endif

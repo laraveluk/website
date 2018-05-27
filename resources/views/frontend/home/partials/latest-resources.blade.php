@@ -6,7 +6,7 @@
 	        <p class="text-grey-darkest text-sm font-light">Watch this space for a list of helpful resources and links shared by our members.</p>
 	    </div>
     </div>
-    <div class="text-xs text-center text-grey-dark pt-4 border-t border-grey-lighter font-light">
+    <div class="text-xs text-center text-grey-dark pt-4 border-t border-grey-light">
         Coming soon.
     </div>
 </div>
