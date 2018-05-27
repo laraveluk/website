@@ -49,6 +49,7 @@
                                     class="shadow bg-red hover:bg-purple-light text-white font-bold py-2 px-4 rounded">
                                 Login
                             </button>
+                            <a class="text-white ml-4" href="{{ route('password.request') }}">Forgot password?</a>
                         </div>
                     </div>
                     <div class="text-white mt-4 text-sm">If login in with Slack, make sure you are not currently switched to another slack team in the browser.</div>
