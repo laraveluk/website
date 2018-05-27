@@ -1,17 +1,22 @@
 <template>
-    <div class="flex flex-col w-full md:w-1/2 mt-8">
-        <div class="flex flex-col h-full border border-grey-light bg-white p-6 leading-normal rounded shadow mx-4">
-            <p class="text-xs uppercase text-grey-dark flex items-center">
-                {{ postType }}
-            </p> <div class="flex flex-col flex-grow mb-4">
-            <a :href= "postLink" class="no-underline text-blue-navy font-bold text-lg md:text-xl">
-                {{ post.title }}
-            </a> <p class="text-grey-darkest font-light leading-normal md:text-lg">
-                {{ post.excerpt}}
-            </p>
-        </div>
-            <div class="flex items-center">
-                <div class="text-sm">
+    <div class="flex flex-col w-full md:w-1/3 mt-8">
+        <div class="flex flex-col h-full border border-grey-light bg-white leading-normal rounded shadow mx-4">
+            <img class="w-full" src="/images/post-default.jpg" alt="">
+            <div class="flex flex-grow flex-col p-6 ">
+              <p class="text-xs uppercase text-grey-dark mb-2">
+                  {{ postType }}
+              </p> 
+              <div class="flex flex-col flex-grow mb-4">
+                <a :href= "postLink" class="no-underline text-blue-navy font-bold leading-none text-lg md:text-xl mb-2">
+                    {{ post.title }}
+                </a>
+                <p class="text-grey-darkest font-light leading-normal md:text-lg">
+                    {{ post.excerpt}}
+                </p>
+              </div>
+            </div>
+            <div class="flex">
+                <div class="text-sm  p-6">
                     <p class="text-grey-darkest leading-none font-light">
                         {{ post.author.name }}
                     </p>

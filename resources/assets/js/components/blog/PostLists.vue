@@ -1,32 +1,37 @@
 <template xmlns="http://www.w3.org/1999/html">
-        <div class="flex flex-col max-w-2xl mx-auto md:flex-row md:flex-wrap">
+        <div class="flex flex-col w-full md:flex-row md:flex-wrap">
             <div class="flex flex-row items-center w-full border-b border-grey-light md:mx-4">
                 <div class="flex mx-auto font-bold text-lg md:text-3xl md:flex-grow md:mx-0">
-                    <a href="/blog"
-                       :class="{'text-blue': type === ''}"
-                       class="no-underline text-grey-light pb-4 border-b -mb-px mr-8 hover:text-blue-navy hover:border-blue-navy">
+                    <a
+                       :class="{'text-blue-navy': filter === '', 'border-blue-navy': filter === ''}"
+                       class="cursor-pointer no-underline text-grey-light pb-4 border-b -mb-px mr-8 hover:text-blue-navy hover:border-blue-navy"
+                       @click="filterPosts('')">
                         All
                     </a>
-                    <a href="/blog/post"
-                       :class="{'text-blue': type === 'post'}"
-                       class="no-underline text-grey-light pb-4 border-b border-grey-light -mb-px mr-8 hover:text-blue-navy hover:border-blue-navy pb-4">
+                    <a
+                       :class="{'text-blue-navy': filter === 'post', 'border-blue-navy': filter === 'post'}"
+                       class="cursor-pointer no-underline text-grey-light pb-4 border-b border-grey-light -mb-px mr-8 hover:text-blue-navy hover:border-blue-navy pb-4"
+                       @click="filterPosts('post')">
                         Posts
                     </a>
-                    <a href="/blog/interviews"
-                       :class="{'text-blue': type === 'interviews'}"
-                       class="no-underline text-grey-light pb-4 border-b border-grey-light -mb-px mr-8 hover:text-blue-navy hover:border-blue-navy">
+                    <a
+                       :class="{'text-blue-navy': filter === 'interviews', 'border-blue-navy': filter === 'interviews'}"
+                       class="cursor-pointer no-underline text-grey-light pb-4 border-b border-grey-light -mb-px mr-8 hover:text-blue-navy hover:border-blue-navy"
+                       @click="filterPosts('interviews')">
                         Interviews
                     </a>
-                    <a href="/blog/events"
-                       :class="{'text-blue': type === 'events'}"
-                       class="no-underline text-grey-light pb-4 border-b border-grey-light -mb-px hover:text-blue-navy hover:border-blue-navy">
+                    <a
+                       :class="{'text-blue-navy': filter === 'events', 'border-blue-navy': filter === 'events'}"
+                       class="cursor-pointer no-underline text-grey-light pb-4 border-b border-grey-light -mb-px hover:text-blue-navy hover:border-blue-navy"
+                       @click="filterPosts('events')">
                         Events
                     </a>
                 </div>
             </div>
-
+            
             <PostItem
                 v-for="post in posts"
+                v-if="post.post_type == filter || filter == ''"
                 :post="post"
                 :key="post.id" />
         </div>
@@ -49,19 +54,20 @@
 
       data () {
         return {
-          posts: []
+          posts: [],
+          filter: '',
         }
       },
       methods: {
            fetchPosts () {
              let url = '/api/blog/posts'
 
-             if (this.type !=='') {
-               url = `/api/blog/posts?type=${this.type}`
-             }
-
              axios.get(url)
                .then(response => this.posts = response.data.posts)
+           },
+
+           filterPosts(filter) {
+            this.filter = filter;
            }
        }
     }
