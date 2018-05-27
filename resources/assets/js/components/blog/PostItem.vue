@@ -57,7 +57,7 @@
 
       filters: {
         formatDate(value) {
-          return moment(value.date).format('Do MMMM YYYY')
+          return moment(value).format('Do MMMM YYYY')
         }
       }
     }
