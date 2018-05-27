@@ -11,7 +11,7 @@
 	        <a href="/blog/interviews/laravel-talks-to-simon-bennett-of-snapshooter-io-2" class="font-light text-sm text-grey-dark no-underline hover:text-blue-navy">Read more...</a>
 	    </div>
     </div>
-    <div class="text-xs text-center text-grey-dark pt-4 border-t border-grey-lighter font-light">
+    <div class="text-xs text-center text-grey-dark pt-4 border-t border-grey-light">
         More interviews coming soon.
     </div>
 </div>
