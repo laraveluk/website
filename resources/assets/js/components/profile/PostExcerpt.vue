@@ -15,7 +15,7 @@
 
             <div class="text-sm">
                 <p class="text-black leading-none">{{name}}</p>
-                <p class="text-grey-dark">{{post.created_at | formatDate}}</p>
+                <p class="text-grey-dark">{{post.created_at.date | formatDate}}</p>
             </div>
 
         </div>
