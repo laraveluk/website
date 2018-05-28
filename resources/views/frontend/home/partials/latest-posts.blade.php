@@ -9,7 +9,7 @@
         @endif
             <!-- Avatar -->
             @if ($post->author)
-            <a href="{{route('profile', $post->author)}}">
+            <a href="{{route('profiles.show', $post->author)}}">
                 <img class="w-10 h-10 rounded-full mr-6" src="{{$post->author->avatar}}" alt="{{$post->author->name}}'s Avatar">
             </a>
             @endif
