@@ -62,7 +62,7 @@ class Post extends Model
     /**
      * A post belongs to a user
      *
-     * @return Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function author()
     {
@@ -72,7 +72,7 @@ class Post extends Model
     /**
      * A post has and belongs to many comments
      *
-     * @return Illuminate\Database\Eloquent\Relations\MorphMany
+     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
      */
     public function comments()
     {

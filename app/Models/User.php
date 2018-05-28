@@ -47,13 +47,40 @@ class User extends Authenticatable
         return $this->hasMany(Promotion::class);
     }
 
-	/**
-	 * A user has many profile key/pairs
-	 * @return \Illuminate\Database\Eloquent\Relations\HasMany
-	 */
-	public function profiles() {
-		return $this->hasMany(Profile::class);
-	}
+    /**
+     * A user has many profile key/pairs
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function profiles()
+    {
+        return $this->hasMany(Profile::class);
+    }
+
+    /**
+     * Return user with relations for profile view/edit via User Resource
+     * @param $query
+     * @return mixed
+     */
+    public function scopeFullProfile($query)
+    {
+        return $query->with([
+            'profiles.profile_key',
+            'promotions',
+            'socialLinks',
+            'posts' => function ($posts) {
+                $posts->orderBy('created_at', 'desc');
+            }
+        ]);
+    }
+
+    /**
+     * A user has many socialLinks
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function socialLinks()
+    {
+        return $this->hasMany(SocialLinks::class);
+    }
 
     /**
      * User is linked to a role
@@ -84,7 +111,7 @@ class User extends Authenticatable
     /**
      * Assign user to role
      *
-     * @param App\Models\Role $role
+     * @param \App\Models\Role $role
      */
     public function assignRole(Role $role)
     {
@@ -94,7 +121,7 @@ class User extends Authenticatable
     /**
      * Remove user role
      *
-     * @param App\Models\Role $role
+     * @param \App\Models\Role $role
      * @return int
      */
     public function removeRole($role)
@@ -104,7 +131,7 @@ class User extends Authenticatable
 
     /**
      * Get the avatar attribute
-     * 
+     *
      * @param string $avatar
      * @return string
      */

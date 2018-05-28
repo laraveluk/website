@@ -18,6 +18,7 @@ window.Vue = require('vue');
 Vue.component('Dropdown', require('../components/Dropdown'));
 Vue.component('Navbar', require('../components/Navbar'));
 Vue.component('PostLists', require('../components/blog/PostLists'));
+Vue.component('ProfilePage', require('../components/profile/ProfilePage'));
 
 const app = new Vue({
     el: '#app'
