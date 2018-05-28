@@ -1,0 +1,106 @@
+.profile {
+  background-color: white;
+  .hero {
+    height: 300px;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    &__container {
+      max-width: 1200px;
+      width: 95%;
+      margin: 0 auto;
+    }
+
+    &__content {
+      float: left;
+      width: 100%;
+      padding: 25px 0;
+    }
+
+    &__title {
+      color: white;
+      font-weight: 300;
+      font-size: 40px;
+      text-align: center;
+      margin: 5px 0;
+    }
+
+    &__subtitle {
+      color: white;
+      font-weight: 100;
+      font-size: 20px;
+      text-align: center;
+      margin: 2px 0;
+    }
+
+    &__avatar {
+      width: 200px;
+      height: 200px;
+
+      border-radius: 50%;
+
+      background-size: cover;
+      background-position: center center;
+      border: 2px solid rgba(0, 165, 0, 0.75);
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .site {
+    padding: 75px 0;
+
+    &__container {
+      max-width: 1200px;
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+
+  .content {
+    width: 65%;
+    float: right;
+    min-height: 100vh;
+    padding: 20px;
+
+    &__title {
+      text-transform: uppercase;
+      font-weight: 100;
+      color: #666666;
+      letter-spacing: 0.25px;
+      border-bottom: 1px solid #666666;
+
+    }
+  }
+
+  .sidebar {
+    width: 35%;
+    float: left;
+    min-height: 100vh;
+    padding: 20px;
+
+    &__title {
+      text-transform: uppercase;
+      font-weight: 100;
+      color: #666666;
+      letter-spacing: 0.25px;
+      border-bottom: 1px solid #666666;
+    }
+    &__content {
+      p {
+        margin: 10px 0;
+      }
+    }
+  }
+
+  .clear {
+    clear: both;
+  }
+}

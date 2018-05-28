@@ -12,7 +12,7 @@ class Profile extends Model
      * @var array
      */
     protected $fillable = [
-	    'profile_key_id','value'
+        'profile_key_id', 'value'
     ];
 
     /**
@@ -25,15 +25,24 @@ class Profile extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
-	/**
-	 * A profile belongs to a profile key
-	 *
-	 * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-	 */
-	public function profile_key() {
-		return $this->belongsTo('App\ProfileKey');
-	}
+    /**
+     * A profile belongs to a profile key
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function profile_key()
+    {
+        return $this->belongsTo(ProfileKey::class);
+    }
 
-
+    /**
+     * A profile belongs to a profile key
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function social_links()
+    {
+        return $this->hasMany(SocialLinks::class);
+    }
 
 }

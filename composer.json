@@ -8,6 +8,7 @@
         "php": ">=7.0.0",
         "cviebrock/eloquent-sluggable": "^4.3",
         "cviebrock/eloquent-taggable": "^3.3",
+        "doctrine/dbal": "^2.7",
         "fideloper/proxy": "~4.0",
         "joepriest/passwordreset": "^1.2.1",
         "laravel/framework": "5.6.*",

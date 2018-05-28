@@ -8,10 +8,25 @@
 
 namespace App\Enums;
 
-class ProfileKeys {
+use ReflectionClass;
 
-	const TEXT = 0;
-	const NUMBER = 1;
-	const TEXTAREA = 2;
+class ProfileKeys
+{
+    const TEXT = 0;
+    const NUMBER = 1;
+    const TEXTAREA = 2;
 
+
+    public static function getType($value)
+    {
+        $class = new ReflectionClass(__CLASS__);
+        $constants = array_flip($class->getConstants());
+
+        return $constants[$value];
+    }
+
+    public static function getId($value)
+    {
+        return constant("Self::$value");
+    }
 }

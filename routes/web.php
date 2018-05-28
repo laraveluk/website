@@ -28,8 +28,9 @@ Route::prefix('blog')->namespace('Blog')->group(function () {
     Route::post('/{type}/{post}/comment', 'CommentController@store')->name('frontend.comments.store');
 });
 
-/** Profile Show Route */
-Route::get('profiles/{id}', 'ProfileShowController')->name('profile');
+/** Profile */
+Route::get('profiles/{id}', 'ProfileController@show')->name('profiles.show');
+Route::get('profiles/{id}/edit', 'ProfileController@edit')->name('profiles.edit');
 
 /** Redirects*/
 Route::redirect('tutorials', '/blog/tutorials');
