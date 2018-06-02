@@ -779,7 +779,7 @@ module.exports = {
   | specify a fill color using existing text color utilities and helps keep the
   | generated CSS file size down.
   |
-  | Class name: .fill-{name}
+  | Clasws name: .fill-{name}
   |
   */
 
