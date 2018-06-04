@@ -19,7 +19,8 @@ class Post extends JsonResource
             'body' => $this->body,
             'slug' => $this->slug,
             'post_type' => $this->post_type,
-            'excerpt' => $this->excerpt
+            'excerpt' => $this->excerpt,
+            'created_at' => $this->created_at
         ];
     }
 }

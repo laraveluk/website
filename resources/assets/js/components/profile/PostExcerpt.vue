@@ -5,7 +5,7 @@
 
         <div class="mb-8">
             <div class="text-black font-bold text-xl mb-2">
-                <a href="#" class="no-underline text-red">{{post.title}}</a>
+                <a :href="'/blog/' + post.post_type + '/' + post.slug" class="no-underline text-red">{{post.title}}</a>
             </div>
 
             {{post.excerpt}}
@@ -15,7 +15,7 @@
 
             <div class="text-sm">
                 <p class="text-black leading-none">{{name}}</p>
-                <p class="text-grey-dark">{{post.created_at | formatDate}}</p>
+                <p class="text-grey-dark">{{post.created_at.date | formatDate}}</p>
             </div>
 
         </div>
