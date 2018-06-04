@@ -557,6 +557,7 @@ module.exports = {
     '50': '50vh',
     '75': '75vh',
     'full': '100%',
+    'screen-header': 'calc(100vh - 77px - 64px)',
     'screen': '100vh'
   },
 
@@ -779,7 +780,7 @@ module.exports = {
   | specify a fill color using existing text color utilities and helps keep the
   | generated CSS file size down.
   |
-  | Class name: .fill-{name}
+  | Clasws name: .fill-{name}
   |
   */
 
@@ -853,7 +854,7 @@ module.exports = {
     pointerEvents: ['responsive'],
     position: ['responsive'],
     resize: ['responsive'],
-    shadows: ['responsive'],
+    shadows: ['responsive', 'hover'],
     svgFill: [],
     svgStroke: [],
     textAlign: ['responsive'],
