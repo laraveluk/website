@@ -7,9 +7,9 @@
     <div class="w-full">
         <div class="w-full flex flex-col items-center justify-center bg-grey-lighter font-sans min-h-screen-header">
             <div class="container mx-auto">
-                <div class="md:w-full sm:w-full lg:w-1/2 lg:max-w-l mx-auto border border-grey p-8 pt-0 rounded">
+                <div class="md:w-full sm:w-full lg:w-1/2 lg:max-w-l mx-auto border border-grey p-8 md:pt-0 rounded bg-white">
                     <div class="text-center">
-                        <h2 class="text-blue-light text-5xl mb-8 text-center -mt-8 bg-grey-lighter inline-block px-4">Login</h2>
+                        <h2 class="text-blue-light text-5xl mb-8 text-center md:-mt-8 bg-grey-lighter inline-block px-4 bg-white border border-grey rounded  py-2">Login</h2>
                     </div>
 
                     <div class="flex flex-col items-center justify-center pb-8 border-b border-grey mb-8">
