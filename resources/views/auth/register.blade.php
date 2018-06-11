@@ -34,7 +34,7 @@
                         <div class="mb-6">
                             <label for="email" class="block text-grey-dark text-lg font-bold md:text-left mb-2 pr-4">Email</label>
                             <input class="shadow appearance-none border rounded w-full py-2 px-3 text-blue-lightest"
-                                   id="name" type="text" name="email" value="{{ old('email') }}" placeholder="Email">
+                                   id="email" type="text" name="email" value="{{ old('email') }}" placeholder="Email">
                             @if ($errors->has('email'))
                             <span class="text-red inline-block mt-4">{{ $errors->first('email') }}</span>
                             @endif
