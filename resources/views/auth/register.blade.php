@@ -19,7 +19,7 @@
                         <p class="text-grey-dark text-xs"><i class="fas fa-"></i> If you're logging in with Slack, make sure you are not currently switched to another slack team in the browser.</p>
                     </div>
 
-                    <form role="form" class="mb-4" method="POST" action="{{ route('login') }}">
+                    <form role="form" class="mb-4" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
                         <div class="mb-6">
