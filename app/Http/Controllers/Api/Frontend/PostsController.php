@@ -18,9 +18,7 @@ class PostsController extends Controller
         }
 
 
-        $posts = $postQuery
-                    ->get()
-                    ->sortByDesc('created_at');
+        $posts = $postQuery->orderBy('created_at', 'DESC')->get();
 
         return response()->json([
             'posts' => $posts
