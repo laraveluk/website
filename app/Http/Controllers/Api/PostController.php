@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Log;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Response;
 
 class PostController extends Controller
 {
@@ -34,8 +35,8 @@ class PostController extends Controller
     /**
      * Display a post
      *
-     * @param App\Models\Post $post
-     * @return Illuminate\Http\Response
+     * @param Post $post
+     * @return Response
      */
     public function show(Post $post)
     {

@@ -70,7 +70,10 @@
              let url = '/api/blog/posts'
 
              axios.get(url)
-               .then(response => this.posts = response.data.posts)
+               .then(response => {
+                 console.log(response.data.posts)
+                 this.posts = response.data.posts
+               })
            },
 
            filterPosts(filter) {

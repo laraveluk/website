@@ -13,8 +13,6 @@ before_script:
   - composer install --no-interaction
   - php artisan key:generate
   - php artisan migrate
-  - yarn
-  - yarn prod
 
 script:
   - vendor/bin/phpunit

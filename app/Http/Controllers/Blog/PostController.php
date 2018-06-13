@@ -18,7 +18,7 @@ class PostController extends Controller
         if (is_null($postType)) {
             $metadata_title = 'Laravel UK / News, Interviews & Articles';
         } else {
-           // $posts = Post::with('author', 'tags')->where('post_type', $postType)->get()->sortByDesc('created_at');
+
             $metadata_title = 'Laravel UK | ' . title_case($postType);
         }
 
