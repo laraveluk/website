@@ -31,13 +31,13 @@ class SlackLoginController extends Controller
     {
         $slackUser = Socialite::driver('slack')->user();
 
-        if ($user = User::where('slack_id', $slackUser->getId())->first()) { // User already exists, so sign them back in
+        if ($user = User::where('email', $slackUser->getEmail())->first()) { // User already exists, so sign them back in
 
             $user->update([
                 'name' => $slackUser->getName(),
-                'email' => $slackUser->getEmail(),
                 'avatar' => $slackUser->getAvatar(),
-                'nickname' => $slackUser->getNickname()
+                'nickname' => $slackUser->getNickname(),
+                'slack_id' => $slackUser->getId()
             ]);
 
             Log::debug("{$slackUser->getName()} logged in with Slack");
