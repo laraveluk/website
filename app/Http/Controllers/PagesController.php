@@ -9,8 +9,11 @@ class PagesController extends Controller
 {
     public function homePage()
     {
-        $posts = Post::with('author', 'tags')->get()->sortByDesc('created_at')->take(5);
-
+        $posts = Post::with('author', 'tags')
+            ->approved()
+            ->get()
+            ->take(5);
+    
         return view('frontend.home.index', compact('posts'));
     }
 
