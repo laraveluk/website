@@ -22,6 +22,13 @@
                                 Edit
                             </a>
                         @endcan
+                        @can('approve', $post)
+                          @if (! $post->approved)
+                            <approve-button
+                              :post_id="{{ $post->id }}">
+                            </approve-button>
+                            @endif
+                        @endcan
                     @foreach ($post->tags as $tag)
                         <a href="{{route('frontend.posts.tags.show', $tag->name)}}" class="bg-transparent border border-blue hover:bg-blue hover:text-white text-blue font-bold py-2 px-4 mx-1 float-right no-underline rounded">
                             {{$tag->name}}

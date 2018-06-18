@@ -3,9 +3,16 @@
         <div class="flex flex-col h-full border border-grey-light bg-white leading-normal rounded shadow mx-4">
             <img class="w-full" src="/images/post-default.jpg" alt="">
             <div class="flex flex-grow flex-col p-6 ">
-              <p class="text-xs uppercase text-grey-dark mb-2">
+              <div class="flex justify-between mb-2">
+                 <p class="block text-xs uppercase text-grey-dark">
                   {{ postType }}
-              </p> 
+                </p> 
+                <p v-if="! post.approved"
+                  class="block text-xs uppercase text-red">
+                  Unpublished
+                </p>
+              </div>
+            
               <div class="flex flex-col flex-grow mb-4">
                 <a :href= "postLink" class="no-underline text-blue-navy font-bold leading-none text-lg md:text-xl mb-2">
                     {{ post.title }}

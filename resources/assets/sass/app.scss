@@ -5,11 +5,10 @@
  * You can see the styles here:
  * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
  */
+
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
 @import "../../../node_modules/animate.css/animate";
-
 @tailwind preflight;
-
 /**
   * Custom elements added here
  *
@@ -23,43 +22,43 @@
  * @import "components/buttons";
  * @import "components/forms";
  */
-body, html {
-  height: 100%;
-   box-sizing: border-box;
+
+body,
+html {
+      height: 100%;
+      box-sizing: border-box;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      @media only screen and (-webkit-min-device-pixel-ratio: 1.25),
-            only screen and (min-device-pixel-ratio: 1.25),
-            only screen and (min-resolution: 200dpi),
-            only screen and (min-resolution: 1.25dppx) {
+      @media only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-device-pixel-ratio: 1.25), only screen and (min-resolution: 200dpi), only screen and (min-resolution: 1.25dppx) {
             -webkit-font-smoothing: subpixel-antialiased;
       }
 }
-
 
 input,
 select,
 select:focus,
 textarea {
-  font-size: 16px; //-- this will prevent the input boxes from scaling/zooming on focus
+      font-size: 16px; //-- this will prevent the input boxes from scaling/zooming on focus
 }
-
 
 ::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
       @apply .text-grey .text-sm;
       letter-spacing: 0.04rem;
 }
+
 ::-moz-placeholder {
       /* Firefox 19+ */
       @apply .text-grey .text-sm;
       letter-spacing: 0.04rem;
 }
+
 :-ms-input-placeholder {
       /* IE 10+ */
       @apply .text-grey .text-sm;
       letter-spacing: 0.04rem;
 }
+
 :-moz-placeholder {
       /* Firefox 18- */
       @apply .text-grey .text-sm;
@@ -74,13 +73,13 @@ textarea {
 @import "components/blog";
 @import "components/about";
 @import "components/profilepage";
-
+@import "components/modal";
 /**
  * Tailwind's utility classes injected here. Generated based on your
  * config file.
  */
-@tailwind utilities;
 
+@tailwind utilities;
 /**
  * Add custom utilities not covered by Tailwind
  */

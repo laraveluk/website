@@ -11,9 +11,14 @@ class Post extends Model
     use Sluggable, Taggable;
 
     /** @var array $fillable */
-    protected $fillable = ['title', 'body', 'slug', 'user_id', 'post_type'];
+    protected $fillable = ['title', 'body', 'slug', 'user_id', 'post_type', 'approved', 'approved_by'];
+    
     /** @var array $appends */
     protected $appends = ['excerpt'];
+
+    protected $casts = [
+        'approved' => 'boolean'
+    ];
 
     /**
      * Return the sluggable configuration array for this model.
@@ -37,6 +42,17 @@ class Post extends Model
     public function getRouteKeyName()
     {
         return 'slug';
+    }
+
+    /**
+     * Return only approved posts
+     *
+     * @param $query
+     * @return mixed
+     */
+    public function scopeApproved($query)
+    {
+        return $query->where('approved', 1)->orderBy('created_at', 'DESC');
     }
 
     /**

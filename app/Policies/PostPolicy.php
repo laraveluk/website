@@ -41,4 +41,9 @@ class PostPolicy
     {
         return $user->id === $post->user_id;
     }
+
+    public function approve(User $user, Post $post)
+    {
+        return $user->hasRole('Admin');
+    }
 }

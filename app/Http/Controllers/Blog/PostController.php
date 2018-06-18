@@ -15,6 +15,7 @@ class PostController extends Controller
      */
     public function index($postType = null)
     {
+        //dd(auth()->user()->hasRole('Admin'));
         if (is_null($postType)) {
             $metadata_title = 'Laravel UK / News, Interviews & Articles';
         } else {
