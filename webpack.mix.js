@@ -14,6 +14,15 @@ let mix = require('laravel-mix');
  |
  */
 
+mix.webpackConfig({
+    resolve: {
+      alias: {
+        "frontend" : path.resolve(__dirname, 'resources/assets/js/frontend'),
+        "backend" : path.resolve(__dirname, 'resources/assets/js/backend')
+      }
+    }
+  })
+
 // Frontend assets
 mix.js('resources/assets/js/frontend/app.js', 'public/js/')
     .sass('resources/assets/sass/app.scss', 'public/css/');

@@ -1,6 +1,8 @@
 <template>
     <div>
         <navbar></navbar>
+        <!--<div class="notifications"></div>-->
+
         <router-view></router-view>
         <site-footer></site-footer>
     </div>
