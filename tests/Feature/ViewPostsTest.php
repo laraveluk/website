@@ -26,10 +26,12 @@ class ViewPostsTest extends TestCase
 //    }
 
     /** @test */
-    public function any_user_may_view_a_blog_post()
+    public function any_user_may_view_an_approved_blog_post()
     {
         // Given that there is a post in the database
-        $post = factory('App\Models\Post')->create();
+        $post = factory('App\Models\Post')->create([
+            'approved' => 1,
+        ]);
         // When we visit that post's URL
         $this->call('GET', route('frontend.posts.show', [$post->post_type, $post]))
         // It should load successfully
@@ -45,7 +47,9 @@ class ViewPostsTest extends TestCase
     public function any_blog_post_gets_its_own_dynamic_metadata_information()
     {
         // Given that there is a post in the database
-        $post = factory('App\Models\Post')->create();
+        $post = factory('App\Models\Post')->create([
+            'approved' => 1,
+        ]);
 
         $title = $post->title;
         $excerpt = $post->excerpt;

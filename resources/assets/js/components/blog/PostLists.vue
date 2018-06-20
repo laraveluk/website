@@ -49,7 +49,7 @@
     import PostItem from './PostItem'
 
     export default {
-      props: ['type', 'auth'],
+      props: ['type', 'auth', 'admin'],
 
       components: {
         PostItem
@@ -68,10 +68,10 @@
       methods: {
            fetchPosts () {
              let url = '/api/blog/posts'
+             let data = this.admin ? {all: true}: {}
 
-             axios.get(url)
+             axios.get(url, {params: data})
                .then(response => {
-                 console.log(response.data.posts)
                  this.posts = response.data.posts
                })
            },

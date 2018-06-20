@@ -13,9 +13,13 @@ use Illuminate\Http\Request;
 
 // Deploy route
 Route::post('deploy', 'UtilController@deploy')->name('deploy');
+
 Route::get('blog/posts', ['as' => 'frontend.posts', 'uses' => 'Frontend\PostsController@getPosts']);
 
 Route::middleware(['web', 'auth', 'api'])->group(function () {
+    Route::get('blog/posts/{admin}', ['as' => 'frontend.posts', 'uses' => 'Frontend\PostsController@getPosts']);
+    Route::post('blog/approve/post', ['as' => 'frontend.approve_posts', 'uses' => 'Frontend\PostsController@approvePost']);
+    
     Route::resource('user', 'UserController', [
         'only' => [
             'index',

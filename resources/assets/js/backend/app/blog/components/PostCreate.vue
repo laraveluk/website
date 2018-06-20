@@ -69,8 +69,7 @@ export default {
   methods: {
     savePost() {
       axios.post("/api/post", { data: this.post }).then(({ data }) => {
-        window.location.href= `/blog/${data.post.post_type}/${data.post.slug}`
-        // this.$router.push(`/blog/${data.post.slug}`);
+          window.location.href= `/blog/${data.post.post_type}/${data.post.slug}`
       });
     }
   },
