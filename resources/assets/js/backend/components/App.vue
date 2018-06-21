@@ -1,8 +1,9 @@
 <template>
     <div>
-        <navbar></navbar>
-        <!--<div class="notifications"></div>-->
-
+      <div class="bg-blue-navy ">
+         <navbar></navbar>
+      </div>
+      
         <router-view></router-view>
         <site-footer></site-footer>
     </div>

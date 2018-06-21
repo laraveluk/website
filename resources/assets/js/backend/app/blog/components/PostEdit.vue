@@ -1,10 +1,10 @@
 <template>
-    <div v-if="post !== undefined">
-  
+    <div v-if="post !== undefined" class="bg-white p-6">
         <div class="flex flex-wrap max-w-2xl mx-auto">
             <div class="w-full rounded overflow-hidden shadow-lg">
-                <div class="mt-6">
-                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" v-model="post.title">
+                <div class="mt-6 px-6">
+                     <input 
+                     class="bg-white shadow appearance-none border rounded w-full py-4 px-3 text-grey-darker" v-model="post.title">
                 </div>
                
                 <!-- <img class="w-full" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains"> -->
@@ -20,7 +20,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </template>
 
 <script>
