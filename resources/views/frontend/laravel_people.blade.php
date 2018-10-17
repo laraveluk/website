@@ -21,7 +21,7 @@
 
             <section class="flex flex-wrap md:flex-no-wrap justify-center md:justify-start max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg mb-8">
                     {{-- Add your profile pic --}}
-                <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url('https://pbs.twimg.com/profile_images/378800000501505377/4df558a3066b7c67e33204d665f7954f_400x400.jpeg')"></figure>
+                <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url({!! \App\Helpers\TwitterImage::get('ericlbarnes') !!})"></figure>
                 <section class="flex flex-col justify-between w-full md:w-4/5">
                     {{-- Your name and a bit about you --}}
                     <div class="p-4 text-lg leading-normal">
@@ -41,7 +41,7 @@
 
             <section class="flex flex-wrap md:flex-no-wrap justify-center md:justify-start max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg mb-8">
                     {{-- Add your profile pic --}}
-                <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url('https://avatars2.githubusercontent.com/u/558441?s=400&v=4')"></figure>
+                <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url({!! \App\Helpers\TwitterImage::get('michaeldyrynda') !!})"></figure>
                 <section class="flex flex-col justify-between w-full md:w-4/5">
                     {{-- Your name and a bit about you --}}
                     <div class="p-4 text-lg leading-normal">
@@ -60,7 +60,7 @@
             <!-- Section start -->
             <section class="flex flex-wrap md:flex-no-wrap justify-center md:justify-start max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg mb-8">
                     {{-- Add your profile pic --}}
-                <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url('https://pbs.twimg.com/profile_images/591437812932608000/oeuRzWJo_400x400.jpg')"></figure>
+                <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url({!! \App\Helpers\TwitterImage::get('ianlandsman') !!}"></figure>
                 <section class="flex flex-col justify-between w-full md:w-4/5">
                     {{-- Your name and a bit about you --}}
                     <div class="p-4 text-lg leading-normal">
@@ -81,7 +81,7 @@
             <!-- Section start -->
             <section class="flex flex-wrap md:flex-no-wrap justify-center md:justify-start max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg mb-8">
                     {{-- Add your profile pic --}}
-                <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url('https://pbs.twimg.com/profile_images/829704528522047488/MUgBrW2J_400x400.jpg')"></figure>
+                <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url({!! \App\Helpers\TwitterImage::get('laurium') !!})"></figure>
                 <section class="flex flex-col justify-between w-full md:w-4/5">
                     {{-- Your name and a bit about you --}}
                     <div class="p-4 text-lg leading-normal">
@@ -101,7 +101,7 @@
             <!-- Section start -->
             <section class="flex flex-wrap md:flex-no-wrap justify-center md:justify-start max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg mb-8">
                     {{-- Add your profile pic --}}
-                <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url('https://pbs.twimg.com/profile_images/869972011291779072/cORueTQM_400x400.jpg')"></figure>
+                <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url({!! \App\Helpers\TwitterImage::get('stauffermatt') !!})"></figure>
                 <section class="flex flex-col justify-between w-full md:w-4/5">
                     {{-- Your name and a bit about you --}}
                     <div class="p-4 text-lg leading-normal">
@@ -119,7 +119,7 @@
             <!-- Section start -->
             <section class="flex flex-wrap md:flex-no-wrap justify-center md:justify-start max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg mb-8">
                     {{-- Add your profile pic --}}
-                <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url('https://pbs.twimg.com/profile_images/914894066072113152/pWD-GUwG_400x400.jpg')"></figure>
+                <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url({!! \App\Helpers\TwitterImage::get('taylorotwell') !!})"></figure>
                 <section class="flex flex-col justify-between w-full md:w-4/5">
                     {{-- Your name and a bit about you --}}
                     <div class="p-4 text-lg leading-normal">
@@ -137,7 +137,7 @@
             <!-- Section start -->
             <section class="flex flex-wrap md:flex-no-wrap justify-center md:justify-start max-w-lg mx-auto bg-white rounded-lg overflow-hidden shadow-lg mb-8">
                 {{-- Add your profile pic --}}
-                <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url('https://www.gravatar.com/avatar/3564926bec533732670816999c460a35?s=200')"></figure>
+                <figure class="w-full md:w-1/5 ratio-3/4 flex-no-shink bg-cover bg-center" style="background-image: url({!! \App\Helpers\TwitterImage::get('alexjgarrett') !!})"></figure>
                 <section class="flex flex-col justify-between w-full md:w-4/5">
                     {{-- Your name and a bit about you --}}
                     <div class="p-4 text-lg leading-normal">
