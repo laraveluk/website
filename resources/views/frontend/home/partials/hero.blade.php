@@ -1,5 +1,5 @@
 <section class="flex flex-col hero bg-cover bg-center bg-no-repeat">
-    <div class="snow"></div>
+    <section id="snow"></section>
 	<div class="md:p-6">
     	<navbar current-route="{{Route::currentRouteName()}}"></navbar>
     </div>
