@@ -1,5 +1,5 @@
 @extends('frontend.master')
-
+<div class="snow"></div>
 @section('title_and_meta')
     <title>Welcome To LaravelUK Community - The most exciting Laravel community in the UK</title>
     <meta name="title" content="Welcome To LaravelUK Community - The most exciting Laravel community in the UK" />
@@ -18,7 +18,7 @@
     <!-- / Introduction to LaravelUK -->
 
     <div class="flex flex-col">
-        <div class="flex flex-col justify-center items-center container mx-auto py-12 px-4 md:p-12 min-h-75">   
+        <div class="flex flex-col justify-center items-center container mx-auto py-12 px-4 md:p-12 min-h-75">
             <!-- LaravelUK Sponsors -->
             @include('frontend.home.partials.sponsor')
             <!-- / LaravelUK Sponsors -->
@@ -34,8 +34,8 @@
 
                 <!-- Latest Resources -->
                 @include('frontend.home.partials.latest-resources')
-                <!-- / Latest Resources -->    
+                <!-- / Latest Resources -->
             </div>
-        </div> 
+        </div>
     </div>
 @endsection
