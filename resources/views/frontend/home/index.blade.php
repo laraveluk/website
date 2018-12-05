@@ -1,5 +1,4 @@
 @extends('frontend.master')
-<div class="snow"></div>
 @section('title_and_meta')
     <title>Welcome To LaravelUK Community - The most exciting Laravel community in the UK</title>
     <meta name="title" content="Welcome To LaravelUK Community - The most exciting Laravel community in the UK" />
