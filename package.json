@@ -21,7 +21,7 @@
         "nsp": "^3.2.1",
         "nsp-preprocessor-yarn": "^1.1.2",
         "tailwindcss": "^0.4.1",
-        "vue": "^2.5.7"
+        "vue": "^2.5.17"
     },
     "dependencies": {
         "animate.css": "^3.6.1",
