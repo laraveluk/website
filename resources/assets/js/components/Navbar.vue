@@ -19,6 +19,7 @@
                 <a href="/laravel-people" class="hover:text-white no-underline mr-6 my-4 md:my-0 text-3xl md:text-xl" :class="[isActiveRoute('laravelpeeps') ? activeClass : inactiveClass]">LaraCelebs</a>
 
                 <div class="guest flex flex-col md:flex-row justify-center items-center mr-6 md:mr-0" v-if="user === null">
+                    <a href="/slack" class="text-blue-lightest hover:text-white no-underline md:mr-6 my-4 md:my-0 text-3xl md:text-xl">Slack</a>
                     <a href="/login" class="text-blue-lightest hover:text-white no-underline md:mr-6 my-4 md:my-0 text-3xl md:text-xl">Log in</a>
                     <a href="/register" class="text-blue-lightest hover:text-white no-underline text-3xl md:text-xl md:mr-6 my-4">Sign up</a>
                     <!--<a href="/join-slack" class="text-grey bg-red hover:bg-red-dark no-underline rounded-full border border-red-lighter px-4 py-2 lg:ml-2 shadow-lg">Join us on Slack</a>-->

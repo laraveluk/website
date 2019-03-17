@@ -61,7 +61,7 @@ class SlackLoginController extends Controller
     }
 
     public function showInviteForm() {
-        return view('frontend.slack.invite');
+        return view('frontend.slack');
     }
 
     public function sendInvite(Request $request) {
