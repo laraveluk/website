@@ -10,9 +10,9 @@
                 <div class="md:w-full sm:w-full lg:w-1/2 lg:max-w-l mx-auto border border-grey p-8 my-8 md:pt-0 rounded bg-white">
                     <div class="text-center">
                         <div class="mb-8 text-center md:-mt-8 bg-grey-lighter inline-block bg-white border border-grey rounded p-0">
-                        <img src="/images/slack-mark.png" alt="Slack" class="w-24 h-24" />
+                            <img src="/images/slack-mark.png" alt="Slack" class="w-24 h-24" />
+                        </div>
                     </div>
-
                     <p class="mb-6 font-light text-grey-darkest leading-normal text-left md:text-xl">To join the LaravelUK Slack community you can request an invite by submitting your email address below.</p>
 
                     <form method="post">
