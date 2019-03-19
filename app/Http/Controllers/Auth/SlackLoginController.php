@@ -61,7 +61,7 @@ class SlackLoginController extends Controller
     }
 
     public function showInviteForm() {
-        return view('frontend.slack.invite');
+        return view('frontend.slack');
     }
 
     public function sendInvite(Request $request) {
@@ -69,7 +69,27 @@ class SlackLoginController extends Controller
         $request->validate([
             'email' => 'required'
         ]);
-
-        return Slack::sendInvitation($request->input('email'));
+        // TODO: update to the check response and return success
+        // or error message
+        $slack = Slack::sendInvitation($request->input('email'));
+        if(!$slack->ok) {
+            $message = '';
+            switch($slack->error) {
+                case 'already_in_team':
+                    $message = 'You have already joined!';
+                    break;
+                case 'already_invited':
+                    $message = 'You have already been invited!';
+                    break;
+                case 'invalid_email':
+                    $message = 'The email submitted is invalid.';
+                    break;
+                default:
+                    'There was a problem sending your invite.';
+                    break;
+            }
+            return back()->withErrors(['message' => $message]);
+        }
+        return back()->withSuccess('Yay! Your invite is on the way. We can\'t wait to welcome you the UK\'s best Laravel community!');
     }
 }
