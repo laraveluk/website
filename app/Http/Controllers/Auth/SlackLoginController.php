@@ -90,6 +90,6 @@ class SlackLoginController extends Controller
             }
             return back()->withErrors(['message' => $message]);
         }
-        return back()->withSuccess('Yay! You\'re invite is on the way. We can\'t wait to welcome you the UK\'s best Laravel community!');
+        return back()->withSuccess('Yay! Your invite is on the way. We can\'t wait to welcome you the UK\'s best Laravel community!');
     }
 }
