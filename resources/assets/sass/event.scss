@@ -6,6 +6,10 @@
     padding: 0;
     margin: 0;
 
+    section:not(.hero):not(.map) {
+        margin: 5rem 0;
+    }
+
     /*
         Hero
     */
@@ -15,26 +19,26 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin-bottom: 3rem;
         padding: 10rem 0;
+        margin-bottom: 5rem;
 
         &__container {}
 
         &__title {
-            color: #FFFFFF;
+            color: $white;
             font-size: 4rem;
             text-align: center;
         }
 
         &__subtitle {
-            color: #FFFFFF;
+            color: $white;
             font-size: 2.5rem;
             margin-top: 3rem;
             text-align: center;
         }
 
         &__intro {
-            color: #FFFFFF;
+            color: $white;
             font-size: 1.25rem;
             margin-top: 1rem;
             text-align: center;
@@ -94,7 +98,7 @@
 
         &__submit {
             background-color: $pink-dark;
-            color: #FFFFFF;
+            color: $white;
             font-size: 2rem;
             font-weight: bold;
             padding: 0.95rem;
@@ -112,59 +116,192 @@
         About
     */
     .about {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+
         &__container {}
 
-        &__title {}
+        &__title {
+            color: $blue;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
 
-        &__content {}
+            span {
+                color: $pink-dark;
+            }
+        }
+
+        &__content {
+            font-size: 1.25rem;
+            color: $grey;
+        }
     }
 
     /*
         Speakers
     */
     .speakers {
-        &__container {}
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
 
-        &__title {}
+        &__flex-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__title {
+            color: $blue;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
     }
 
     /*
         Speaker
     */
     .speaker {
-        &__name {}
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 33.33%;
 
-        &__image {}
+        &__name {
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: $blue;
+            margin: 0.5rem 0;
+        }
 
-        &__about {}
+        &__image {
+            background-size: cover;
+            background-position: center center;
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            margin: 2rem 0;
+        }
 
-        &__meta {}
+        &__about {
+            margin: 0.25rem 0;
+
+            a {
+                color: $blue-light;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &__meta {
+            margin: 0.25rem 0;
+
+            a, i {
+                text-decoration: none;
+                color: #1da1f2;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            i {
+                font-size: 1.5rem;
+            }
+        }
     }
 
     /*
         Sponsors
     */
     .sponsors {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+
         &__container {}
 
-        &__title {}
+        &__flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+        }
 
-        &__intro {}
+        &__title {
+            color: $blue;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        &__intro {
+            font-size: 1.25rem;
+            color: $grey;
+            margin-bottom: 2rem;
+        }
     }
 
     /*
         Sponsor
     */
     .sponsor {
-        &__image {}
+        display: flex;
+        width: 33.33%;
+        padding: 0 2rem;
+
+        &__image {
+            img {
+                filter: grayscale(100%);
+            }
+        }
     }
 
     /*
         Map
     */
     .map {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 0;
+
         &__container {}
 
-        &__title {}
+        &__flex-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__title {
+            color: $blue;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    /*
+        Map
+    */
+    .footer {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+        background-color: $blue;
+        color: $white;
+        padding: 2rem 0;
+        font-weight: bold;
     }
 }
