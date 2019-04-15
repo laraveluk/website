@@ -1,0 +1,384 @@
+@tailwind preflight;
+
+@import "./event/structure";
+
+.event {
+    padding: 0;
+    margin: 0;
+
+    section:not(.hero):not(.map) {
+        margin: 5rem 0;
+
+        @media all and (max-width: $tablet) {
+            margin: 2.5rem 0;
+        }
+    }
+
+    /*
+        Hero
+    */
+    .hero {
+        align-items: center;
+        background-color: $blue;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10rem 0;
+        margin-bottom: 5rem;
+
+        @media all and (max-width: $tablet) {
+            padding: 5rem 0;
+            margin-bottom: 2.5rem;
+        }
+
+        &__container {}
+
+        &__title {
+            color: $white;
+            font-size: 4rem;
+            text-align: center;
+
+            @media all and (max-width: $tablet) {
+                font-size: 2rem;
+            }
+        }
+
+        &__subtitle {
+            color: $white;
+            font-size: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+
+            @media all and (max-width: $tablet) {
+                font-size: 1.25rem;
+                margin-top: 1.5rem;
+            }
+        }
+
+        &__intro {
+            color: $white;
+            font-size: 1.25rem;
+            margin-top: 1rem;
+            text-align: center;
+
+            @media all and (max-width: $tablet) {
+                font-size: 1rem;
+            }
+        }
+
+        &__form {
+            @extend .wrapper-sm;
+
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    /*
+        Form
+    */
+    .form {
+        &__group {
+            width: 100%;
+
+            &--has-addon {
+                align-items: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+
+                .form__input {
+                    flex: 1;
+                    width: 70%;
+                }
+
+                .form__addon {
+                    width: 30%;
+                }
+            }
+        }
+
+        &__input {
+            display: block;
+            margin: 2rem 0;
+            padding: 1.5rem;
+
+            @media all and (max-width: $tablet) {
+                margin: 1rem 0;
+                padding: 0.75rem;
+            }
+
+            &:focus, &:hover {
+                outline: none;
+                border: 0;
+            }
+
+            &--has-errors {}
+        }
+
+        &__errors {
+            background-color: $red;
+            color: $white;
+            padding: 1rem;
+            width: 100%;
+        }
+
+        &__message {
+            background-color: $pink;
+            color: $white;
+            padding: 1rem;
+            width: 100%;
+        }
+
+        &__addon {}
+
+        &__submit {
+            background-color: $pink-dark;
+            color: $white;
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 0.95rem;
+            text-align: center;
+            transition: all 0.25s ease-in-out;
+            width: 100%;
+
+            @media all and (max-width: $tablet) {
+                font-size: 1rem;
+                padding: 0.75rem;
+            }
+
+            &:hover {
+                background-color: $pink-darker;
+            }
+        }
+    }
+
+    /*
+        About
+    */
+    .about {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+
+        &__container {}
+
+        &__title {
+            color: $blue;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+
+            @media all and (max-width: $tablet) {
+                margin-bottom: 1rem;
+                font-size: 1.75rem;
+            }
+
+            span {
+                color: $pink-dark;
+            }
+        }
+
+        &__content {
+            font-size: 1.25rem;
+
+            @media all and (max-width: $tablet) {
+                font-size: 1rem;
+            }
+
+            color: $grey;
+        }
+    }
+
+    /*
+        Speakers
+    */
+    .speakers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+
+        &__flex-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__title {
+            color: $blue;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+
+            @media all and (max-width: $tablet) {
+                margin-bottom: 1rem;
+                font-size: 1.75rem;
+            }
+        }
+    }
+
+    /*
+        Speaker
+    */
+    .speaker {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 33.33%;
+
+        @media all and (max-width: $tablet) {
+            width: 100%;
+        }
+
+        &__name {
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: $blue;
+            margin: 0.5rem 0;
+        }
+
+        &__image {
+            background-size: cover;
+            background-position: center center;
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            margin: 2rem 0;
+        }
+
+        &__about {
+            margin: 0.25rem 0;
+
+            a {
+                color: $blue-light;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &__meta {
+            margin: 0.25rem 0;
+
+            a, i {
+                text-decoration: none;
+                color: #1da1f2;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            i {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    /*
+        Sponsors
+    */
+    .sponsors {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+
+        &__container {}
+
+        &__flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+        }
+
+        &__title {
+            color: $blue;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+
+            @media all and (max-width: $tablet) {
+                margin-bottom: 1rem;
+                font-size: 1.75rem;
+            }
+        }
+
+        &__intro {
+            font-size: 1.25rem;
+            color: $grey;
+            margin-bottom: 2rem;
+        }
+    }
+
+    /*
+        Sponsor
+    */
+    .sponsor {
+        display: flex;
+        width: 33.33%;
+        padding: 0 2rem;
+
+        @media all and (max-width: $tablet) {
+            width: 100%;
+        }
+
+        &__image {
+            img {
+                filter: grayscale(100%);
+            }
+        }
+    }
+
+    /*
+        Map
+    */
+    .map {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 0;
+
+        &__container {}
+
+        &__flex-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__title {
+            color: $blue;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+
+            @media all and (max-width: $tablet) {
+                margin-bottom: 1rem;
+                font-size: 1.75rem;
+            }
+        }
+    }
+
+    /*
+        Map
+    */
+    .footer {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+        background-color: $blue;
+        color: $white;
+        padding: 2rem 0;
+        font-weight: bold;
+    }
+}

@@ -25,7 +25,8 @@ mix.webpackConfig({
 
 // Frontend assets
 mix.js('resources/assets/js/frontend/app.js', 'public/js/')
-    .sass('resources/assets/sass/app.scss', 'public/css/');
+    .sass('resources/assets/sass/app.scss', 'public/css/')
+    .sass('resources/assets/sass/event.scss', 'public/css/');
 
 //Backend assets
 mix.js('resources/assets/js/backend/backend.js', 'public/js/');
@@ -39,7 +40,7 @@ if (mix.inProduction) {
 	mix.version();
 }
 
-mix.browserSync({
-    proxy: process.env.APP_URL,
-    open: false
-});
+// mix.browserSync({
+//     proxy: process.env.APP_URL,
+//     open: false
+// });

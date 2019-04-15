@@ -1,0 +1,285 @@
+$black: #22292f;
+$grey-darkest: #3d4852;
+$grey-darker: #606f7b;
+$grey-dark: #8795a1;
+$grey: #b8c2cc;
+$grey-light: #dae1e7;
+$grey-lighter: #f1f5f8;
+$grey-lightest: #f8fafc;
+$white: #ffffff;
+$red-darkest: #260100;
+$red-darker: #590804;
+$red-dark: #94150F;
+$red: #C0251E;
+$red-light: #CC433D;
+$red-lighter: #D95C57;
+$red-lightest: #f79694;
+$orange-darkest: #462a16;
+$orange-darker: #613b1f;
+$orange-dark: #de751f;
+$orange: #f6993f;
+$orange-light: #faad63;
+$orange-lighter: #fcd9b6;
+$orange-lightest: #fff5eb;
+$yellow-darkest: #453411;
+$yellow-darker: #684f1d;
+$yellow-dark: #f2d024;
+$yellow: #ffed4a;
+$yellow-light: #fff382;
+$yellow-lighter: #fff9c2;
+$yellow-lightest: #fcfbeb;
+$green-darkest: #0f2f21;
+$green-darker: #1a4731;
+$green-dark: #1f9d55;
+$green: #38c172;
+$green-light: #51d88a;
+$green-lighter: #a2f5bf;
+$green-lightest: #e3fcec;
+$teal-darkest: #0d3331;
+$teal-darker: #20504f;
+$teal-dark: #38a89d;
+$teal: #4dc0b5;
+$teal-light: #64d5ca;
+$teal-lighter: #a0f0ed;
+$teal-lightest: #e8fffe;
+$blue-darkest: #0d100a;
+$blue-darker: #0D101A;
+$blue-dark: #1C2233;
+$blue: #2B3450;
+$blue-light: #3F4C73;
+$blue-lighter: #6B7799;
+$blue-lightest: #98a3d9;
+$blue-navy: #132064;
+$purple-darkest: #21183c;
+$purple-darker: #382b5f;
+$purple-dark: #794acf;
+$purple: #9561e2;
+$purple-light: #a779e9;
+$purple-lighter: #d6bbfc;
+$purple-lightest: #f3ebff;
+$pink-darkest: #451225;
+$pink-darker: #6f213f;
+$pink-dark: #eb5286;
+$pink: #f66d9b;
+$pink-light: #fa7ea8;
+$pink-lighter: #ffbbca;
+$pink-lightest: #ffebef;
+
+// MEDIA QUERIES
+$lrg: 1200px;
+$med: 993px;
+$sm: 769px;
+$exsm: 481px;
+$iphone: 321px;
+
+// ALIAS THE SIZES FOR EASE OF READING
+$desktop: $lrg;
+$laptop: $med;
+$tablet: $sm;
+$phone: $exsm;
+$mob: $exsm;
+
+body,
+html {
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-device-pixel-ratio: 1.25), only screen and (min-resolution: 200dpi), only screen and (min-resolution: 1.25dppx) {
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+}
+
+.clear:before,
+.clear:after {
+    content: ' ';
+    display: table;
+}
+
+.clear:after {
+    clear: both;
+}
+
+.clear {
+    *zoom: 1;
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    vertical-align: bottom;
+    border: none;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+/*-- STRUCTURE --*/
+
+.wrapper {
+    @extend .clear;
+
+    max-width: $med;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.wrapper-sm {
+    max-width: $tablet;
+    width: 95%;
+    margin: 0 auto;
+}
+
+// helper for `anything`__container
+[class*='__container'], [class*='__wrapper'] {
+    @extend .wrapper;
+}
+
+[class*='__flex-container'] {
+    @extend .wrapper;
+
+    display: flex;
+
+    @media all and (max-width: $tablet) {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+[class*='__flex-container--small'] {
+    @extend .wrapper-sm;
+
+    display: flex;
+
+    @media all and (max-width: $tablet) {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+[class*='__container--small'], [class*='__container--slim'] {
+    @extend .wrapper-sm;
+}
+
+// Grid wrapper using flex + BEM
+.grid {
+    // Define the flex container
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item-4-col {
+        width: 23.5%;
+        margin-right: 2%;
+
+        @media (min-width: $med) {
+            &:nth-of-type(4n) {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: $med) {
+            width: 49%;
+
+            &:nth-of-type(2n) {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: $mob) {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    &__item-3-col {
+        width: 32%;
+        margin-right: 2%;
+        margin-bottom: 1.5em;
+
+        @media (min-width: $med) {
+            &:nth-of-type(3n) {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: $med) {
+            width: 49%;
+
+            &:nth-of-type(2n) {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: $mob) {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    &__item-2-col {
+        width: 49%;
+        margin-right: 2%;
+        margin-bottom: 1.5em;
+
+        @media (min-width: $mob) {
+            &:nth-of-type(2n) {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: $mob) {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+}
+
+// CSS Grid
+$gridcolumns: 12;
+$class: grid;
+
+// loops through 100 times
+@for $i from 1 through $gridcolumns {
+    .#{$class}--#{$i} {
+        /* autoprefixer: off */
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat($i, 1fr);
+        width: 100%;
+        z-index: 201;
+
+        @media (max-width: $tablet) {
+            /* autoprefixer: off */
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: $mob) {
+            /* autoprefixer: off */
+            grid-template-columns: 1fr;
+        }
+    }
+
+    [data-grid-columns="#{$i}"] {
+        /* autoprefixer: off */
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat($i, 1fr);
+        width: 100%;
+        z-index: 201;
+
+        @media (max-width: $tablet) {
+            /* autoprefixer: off */
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: $mob) {
+            /* autoprefixer: off */
+            grid-template-columns: 1fr;
+        }
+    }
+}
