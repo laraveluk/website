@@ -1,0 +1,170 @@
+@tailwind preflight;
+
+@import "./event/structure";
+
+.event {
+    padding: 0;
+    margin: 0;
+
+    /*
+        Hero
+    */
+    .hero {
+        align-items: center;
+        background-color: $blue;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 3rem;
+        padding: 10rem 0;
+
+        &__container {}
+
+        &__title {
+            color: #FFFFFF;
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        &__subtitle {
+            color: #FFFFFF;
+            font-size: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        &__intro {
+            color: #FFFFFF;
+            font-size: 1.25rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        &__form {
+            @extend .wrapper-sm;
+
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    /*
+        Form
+    */
+    .form {
+        &__group {
+            width: 100%;
+
+            &--has-addon {
+                align-items: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+
+                .form__input {
+                    flex: 1;
+                    width: 70%;
+                }
+
+                .form__addon {
+                    width: 30%;
+                }
+            }
+        }
+
+        &__input {
+            display: block;
+            margin: 2rem 0;
+            padding: 1.5rem;
+
+            &:focus, &:hover {
+                outline: none;
+                border: 0;
+            }
+
+            &--has-errors {}
+        }
+
+        &__errors {}
+
+        &__addon {}
+
+        &__submit {
+            background-color: $pink-dark;
+            color: #FFFFFF;
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 0.95rem;
+            text-align: center;
+            transition: all 0.25s ease-in-out;
+            width: 100%;
+
+            &:hover {
+                background-color: $pink-darker;
+            }
+        }
+    }
+
+    /*
+        About
+    */
+    .about {
+        &__container {}
+
+        &__title {}
+
+        &__content {}
+    }
+
+    /*
+        Speakers
+    */
+    .speakers {
+        &__container {}
+
+        &__title {}
+    }
+
+    /*
+        Speaker
+    */
+    .speaker {
+        &__name {}
+
+        &__image {}
+
+        &__about {}
+
+        &__meta {}
+    }
+
+    /*
+        Sponsors
+    */
+    .sponsors {
+        &__container {}
+
+        &__title {}
+
+        &__intro {}
+    }
+
+    /*
+        Sponsor
+    */
+    .sponsor {
+        &__image {}
+    }
+
+    /*
+        Map
+    */
+    .map {
+        &__container {}
+
+        &__title {}
+    }
+}
