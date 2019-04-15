@@ -8,6 +8,10 @@
 
     section:not(.hero):not(.map) {
         margin: 5rem 0;
+
+        @media all and (max-width: $tablet) {
+            margin: 2.5rem 0;
+        }
     }
 
     /*
@@ -22,12 +26,21 @@
         padding: 10rem 0;
         margin-bottom: 5rem;
 
+        @media all and (max-width: $tablet) {
+            padding: 5rem 0;
+            margin-bottom: 2.5rem;
+        }
+
         &__container {}
 
         &__title {
             color: $white;
             font-size: 4rem;
             text-align: center;
+
+            @media all and (max-width: $tablet) {
+                font-size: 2rem;
+            }
         }
 
         &__subtitle {
@@ -35,6 +48,11 @@
             font-size: 2.5rem;
             margin-top: 3rem;
             text-align: center;
+
+            @media all and (max-width: $tablet) {
+                font-size: 1.25rem;
+                margin-top: 1.5rem;
+            }
         }
 
         &__intro {
@@ -42,6 +60,10 @@
             font-size: 1.25rem;
             margin-top: 1rem;
             text-align: center;
+
+            @media all and (max-width: $tablet) {
+                font-size: 1rem;
+            }
         }
 
         &__form {
@@ -84,6 +106,11 @@
             margin: 2rem 0;
             padding: 1.5rem;
 
+            @media all and (max-width: $tablet) {
+                margin: 1rem 0;
+                padding: 0.75rem;
+            }
+
             &:focus, &:hover {
                 outline: none;
                 border: 0;
@@ -105,6 +132,11 @@
             text-align: center;
             transition: all 0.25s ease-in-out;
             width: 100%;
+
+            @media all and (max-width: $tablet) {
+                font-size: 1rem;
+                padding: 0.75rem;
+            }
 
             &:hover {
                 background-color: $pink-darker;
@@ -129,6 +161,11 @@
             margin-bottom: 2rem;
             font-size: 2.5rem;
 
+            @media all and (max-width: $tablet) {
+                margin-bottom: 1rem;
+                font-size: 1.75rem;
+            }
+
             span {
                 color: $pink-dark;
             }
@@ -136,6 +173,11 @@
 
         &__content {
             font-size: 1.25rem;
+
+            @media all and (max-width: $tablet) {
+                font-size: 1rem;
+            }
+
             color: $grey;
         }
     }
@@ -158,6 +200,11 @@
             color: $blue;
             font-size: 2.5rem;
             margin-bottom: 2rem;
+
+            @media all and (max-width: $tablet) {
+                margin-bottom: 1rem;
+                font-size: 1.75rem;
+            }
         }
     }
 
@@ -171,6 +218,10 @@
         align-items: center;
         justify-content: center;
         width: 33.33%;
+
+        @media all and (max-width: $tablet) {
+            width: 100%;
+        }
 
         &__name {
             font-weight: bold;
@@ -242,6 +293,11 @@
             color: $blue;
             margin-bottom: 2rem;
             font-size: 2.5rem;
+
+            @media all and (max-width: $tablet) {
+                margin-bottom: 1rem;
+                font-size: 1.75rem;
+            }
         }
 
         &__intro {
@@ -258,6 +314,10 @@
         display: flex;
         width: 33.33%;
         padding: 0 2rem;
+
+        @media all and (max-width: $tablet) {
+            width: 100%;
+        }
 
         &__image {
             img {
@@ -287,6 +347,11 @@
             color: $blue;
             font-size: 2.5rem;
             margin-bottom: 2rem;
+
+            @media all and (max-width: $tablet) {
+                margin-bottom: 1rem;
+                font-size: 1.75rem;
+            }
         }
     }
 
