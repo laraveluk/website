@@ -20,7 +20,8 @@ Route::get('login/slack/callback', 'Auth\SlackLoginController@handleProviderCall
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::namespace('Page')->group(function() {
-    Route::get('event', 'EventController@show')->name('pages.show');
+    Route::get('event', 'EventController@show')->name('pages.event.show');
+    Route::post('event', 'EventController@store')->name('pages.event.store');
 });
 
 /** Blog Routes */

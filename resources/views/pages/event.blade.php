@@ -28,7 +28,7 @@
             <h2 class="hero__subtitle">Join our list</h2>
             <p class="hero__intro">Keep up to date with all our latest events</p>
 
-            <form class="hero__form">
+            <form class="hero__form" method="POST" action="{{route('pages.event.store')}}">
                 @csrf
                 <div class="form__group form__group--has-addon">
                     <input 
@@ -46,6 +46,12 @@
                     @if ($errors->has('email'))
                         <span class="form__errors" role="alert">
                             <strong>{{ $errors->first('email') }}</strong>
+                        </span>
+                    @endif
+
+                    @if (session()->has('message'))
+                        <span class="form__message" role="alert">
+                            <strong>{{ session('message') }}</strong>
                         </span>
                     @endif
                 </div>
@@ -89,9 +95,9 @@
         <div class="sponsors__flex-container">
             @for ($i = 0; $i < 3; $i++)
                 <article class="sponsor">
-                    <div class="sponsor__image">
+                    <a href="#" class="sponsor__image">
                         <img src="https://www.google.com/logos/doodles/2015/googles-new-logo-5078286822539264.3-hp2x.gif" alt="Sponsor">
-                    </div>
+                    </a>
                 </article>
             @endfor
         </div>
@@ -102,7 +108,7 @@
         <div class="map__container">
             <h2 class="map__title">Venue</h2>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4966.120152445886!2d-0.1283616718053107!3d51.512113818543526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604cb878e81b3%3A0x91f10fa364452046!2sCovent+Garden%2C+London!5e0!3m2!1sen!2suk!4v1555346559942!5m2!1sen!2suk" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.7403810218825!2d-0.08046558353968311!3d51.53632147963979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761c9624428cb5%3A0xee818efd911009c5!2sTuscany+Wharf%2C+4B+Orsman+Rd%2C+London+N1+5QJ!5e0!3m2!1sen!2suk!4v1555347204380!5m2!1sen!2suk" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </section>
     {{-- / Map --}}
     <footer class="footer">
