@@ -206,6 +206,8 @@
         &__flex-container {
             display: flex;
             flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
         }
 
         &__title {
