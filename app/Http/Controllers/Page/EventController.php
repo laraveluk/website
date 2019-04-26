@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Page;
 
+use App\Events\EventHasNewSignup;
 use App\Models\EventSignup;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -31,7 +32,8 @@ class EventController extends Controller
             'email' => 'required|unique:event_signups'
         ]);
 
-        EventSignup::updateOrCreate(
+
+        $eventUser = EventSignup::updateOrCreate(
             [
                 'email' => $request->email,
             ],
@@ -40,6 +42,9 @@ class EventController extends Controller
                 'year' => date('Y')
             ]
         );
+
+
+        event(new EventHasNewSignup($eventUser));
 
         // @todo do we need to confirm their email ?
         return back()->with(['message' => 'Thank you, we will be in touch with more information about the event!']);

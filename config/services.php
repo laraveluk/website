@@ -39,5 +39,6 @@ return [
         'client_id' => env('SLACK_CLIENT_ID'),
         'client_secret' => env('SLACK_CLIENT_SECRET'),
         'redirect' => env('SLACK_REDIRECT_CALLBACK_URL'),
+        'event_signup_webhook' => env('SLACK_EVENT_SIGNUP_WEBHOOK'),
     ],
 ];
