@@ -79,15 +79,24 @@
             <h2 class="speakers__title">Speakers</h2>
         </div>
         <div class="speakers__flex-container">
-            <p>Speakers to be announced soon</p>
-            {{--@for ($i = 0; $i < 3; $i++)--}}
-            {{--<article class="speaker">--}}
-            {{--<div class="speaker__image" style="background-image: url(https://pbs.twimg.com/profile_images/1012406703265124352/eggpA4H6_400x400.jpg)"></div>--}}
-            {{--<strong class="speaker__name">Mikey Burton</strong>--}}
-            {{--<p class="speaker__about">Lead Developer / <a href="">Fifteen</a></p>--}}
-            {{--<p class="speaker__meta"><a href="https://twitter.com/madmikeyb"><i class="fab fa-twitter"></i> @madmikeyb</a></p>--}}
-            {{--</article>--}}
-            {{--@endfor--}}
+            <article class="speaker">
+                <div class="speaker__image" style="background-image: url(https://pbs.twimg.com/profile_images/1012406703265124352/eggpA4H6_400x400.jpg)"></div>
+                <strong class="speaker__name">Mikey Burton</strong>
+                <p class="speaker__about">Lead Developer / <a href="https://www.fifteendesign.co.uk/">Fifteen</a></p>
+                <p class="speaker__meta"><a href="https://twitter.com/madmikeyb"><i class="fab fa-twitter"></i>@madmikeyb</a></p>
+            </article>
+            <article class="speaker">
+                <div class="speaker__image" style="background-image: url(https://pbs.twimg.com/profile_images/847816387082977281/7s2QbhTX_400x400.jpg)"></div>
+                <strong class="speaker__name">Steve Pope</strong>
+                <p class="speaker__about">Senior Developer / <a href="https://www.telummedia.com/">Telum Media UK</a></p>
+                <p class="speaker__meta"><a href="https://twitter.com/stpopoola"><i class="fab fa-twitter"></i>@stpopoola</a></p>
+            </article>
+            <article class="speaker">
+                <div class="speaker__image" style="background-image: url(https://pbs.twimg.com/profile_images/1100358506220322817/QfdfUCqh_400x400.jpg)"></div>
+                <strong class="speaker__name">Daniel Vinnicombe</strong>
+                <p class="speaker__about">Founder / <a href="https://makepad.live/">Makepad</a></p>
+                <p class="speaker__meta"><a href="https://twitter.com/iiCe89"><i class="fab fa-twitter"></i>@iiCe89</a></p>
+            </article>
         </div>
     </section>
     {{-- / Speakers --}}
