@@ -2,8 +2,11 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Event;
+use App\Events\EventHasNewSignup;
+use App\Listeners\NotifyWhenEventUserSignedUp;
+use App\Notifications\NotifyNewUserSignup;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+use SocialiteProviders\Manager\SocialiteWasCalled;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -13,9 +16,11 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        \SocialiteProviders\Manager\SocialiteWasCalled::class => [
-            // add your listeners (aka providers) here
+        SocialiteWasCalled::class => [
             'SocialiteProviders\Slack\SlackExtendSocialite@handle',
+        ],
+        EventHasNewSignup::class => [
+            NotifyWhenEventUserSignedUp::class
         ],
     ];
 

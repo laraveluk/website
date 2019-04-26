@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ProfileKey extends Model
+class   ProfileKey extends Model
 {
     protected $fillable = ['name', 'type'];
 
