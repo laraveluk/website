@@ -46,7 +46,7 @@ class NotifyNewUserSignup extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->from('notify@email.laravel.uk.com', 'Laravel UK')
+            ->from('notify@email.laravelphp.uk', 'Laravel UK')
             ->subject('Thanks for Signing up!')
             ->view(
             'email.event_signup'
