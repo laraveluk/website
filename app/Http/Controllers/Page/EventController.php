@@ -47,6 +47,9 @@ class EventController extends Controller
         event(new EventHasNewSignup($eventUser));
 
         // @todo do we need to confirm their email ?
-        return back()->with(['message' => 'Thank you, we will be in touch with more information about the event!']);
+        return back()->with([
+            'message' => 'Thank you, we will be in touch with more information about the event!',
+            'note' => 'Note,  Please check your spam folder if you can\'t see our email in your inbox.'
+        ]);
     }
 }

@@ -133,6 +133,13 @@
             width: 100%;
         }
 
+        &__note {
+            background-color: $orange;
+            color: $white;
+            padding: 1rem;
+            width: 100%;
+        }
+
         &__addon {}
 
         &__submit {
