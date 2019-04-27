@@ -28,28 +28,28 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-//        $request->validate([
-//            'email' => 'required|unique:event_signups'
-//        ]);
-//
-//
-//        $eventUser = EventSignup::updateOrCreate(
-//            [
-//                'email' => $request->email,
-//            ],
-//            [
-//                'email' => $request->email,
-//                'year' => date('Y')
-//            ]
-//        );
-//
-//
-//        event(new EventHasNewSignup($eventUser));
+        $request->validate([
+            'email' => 'required|unique:event_signups'
+        ]);
+
+
+        $eventUser = EventSignup::updateOrCreate(
+            [
+                'email' => $request->email,
+            ],
+            [
+                'email' => $request->email,
+                'year' => date('Y')
+            ]
+        );
+
+
+        event(new EventHasNewSignup($eventUser));
 
         // @todo do we need to confirm their email ?
         return back()->with([
             'message' => 'Thank you, we will be in touch with more information about the event!',
-            'note' => 'Note, our emails may be sent to your spam folder. So look there if you can see any in your inbox.'
+            'note' => 'Note,  Please check your spam folder if you can\'t see our email in your inbox.'
         ]);
     }
 }
