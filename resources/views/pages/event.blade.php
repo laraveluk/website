@@ -54,6 +54,12 @@
                             <strong>{{ session('message') }}</strong>
                         </span>
                     @endif
+
+                    @if (session()->has('note'))
+                        <span class="form__note" role="alert">
+                            <strong>{{ session('note') }}</strong>
+                        </span>
+                    @endif
                 </div>
             </form>
         </div>
