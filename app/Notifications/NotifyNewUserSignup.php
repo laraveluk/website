@@ -60,7 +60,7 @@ class NotifyNewUserSignup extends Notification
             ->success()
             ->content('New Signup for Laravel UK Event!')
             ->from('laraveluk-event', ':dart:')
-            ->to("#laraveluk-live-event")
+            ->to("#event-rsvp")
             ->attachment(function ($attachment) {
                 $attachment->title('Someone has signed up!')
                     ->fields([
