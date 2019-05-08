@@ -80,10 +80,10 @@
         </div>
         <div class="speakers__flex-container">
             <article class="speaker">
-                <div class="speaker__image" style="background-image: url(https://pbs.twimg.com/profile_images/1012406703265124352/eggpA4H6_400x400.jpg)"></div>
-                <strong class="speaker__name">Mikey Burton</strong>
-                <p class="speaker__about">Lead Developer / <a href="https://www.fifteendesign.co.uk/">Fifteen</a></p>
-                <p class="speaker__meta"><a href="https://twitter.com/madmikeyb"><i class="fab fa-twitter"></i>@madmikeyb</a></p>
+                <div class="speaker__image" style="background-image: url(https://pbs.twimg.com/profile_images/924005430464008192/FQfuRp3R_400x400.jpg)"></div>
+                <strong class="speaker__name">Harry Messenger</strong>
+                <p class="speaker__about">Web Developer / <a href="https://rhythm.digital/">Rhythm</a></p>
+                <p class="speaker__meta"><a href="https://twitter.com/harrysmessenger"><i class="fab fa-twitter"></i>@harrysmessenger</a></p>
             </article>
             <article class="speaker">
                 <div class="speaker__image" style="background-image: url(https://pbs.twimg.com/profile_images/847816387082977281/7s2QbhTX_400x400.jpg)"></div>
