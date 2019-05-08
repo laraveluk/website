@@ -98,10 +98,10 @@
                 <p class="speaker__meta"><a href="https://twitter.com/stpopoola"><i class="fab fa-twitter"></i>@stpopoola</a></p>
             </article>
             <article class="speaker">
-                <div class="speaker__image" style="background-image: url(https://pbs.twimg.com/profile_images/1100358506220322817/QfdfUCqh_400x400.jpg)"></div>
-                <strong class="speaker__name">Daniel Vinnicombe</strong>
-                <p class="speaker__about">Founder / <a href="https://makepad.live/">Makepad</a></p>
-                <p class="speaker__meta"><a href="https://twitter.com/iiCe89"><i class="fab fa-twitter"></i>@iiCe89</a></p>
+                <div class="speaker__image" style="background-image: url(https://ca1-eno.edcdn.com/team/_c240x240/seb_large.jpg)"></div>
+                <strong class="speaker__name">Seb Jones</strong>
+                <p class="speaker__about">PHP Developer / <a href="https://www.enovate.co.uk/">Enovate</a></p>
+                <p class="speaker__meta"><a href="https://www.enovate.co.uk/about/team/seb-jones"><i class="fas fa-info-circle"></i>Info</a></p>
             </article>
         </div>
     </section>
