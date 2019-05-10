@@ -39,7 +39,7 @@ class SendEventInfo extends Command
      */
     public function handle()
     {
-        $invitees = EventSignup::where('id', '>', 20)->get();
+        $invitees = EventSignup::all();
 
         foreach ($invitees as $invitee) {
             $invitee->notify( new EventUpdate());
