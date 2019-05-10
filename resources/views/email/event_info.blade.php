@@ -189,9 +189,21 @@
                     <td bgcolor="#ffffff" align="left" style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;" >
                         <multiline label="lead">
                             Hey there! <br /><br />
-                            "A short while ago you filled out a survey form that embarked you on a journey with us to create the first LaravelUK Community event.  <br /><br />
-                            This message is just to let you know that we've heard you loud and clear and will be sending you more information about ticket prices and competitive hotel prices in the days to come.   <br /><br />
-                            If you would like to be removed from the list please let us know, otherwise, we will see you soon!"  <br /><br />
+                            <p>
+                                It's the moment you've all been waiting for, the release of the community event's tickets. We have three types of tickets: General Admission, GA + Single Hotel Room, GA + Twin Hotel Room.
+                            </p>
+                            <p>
+                                The twin room ticket requires a minimum of 2 tickets to be purchased to make up one hotel room booking, perfect for sharing with a friend or work colleague. We've tried our best to keep costs low to bring you value for money.
+                            </p>
+                            <p>
+                                Also, these tickets are early bird tickets. So get them before they sell out 🔥 they will be releasing at 9am but as an email subscriber you get a first look at the ticket page and prices!
+                            </p>
+
+                            <a class="text-blue" href="https://www.eventbrite.co.uk/e/laraveluk-community-event-tickets-61257708455">Click To book</a>
+                            <p>
+                                Hope to see you there
+                            </p>
+
 
                         </multiline>
                     </td>
