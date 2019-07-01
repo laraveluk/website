@@ -22,7 +22,7 @@
                             <span class="block sm:inline">{{ $errors->first('message') }}</span>
                         </div>
                         @endif
-                        <form method="post">
+                       <!--  <form method="post">
                             {{ csrf_field() }}
                             <div class="mb-6">
                                 <label for="email" class="block text-grey-dark text-lg font-bold md:text-left mb-2 pr-4">Email</label>
@@ -37,7 +37,7 @@
                             <div class="md:flex md:items-center">
                                 <button type="submit" class="shadow bg-red hover:bg-purple-light text-white font-bold text-lg py-3 px-8 rounded m-0">Submit</button>
                             </div>
-                        </form>
+                        </form> -->
                     @endif
                 </div>
             </div>
