@@ -70,10 +70,18 @@
         &__content {
             width: 50%;
             padding-right: 1rem;
+
+            @media all and (max-width: $tablet) {
+                width: 100%;
+            }
         }
 
         &__aside {
             width: 50%;
+
+            @media all and (max-width: $tablet) {
+                width: 100%;
+            }
         }
 
         &__buttons {
@@ -150,6 +158,10 @@
         justify-content: center;
         text-align: center;
 
+        @media all and (max-width: $tablet) {
+            flex-direction: column;
+        }
+
         &__intro {
             font-size: 1.25rem;
             color: $grey;
@@ -190,6 +202,10 @@
             text-align: left;
             width: calc(50% - 2rem);
 
+            @media all and (max-width: $tablet) {
+                width: 100%;
+            }
+
             p {
                 color: #3d4852;
                 font-size: 1.15rem;
@@ -205,6 +221,10 @@
 
         &__image {
             width: 50%;
+
+            @media all and (max-width: $tablet) {
+                width: 100%;
+            }
         }
 
         &__image-slide {
