@@ -6,11 +6,12 @@
     padding: 0;
     margin: 0;
 
-    section:not(.hero):not(.map) {
-        margin: 5rem 0;
+    section:not(.hero):not(.venue) {
+        padding: 2rem 0;
+        border-bottom: 0.1rem dashed rgba($blue, 0.25);
 
         @media all and (max-width: $tablet) {
-            margin: 2.5rem 0;
+            padding: 2.5rem 0;
         }
     }
 
@@ -18,61 +19,199 @@
         Hero
     */
     .hero {
-        align-items: center;
         background-color: $blue;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 10rem 0;
-        margin-bottom: 5rem;
+        padding-bottom: 5rem;
 
-        @media all and (max-width: $tablet) {
-            padding: 5rem 0;
-            margin-bottom: 2.5rem;
-        }
-
-        &__container {}
-
-        &__title {
-            color: $white;
-            font-size: 4rem;
+        &__logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            padding-bottom: 3rem;
+            padding-top: 2rem;
 
-            @media all and (max-width: $tablet) {
-                font-size: 2rem;
-            }
-        }
-
-        &__subtitle {
-            color: $white;
-            font-size: 2.5rem;
-            margin-top: 3rem;
-            text-align: center;
-
-            @media all and (max-width: $tablet) {
-                font-size: 1.25rem;
-                margin-top: 1.5rem;
+            svg {
+                color: $white;
+                fill: $white;
+                width: 30%;
             }
         }
 
         &__intro {
+            color: $pink;
+            margin: 0;
+        }
+
+        &__title {
             color: $white;
+            margin: 0 0 1.5rem 0;
+            font-size: 2.25rem;
+        }
+
+        &__subtitle {
+            color: $white;
+            margin: 0;
+            font-size: 1.35rem;
+
+            span {
+                display: block;
+                color: $pink;
+            }
+        }
+
+        &__blurb {
+            p {
+                font-size: 1.15rem;
+                color: $grey;
+                margin: 1.5rem 0;
+            }
+        }
+
+        &__content {
+            width: 50%;
+            padding-right: 1rem;
+        }
+
+        &__aside {
+            width: 50%;
+        }
+
+        &__buttons {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .button {
+                align-items: center;
+                box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.45);
+                color: $white;
+                display: flex;
+                font-weight: bold;
+                justify-content: center;
+                margin: 1rem 0;
+                padding: 1rem 1.5rem;
+                text-align: left;
+                text-decoration: none;
+                text-transform: uppercase;
+                width: 100%;
+
+                small, span {
+                    flex: 1;
+                }
+
+                i {
+                    text-align: right;
+                }
+
+                &--primary {
+                    background-color: $pink;
+                    font-size: 1.35rem;
+
+                    &:hover {
+                        background-color: darken($pink, 25%);
+                    }
+                }
+
+                &--secondary {
+                    background-color: $grey;
+                    font-size: 1rem;
+
+                    // box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.18);
+
+                    &:hover {
+                        background-color: darken($grey, 25%);
+                    }
+                }
+            }
+        }
+    }
+
+    /*
+        Newsletter Signup
+    */
+    .newsletter-signup {
+        &__title {
+            color: $white;
+            margin: 1rem 0;
+        }
+
+        &__sting {
+            color: $white;
+        }
+    }
+
+    /*
+        About
+    */
+    .venue {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+
+        &__intro {
             font-size: 1.25rem;
-            margin-top: 1rem;
-            text-align: center;
+            color: $grey;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        &__container {
+            padding: 2rem 0;
+
+            @media all and (max-width: $tablet) {
+                padding: 2.5rem 0;
+            }
+        }
+
+        &__title {
+            color: $blue;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+
+            @media all and (max-width: $tablet) {
+                margin-bottom: 1rem;
+                font-size: 1.75rem;
+            }
+
+            span {
+                color: $pink-dark;
+            }
+        }
+
+        &__content-wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__content {
+            margin-right: 2rem;
+            text-align: left;
+            width: calc(50% - 2rem);
+
+            p {
+                color: #3d4852;
+                font-size: 1.15rem;
+                margin: 1rem 0;
+            }
 
             @media all and (max-width: $tablet) {
                 font-size: 1rem;
             }
+
+            color: $grey;
         }
 
-        &__form {
-            @extend .wrapper-sm;
+        &__image {
+            width: 50%;
+        }
 
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            width: 100%;
+        &__image-slide {
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            min-height: 30rem;
         }
     }
 
@@ -145,9 +284,9 @@
         &__submit {
             background-color: $pink-dark;
             color: $white;
-            font-size: 2rem;
+            font-size: 1.9rem;
             font-weight: bold;
-            padding: 0.95rem;
+            padding: 1rem;
             text-align: center;
             transition: all 0.25s ease-in-out;
             width: 100%;
@@ -160,44 +299,6 @@
             &:hover {
                 background-color: $pink-darker;
             }
-        }
-    }
-
-    /*
-        About
-    */
-    .about {
-        align-items: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-
-        &__container {}
-
-        &__title {
-            color: $blue;
-            margin-bottom: 2rem;
-            font-size: 2.5rem;
-
-            @media all and (max-width: $tablet) {
-                margin-bottom: 1rem;
-                font-size: 1.75rem;
-            }
-
-            span {
-                color: $pink-dark;
-            }
-        }
-
-        &__content {
-            font-size: 1.25rem;
-
-            @media all and (max-width: $tablet) {
-                font-size: 1rem;
-            }
-
-            color: $grey;
         }
     }
 
@@ -325,6 +426,7 @@
             font-size: 1.25rem;
             color: $grey;
             margin-bottom: 2rem;
+            text-transform: uppercase;
         }
     }
 
@@ -332,9 +434,11 @@
         Sponsor
     */
     .sponsor {
+        align-items: center;
         display: flex;
-        width: 33.33%;
+        justify-content: center;
         padding: 0 2rem;
+        width: 33.33%;
 
         @media all and (max-width: $tablet) {
             width: 100%;
@@ -342,43 +446,12 @@
 
         &__image {
             img {
+                width: 100%;
                 filter: grayscale(100%);
             }
         }
     }
 
-    /*
-        Map
-    */
-    .map {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        margin-bottom: 0;
-
-        &__container {}
-
-        &__flex-container {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        &__title {
-            color: $blue;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-
-            @media all and (max-width: $tablet) {
-                margin-bottom: 1rem;
-                font-size: 1.75rem;
-            }
-        }
-    }
-
-    /*
-        Map
-    */
     .footer {
         display: flex;
         align-items: center;
