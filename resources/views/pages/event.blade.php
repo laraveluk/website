@@ -33,7 +33,7 @@
             <article class="hero__content">
                 <strong class="hero__intro">TICKETS NOW AVAILABLE! <i class="fas fa-arrow-right"></i></strong>
                 <h1 class="hero__title">The LaravelUK Community Event</h1>
-                <h2 class="hero__subtitle">We've been talking for years, <span>now let's meet the faces behind the usernames!</span></h2>
+                <h2 class="hero__subtitle">We've been talking for years, <span>now let's put faces to usernames!</span></h2>
                 <div class="hero__blurb">
                     <p>The LaravelUK group is proud to announce its first annual community event in Old Street, London. After running for almost 3 years, we are finally bringing this nationwide community together.</p>
 
