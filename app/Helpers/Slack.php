@@ -13,6 +13,9 @@ class Slack
 
     public static function sendInvitation($email) {
         //return \Unirest\Request::post(config('slack.invitation_url'), [], ['token' => config('slack.legacy_token'), 'email' => $email]);
+        \Log::info($email . ' attempted to obtain an invitation to Slack');
+        return false;
+        /**
         $client = new \GuzzleHttp\Client();
         $response =  $client->request('POST', config('slack.invitation_url'), ['query' => [
             'token' => config('slack.legacy_token'),
@@ -20,6 +23,7 @@ class Slack
         ]]);
         $response = json_decode($response->getBody());
         return $response;
+        */
     }
 
 }
