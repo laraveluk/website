@@ -46,7 +46,7 @@
             <aside class="hero__aside">
 
                 <div class="hero__buttons">
-                    <button type="button" id="eventbrite-widget-modal-trigger-61257708455" class="button button--primary"><span>Buy Your Ticket &mdash; (From &pound;53.89)</span> <i class="fas fa-arrow-right"></i></button>
+                    <button type="button" id="eventbrite-widget-modal-trigger-61257708455" class="button button--primary"><span>Get Your Ticket &mdash; (From &pound;53.89)</span> <i class="fas fa-arrow-right"></i></button>
 
                     <a href="https://calendar.google.com/calendar/r/eventedit?text=LaravelUK+Community+Event&dates=20190726T090000Z/20190726T163000Z&details=For+details,+link+here:+https://www.eventbrite.co.uk/e/laraveluk-community-event-tickets-61257708455&location=The+Flowerpot+Hoxton+-+4a+Orsman+Road+-+N1+5QJ+London+-+United+Kingdom&sf=true" target="_blank" class="button button--secondary">Friday 26th July &mdash; <small>Add To Calendar</small> <i class="fas fa-calendar-alt"></i></a>
                 </div>
