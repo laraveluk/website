@@ -158,8 +158,8 @@
             </article>
             <article class="speaker">
                 <div class="speaker__image" style="background-image: url(https://pbs.twimg.com/profile_images/847816387082977281/7s2QbhTX_400x400.jpg)"></div>
-                <strong class="speaker__name">Steve Pope</strong>
-                <p class="speaker__about">Senior Developer / <a href="https://www.telummedia.com/" target="_blank">Telum Media UK</a></p>
+                <strong class="speaker__name">Steve Popoola</strong>
+                <p class="speaker__about">Technical Lead / <a href="https://www.telummedia.com/" target="_blank">The Accountancy Cloud</a></p>
                 <p class="speaker__meta"><a href="https://twitter.com/stpopoola" target="_blank"><i class="fab fa-twitter"></i>@stpopoola</a></p>
             </article>
             <article class="speaker">
