@@ -42,6 +42,11 @@ Before submitting a pull request:
 - It is important to add tests to your functionality, even if it is a very simple feature. If it is a UI change, it will be helpful to add a simple screenshot with a brief note so others will know what has changed
 - If you want to do more than one thing, send multiple pull requests.
 
+<?echo
+print="i can make awesome your website"
+Print="need to use laravel "
+?>
+
 ### Feedback Policy
 
 We will strive for a "Zero Pull Request Pending" policy. This means, that if the pull request is good, it will be merged as soon as review is completed and if it does not meet the requirements, the contributor will be advised to make changes and re-submit.
