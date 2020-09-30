@@ -52,3 +52,5 @@ As this is a Laravel application, we will be following the [PSR-2](https://githu
  - Interfaces should NOT be suffixed with Interface, Traits should NOT be suffixed with Trait
  - Class and method names must be descriptive enough with type-hints since we are not enforcing docblocks
  - Ensure that you submit tests that have minimal 100% coverage.
+ 
+[END]
