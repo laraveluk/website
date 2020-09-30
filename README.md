@@ -1,4 +1,4 @@
-## LaravelUK Website Development
+## Laravel UK Website-Development
 
 ### Introduction
 
@@ -34,7 +34,7 @@ If you are new to contibuting to open source projects, please follow the steps b
 ### Etiquette
 As this is a community project, selected reviewers will go through your code to ascertain if the quality is sufficient for it to be merged. You are however free to choose any member of the community to review your code however only specifically assigned members can merge your Pull Requests. Please be considerate towards reviewers/maintainers when raising issues or presenting pull requests. Let's show the world that LaravelUK members are civilized and great people to work with.
 
-## Submission Requirements
+### Submission Requirements
 Before submitting a pull request:
 - Check the codebase to ensure that your feature doesn't already exist.
 - Check the pull requests to ensure that another person hasn't already submitted the feature or fix.
