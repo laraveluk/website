@@ -1,4 +1,4 @@
-## LaravelUK Website Development
+## LaravelUK - The brand
 
 ### Introduction
 
