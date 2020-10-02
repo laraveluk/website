@@ -18,10 +18,10 @@ Laravel
 Vue.js
 Vuex
 VueRouter
-Tailwind CSS (You can write vanilla CSS if you want. We will apply these within the build)
+Tailwind CSS (You can write the vanilla CSS if you want. We will apply these within the build)
 
 ### Contribution Instructions
-If you are new to contibuting to open source projects, please follow the steps below
+If you are new to contributing to open source projects, please follow the steps below
 - Fork the repository
 - Clone the forked repository to your local system
 - Add a git remote to the original repository. Example `git remote add upstream https://github.com/laraveluk/website.git`
@@ -32,7 +32,7 @@ If you are new to contibuting to open source projects, please follow the steps b
 - Submit Pull request
 
 ### Etiquette
-As this is a community project, selected reviewers will go through your code to ascertain if the quality is sufficient for it to be merged. You are however free to choose any member of the community to review your code however only specifically assigned members can merge your Pull Requests. Please be considerate towards reviewers/maintainers when raising issues or presenting pull requests. Let's show the world that LaravelUK members are civilized and great people to work with.
+As this is a community project, selected reviewers will go through your code to ascertain if the quality is sufficient for it to be merged. You are however free to choose any member of the community to review your code, however only specifically assigned members can merge your Pull Requests. Please be considerate towards reviewers/maintainers when raising issues or presenting pull requests. Let's show the world that LaravelUK members are civilized and great people to work with.
 
 ## Submission Requirements
 Before submitting a pull request:
@@ -44,7 +44,7 @@ Before submitting a pull request:
 
 ### Feedback Policy
 
-We will strive for a "Zero Pull Request Pending" policy. This means, that if the pull request is good, it will be merged as soon as review is completed and if it does not meet the requirements, the contributor will be advised to make changes and re-submit.
+We will strive for a "Zero Pull Request Pending" policy. This means, that if the pull request is good, it will be merged as soon as the review is completed and if it does not meet the requirements, the contributor will be advised to make changes and re-submit.
 
 
 ### Coding Standards
