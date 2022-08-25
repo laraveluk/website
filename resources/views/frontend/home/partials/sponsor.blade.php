@@ -6,7 +6,7 @@
         </div>
         <div class="p-2">
             <p class="leading-normal text-grey-darkest font-light md:text-lg">
-                Many thanks to <a href="https://snapshooter.io" target="_blank" rel="noopener" class="no-underline font-bold text-blue-navy">SnapShooter.io</a> for sponsoring the hosting of our website. SnapShooter helps you to schedule frequent customizable DigitalOcean backups of your droplets and volumes.
+                Many thanks to <a href="https://snapshooter.com" target="_blank" rel="noopener" class="no-underline font-bold text-blue-navy">SnapShooter.io</a> for sponsoring the hosting of our website. SnapShooter helps you to schedule frequent customizable DigitalOcean backups of your droplets and volumes.
             </p>
         </div>
     </div>
