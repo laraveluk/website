@@ -12,12 +12,12 @@
                         <h2 class="text-blue-light text-5xl mb-8 text-center md:-mt-8 bg-grey-lighter inline-block px-4 bg-white border border-grey rounded  py-2">Login</h2>
                     </div>
 
-                    <div class="flex flex-col items-center justify-center pb-8 border-b border-grey mb-8">
-                        <a href="{{route('login.slack')}}">
-                            <img src="https://platform.slack-edge.com/img/sign_in_with_slack@2x.png" class="w-3/4 mx-auto block mb-4 hover:shadow-md rounded-lg" />
-                        </a>
-                        <p class="text-grey-dark text-sm font-medium"><i class="fas fa-"></i> If you're logging in with Slack please make sure you are switched to the LaravelUK team. Not a member? <a href="/slack">Join the LaravelUK Slack</a>.</p>
-                    </div>
+{{--                    <div class="flex flex-col items-center justify-center pb-8 border-b border-grey mb-8">--}}
+{{--                        <a href="{{route('login.slack')}}">--}}
+{{--                            <img src="https://platform.slack-edge.com/img/sign_in_with_slack@2x.png" class="w-3/4 mx-auto block mb-4 hover:shadow-md rounded-lg" />--}}
+{{--                        </a>--}}
+{{--                        <p class="text-grey-dark text-sm font-medium"><i class="fas fa-"></i> If you're logging in with Slack please make sure you are switched to the LaravelUK team. Not a member? <a href="/slack">Join the LaravelUK Slack</a>.</p>--}}
+{{--                    </div>--}}
 
                     <form role="form" class="mb-4" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
