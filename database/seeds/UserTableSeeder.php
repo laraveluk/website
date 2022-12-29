@@ -15,7 +15,7 @@ class UserTableSeeder extends Seeder
         factory(User::class)->create([
             'name' => 'John',
             'email' => 'john@doe.com',
-            'password' => bcrypt('secret')
+            'password' => \Illuminate\Support\Facades\Hash::make('password')
         ]);
     }
 }

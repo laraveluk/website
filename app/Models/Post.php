@@ -12,7 +12,7 @@ class Post extends Model
 
     /** @var array $fillable */
     protected $fillable = ['title', 'body', 'slug', 'user_id', 'post_type', 'approved', 'approved_by'];
-    
+
     /** @var array $appends */
     protected $appends = ['excerpt'];
 
@@ -25,7 +25,7 @@ class Post extends Model
      *
      * @return array
      */
-    public function sluggable()
+    public function sluggable() : array
     {
         return [
             'slug' => [
